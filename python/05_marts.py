@@ -1,27 +1,34 @@
 """
 Stage 05 - marts: dimensions, the area fact, and spray demand.
 
-What:   Loads seeds/crop_spray_passes.csv, seeds/season_calendar.csv and
-        seeds/assumptions.csv, validates the spray-passes seed, and builds
-        marts.dim_district / dim_crop / dim_season / dim_year,
+What:   Loads seeds/crop_spray_passes.csv, seeds/season_calendar.csv,
+        seeds/assumptions.csv and seeds/crop_state_spray_passes.csv,
+        validates both spray-passes seeds, and builds marts.dim_district /
+        dim_crop / dim_season / dim_year / dim_crop_state_passes,
         marts.fct_crop_area (grain district x year x season x crop, one row
         per staging row with a non-null area) and marts.mv_spray_demand (a
-        materialised view of spray acres at district x year x season). Runs
-        the checks in the module docstring's Checks section below. See
-        sql/04_marts.sql's header for the full table list.
-Checks: every staging crop is in the seed and vice versa; low <= base <=
-        high; a pass count is null only when basis is unsourced or
-        not_modelled; an in-scope row has a source unless unsourced; fact row
-        count and area match staging exactly; the fact grain is unique and
-        every foreign key resolves; no negative area (zero-area rows are
-        printed, not failed); the view's total/in-scope/not-modelled acres
-        agree and its total matches the fact; pp_spray_acres_base agrees with
-        an independent recomputation from the fact and dim_crop.
+        materialised view of spray acres at district x year x season, using
+        a state-level pass-count override where one exists for that
+        district's state and crop). Runs the checks in the module
+        docstring's Checks section below. See sql/04_marts.sql's header for
+        the full table list.
+Checks: every staging crop is in the national seed and vice versa; low <=
+        base <= high (both seeds); a pass count is null only when basis is
+        unsourced or not_modelled; an in-scope row has a source unless
+        unsourced; a state-override (state, crop) pair exists in staging and
+        is in scope nationally; fact row count and area match staging
+        exactly; the fact grain is unique and every foreign key resolves; no
+        negative area (zero-area rows are printed, not failed); the view's
+        total/in-scope/not-modelled acres agree and its total matches the
+        fact; pp_spray_acres_low/base/high agree with an independent
+        recomputation from the fact, dim_crop and the state override.
 Reads:  staging.stg_crop_production, staging.district_alias,
         sql/04_marts.sql, seeds/crop_spray_passes.csv,
-        seeds/season_calendar.csv, seeds/assumptions.csv
+        seeds/season_calendar.csv, seeds/assumptions.csv,
+        seeds/crop_state_spray_passes.csv
 Writes: staging.crop_spray_passes, staging.season_calendar,
-        staging.assumptions, marts.* (see sql/04_marts.sql)
+        staging.assumptions, staging.crop_state_spray_passes,
+        marts.* (see sql/04_marts.sql)
 Re-run: safe. The whole build runs in one transaction and is committed only
         after every check passes, so a failed run leaves nothing behind that
         a later stage could read. Pass --keep-on-fail to commit anyway for
@@ -41,6 +48,7 @@ SEED_PATHS = {
     "staging.crop_spray_passes": REPO_ROOT / "seeds" / "crop_spray_passes.csv",
     "staging.season_calendar": REPO_ROOT / "seeds" / "season_calendar.csv",
     "staging.assumptions": REPO_ROOT / "seeds" / "assumptions.csv",
+    "staging.crop_state_spray_passes": REPO_ROOT / "seeds" / "crop_state_spray_passes.csv",
 }
 SEED_SPLIT_MARKER = "-- ===== SEEDS LOADED HERE =====\n"
 # The row-count table this stage prints, in pipeline order
@@ -50,6 +58,7 @@ ROW_COUNT_TABLES = [
     ("staging.district_alias", "district_alias rows"),
     ("marts.dim_district", "dim_district rows"),
     ("marts.dim_crop", "dim_crop rows"),
+    ("marts.dim_crop_state_passes", "dim_crop_state_passes rows"),
     ("marts.dim_season", "dim_season rows"),
     ("marts.dim_year", "dim_year rows"),
     ("marts.fct_crop_area", "fct_crop_area rows"),
@@ -137,6 +146,12 @@ def main() -> None:
          "crop(s) with a null pass count and a basis that promises one"),
         ("staging.chk_spray_missing_source", "crop, basis",
          "in-scope crop(s) with no source_url and a basis other than unsourced"),
+        ("staging.chk_state_spray_unknown_pair", "state, crop",
+         "state-override (state, crop) pair(s) not present in staging"),
+        ("staging.chk_state_spray_out_of_scope", "state, crop",
+         "state-override row(s) for a crop that is not in_scope = 'Y' nationally"),
+        ("staging.chk_state_spray_range", "state, crop, pp_passes_low, pp_passes_base, pp_passes_high",
+         "state-override row(s) with low <= base <= high violated"),
     ]
     for table, cols, description in checks:
         cur.execute(f"SELECT {cols} FROM {table}")
@@ -191,11 +206,19 @@ def main() -> None:
             print("   ", row)
         fail_build(f"{len(mv_mismatches)}+ state-year acre totals disagree between mv_spray_demand and the fact")
 
-    cur.execute("SELECT count(*) FROM staging.chk_mv_pp_base_recompute")
-    n = cur.fetchone()[0]
-    if n:
-        fail_build(f"{n} mv_spray_demand row(s) where pp_spray_acres_base disagrees with an "
-                   "independent recomputation from the fact and dim_crop")
+    cur.execute("SELECT district_key, year_label, season_key, "
+                "pp_spray_acres_low, recomputed_low, "
+                "pp_spray_acres_base, recomputed_base, "
+                "pp_spray_acres_high, recomputed_high "
+                "FROM staging.chk_mv_pp_recompute LIMIT 10")
+    pp_mismatches = cur.fetchall()
+    if pp_mismatches:
+        for row in pp_mismatches:
+            print("   ", row)
+        cur.execute("SELECT count(*) FROM staging.chk_mv_pp_recompute")
+        fail_build(f"{cur.fetchone()[0]} mv_spray_demand row(s) where pp_spray_acres_low/base/high "
+                   "disagree with an independent recomputation from the fact, dim_crop and the "
+                   "state override; worst offenders above")
 
     # Every check passed: commit the whole build now, for the first time.
     con.commit()
@@ -220,6 +243,42 @@ def main() -> None:
     print(f"  unsourced:     {unsourced:>15,.0f}  ({100*unsourced/total:.1f}%)")
     print(f"  not modelled:  {not_modelled:>15,.0f}  ({100*not_modelled/total:.1f}%)")
     print(f"  in scope w/ pass count: {100*(in_scope-unsourced)/total:.1f}%")
+
+    # ---- 2023-24 plant-protection spray-acre totals, national (printed, not a gate) ----
+    cur.execute("""
+        SELECT sum(pp_spray_acres_low), sum(pp_spray_acres_base), sum(pp_spray_acres_high)
+        FROM marts.mv_spray_demand WHERE year_label = %s
+    """, (LATEST_COMPLETE_YEAR_LABEL,))
+    pp_low, pp_base, pp_high = (float(x) for x in cur.fetchone())
+    print(f"\n{LATEST_COMPLETE_YEAR_LABEL} pp_spray_acres (all in-scope crops with a pass count):")
+    print(f"  low:  {pp_low:>15,.0f}")
+    print(f"  base: {pp_base:>15,.0f}")
+    print(f"  high: {pp_high:>15,.0f}")
+
+    # ---- 2023-24 rice-only totals and state-override share (printed, not a gate) ----
+    # Computed straight from the fact, not from mv_spray_demand, which has no
+    # crop-level breakdown to filter on.
+    cur.execute("""
+        SELECT
+            sum(f.area_acres),
+            sum(f.area_acres * COALESCE(csp.pp_passes_low,  c.pp_passes_low)),
+            sum(f.area_acres * COALESCE(csp.pp_passes_base, c.pp_passes_base)),
+            sum(f.area_acres * COALESCE(csp.pp_passes_high, c.pp_passes_high)),
+            sum(f.area_acres) FILTER (WHERE csp.state IS NOT NULL)
+        FROM marts.fct_crop_area f
+        JOIN marts.dim_district da ON da.district_key = f.district_key
+        JOIN marts.dim_crop c ON c.crop_key = f.crop_key
+        LEFT JOIN marts.dim_crop_state_passes csp
+          ON csp.state = da.state AND csp.crop_key = f.crop_key
+        WHERE f.crop_key = 'Rice' AND f.year_label = %s
+    """, (LATEST_COMPLETE_YEAR_LABEL,))
+    rice_acres, rice_low, rice_base, rice_high, rice_override_acres = (float(x) for x in cur.fetchone())
+    print(f"\n{LATEST_COMPLETE_YEAR_LABEL} rice only: {rice_acres:,.0f} acres")
+    print(f"  pp_spray_acres low:  {rice_low:>15,.0f}")
+    print(f"  pp_spray_acres base: {rice_base:>15,.0f}")
+    print(f"  pp_spray_acres high: {rice_high:>15,.0f}")
+    print(f"  acres with a state override: {rice_override_acres:,.0f} "
+          f"({100*rice_override_acres/rice_acres:.1f}%)")
 
     # ---- open needs_check crops (printed, not a gate) ----
     cur.execute("SELECT crop FROM staging.crop_spray_passes WHERE needs_check = 'Y' ORDER BY crop")

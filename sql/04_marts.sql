@@ -2,25 +2,34 @@
 -- Reads:  staging.stg_crop_production, staging.district_alias (both
 --         read-only, from earlier stages).
 -- Writes: staging.crop_spray_passes, staging.season_calendar,
---             staging.assumptions - DDL only here; rows are COPYed in by
---             python/05_marts.py between the two halves of this file (see
---             the SEEDS LOADED HERE marker below).
+--             staging.assumptions, staging.crop_state_spray_passes - DDL
+--             only here; rows are COPYed in by python/05_marts.py between
+--             the two halves of this file (see the SEEDS LOADED HERE marker
+--             below).
 --         staging.chk_spray_crop_mismatch, staging.chk_spray_passes_range,
---             staging.chk_spray_passes_null, staging.chk_spray_missing_source
---             - seed validation; python fails the run if any is non-empty.
+--             staging.chk_spray_passes_null, staging.chk_spray_missing_source,
+--             staging.chk_state_spray_unknown_pair,
+--             staging.chk_state_spray_out_of_scope,
+--             staging.chk_state_spray_range - seed validation; python fails
+--             the run if any is non-empty.
 --         marts.dim_district, marts.dim_crop, marts.dim_season,
 --             marts.dim_year - one row per staging district / seed crop /
 --             calendar season / distinct year.
+--         marts.dim_crop_state_passes - the state-level rice override,
+--             exposed as its own small dimension (state x crop): one row per
+--             seeds/crop_state_spray_passes.csv row.
 --         marts.fct_crop_area - grain district_key x year_label x season_key
 --             x crop_key. One row per staging row with a non-null area_ha.
 --         marts.mv_spray_demand - materialised view, grain district_key x
 --             year_label x season_key: acres in scope, unsourced, not
---             modelled, plant-protection spray acres at low/base/high, and
---             nutrient spray acres.
+--             modelled, plant-protection spray acres at low/base/high (state
+--             override applied where one exists for that district's state
+--             and crop, national dim_crop value otherwise), and nutrient
+--             spray acres.
 --         staging.chk_fact_row_count, staging.chk_fact_area_reconciliation,
 --             staging.chk_fact_grain_duplicate, staging.chk_fact_orphan_fk,
 --             staging.chk_fact_negative_area, staging.chk_mv_scope_identity,
---             staging.chk_mv_vs_fact_area, staging.chk_mv_pp_base_recompute -
+--             staging.chk_mv_vs_fact_area, staging.chk_mv_pp_recompute -
 --             quality checks; see python/05_marts.py for the pass/fail gates.
 -- Re-run: safe. Every table and the view are dropped and rebuilt; staging
 --         and district_alias are never written to.
@@ -38,9 +47,9 @@ DROP TABLE IF EXISTS staging.crop_spray_passes;
 CREATE TABLE staging.crop_spray_passes (
     crop             text     PRIMARY KEY,
     in_scope         text     NOT NULL CHECK (in_scope IN ('Y', 'N')),
-    pp_passes_low    numeric,
-    pp_passes_base   numeric,
-    pp_passes_high   numeric,
+    pp_passes_low    numeric(5, 2),
+    pp_passes_base   numeric(5, 2),
+    pp_passes_high   numeric(5, 2),
     basis            text     NOT NULL
         CHECK (basis IN ('observed_survey', 'recommended_schedule', 'unsourced', 'not_modelled')),
     source_title     text,
@@ -68,10 +77,30 @@ CREATE TABLE staging.assumptions (
     source  text  NOT NULL
 );
 
+-- A state-level override of crop_spray_passes for specific (state, crop)
+-- pairs - currently rice in the 8 CSISA survey states. Every column is
+-- NOT NULL: an override row promises a real, sourced number, unlike the
+-- national seed where basis can excuse a null (unsourced/not_modelled).
+DROP TABLE IF EXISTS staging.crop_state_spray_passes;
+CREATE TABLE staging.crop_state_spray_passes (
+    state            text          NOT NULL,
+    crop             text          NOT NULL,
+    pp_passes_low    numeric(5, 2) NOT NULL,
+    pp_passes_base   numeric(5, 2) NOT NULL,
+    pp_passes_high   numeric(5, 2) NOT NULL,
+    n_farmers        int           NOT NULL,
+    source_title     text          NOT NULL,
+    source_url       text          NOT NULL,
+    source_grade     text          NOT NULL CHECK (source_grade IN ('A', 'B', 'C')),
+    note             text,
+    PRIMARY KEY (state, crop)
+);
+
 -- python/05_marts.py splits this file on the marker line below, runs
 -- everything above it, COPYs seeds/crop_spray_passes.csv,
--- seeds/season_calendar.csv and seeds/assumptions.csv into the tables above,
--- then runs everything below it.
+-- seeds/season_calendar.csv, seeds/assumptions.csv and
+-- seeds/crop_state_spray_passes.csv into the tables above, then runs
+-- everything below it.
 -- ===== SEEDS LOADED HERE =====
 
 -- Every crop in staging must be in the seed, and every seed crop must be in
@@ -115,6 +144,32 @@ WHERE in_scope = 'Y'
   AND (source_url IS NULL OR btrim(source_url) = '')
   AND basis <> 'unsourced';
 
+-- An override's (state, crop) pair must already exist in staging - it can
+-- only narrow a real crop-in-a-real-state, never introduce one.
+DROP TABLE IF EXISTS staging.chk_state_spray_unknown_pair;
+CREATE TABLE staging.chk_state_spray_unknown_pair AS
+SELECT csp.state, csp.crop
+FROM staging.crop_state_spray_passes csp
+WHERE NOT EXISTS (
+    SELECT 1 FROM staging.stg_crop_production sp
+    WHERE sp.state_name = csp.state AND sp.crop_name = csp.crop);
+
+-- An override only makes sense for a crop the national seed already
+-- models - LEFT JOIN so a crop missing from crop_spray_passes entirely
+-- (not just out of scope) is caught by the same check.
+DROP TABLE IF EXISTS staging.chk_state_spray_out_of_scope;
+CREATE TABLE staging.chk_state_spray_out_of_scope AS
+SELECT csp.state, csp.crop
+FROM staging.crop_state_spray_passes csp
+LEFT JOIN staging.crop_spray_passes c ON c.crop = csp.crop
+WHERE c.crop IS NULL OR c.in_scope <> 'Y';
+
+DROP TABLE IF EXISTS staging.chk_state_spray_range;
+CREATE TABLE staging.chk_state_spray_range AS
+SELECT state, crop, pp_passes_low, pp_passes_base, pp_passes_high
+FROM staging.crop_state_spray_passes
+WHERE NOT (pp_passes_low <= pp_passes_base AND pp_passes_base <= pp_passes_high);
+
 -- ---- dimensions -------------------------------------------------------
 
 DROP TABLE IF EXISTS marts.dim_district;
@@ -145,6 +200,26 @@ SELECT
     (needs_check = 'Y') AS needs_check
 FROM staging.crop_spray_passes;
 ALTER TABLE marts.dim_crop ADD PRIMARY KEY (crop_key);
+
+-- The state-level override, exposed as its own small dimension rather than
+-- added as columns on every fact row: a BI tool can join fct_crop_area ->
+-- dim_district (for state) -> this table (for state + crop) to see exactly
+-- which rows carry an override and what it is. Chosen over "effective_*"
+-- columns on the fact because it adds one small table instead of touching
+-- all 155k+ fact rows, and keeps the override inspectable as its own thing
+-- rather than baked into a number the dashboard cannot trace back.
+DROP TABLE IF EXISTS marts.dim_crop_state_passes;
+CREATE TABLE marts.dim_crop_state_passes AS
+SELECT
+    state,
+    crop AS crop_key,
+    pp_passes_low,
+    pp_passes_base,
+    pp_passes_high,
+    n_farmers,
+    source_grade
+FROM staging.crop_state_spray_passes;
+ALTER TABLE marts.dim_crop_state_passes ADD PRIMARY KEY (state, crop_key);
 
 -- The data's seasons only: Kharif, Rabi, Summer - there is no whole-year
 -- season (season_calendar's rows already match this exactly; the fact's
@@ -260,22 +335,46 @@ SELECT * FROM marts.fct_crop_area WHERE area_ha < 0;
 -- ---- spray demand ---------------------------------------------------------
 -- (already dropped at the top of this file, before the seed tables it reads)
 
+-- Effective pass counts: the state override where one exists for this row's
+-- (district's state, crop), the national dim_crop value otherwise. Driven
+-- entirely by the LEFT JOIN + COALESCE below - no state name appears in this
+-- query, so a new override state or crop needs only a seed row, never a
+-- SQL change.
 CREATE MATERIALIZED VIEW marts.mv_spray_demand AS
-WITH agg AS (
+WITH effective AS (
     SELECT
         f.district_key,
         f.year_label,
         f.season_key,
-        sum(f.area_acres) AS total_acres,
-        COALESCE(sum(f.area_acres) FILTER (WHERE c.in_scope), 0) AS in_scope_acres,
-        COALESCE(sum(f.area_acres) FILTER (WHERE c.in_scope AND c.pp_passes_base IS NULL), 0) AS unsourced_acres,
-        COALESCE(sum(f.area_acres) FILTER (WHERE NOT c.in_scope), 0) AS not_modelled_acres,
-        COALESCE(sum(f.area_acres * c.pp_passes_low)  FILTER (WHERE c.pp_passes_low  IS NOT NULL), 0) AS pp_spray_acres_low,
-        COALESCE(sum(f.area_acres * c.pp_passes_base) FILTER (WHERE c.pp_passes_base IS NOT NULL), 0) AS pp_spray_acres_base,
-        COALESCE(sum(f.area_acres * c.pp_passes_high) FILTER (WHERE c.pp_passes_high IS NOT NULL), 0) AS pp_spray_acres_high
+        f.area_acres,
+        c.in_scope,
+        c.pp_passes_base AS national_base,
+        COALESCE(csp.pp_passes_low,  c.pp_passes_low)  AS eff_low,
+        COALESCE(csp.pp_passes_base, c.pp_passes_base) AS eff_base,
+        COALESCE(csp.pp_passes_high, c.pp_passes_high) AS eff_high
     FROM marts.fct_crop_area f
+    JOIN marts.dim_district da ON da.district_key = f.district_key
     JOIN marts.dim_crop c ON c.crop_key = f.crop_key
-    GROUP BY f.district_key, f.year_label, f.season_key
+    LEFT JOIN marts.dim_crop_state_passes csp
+      ON csp.state = da.state AND csp.crop_key = f.crop_key
+),
+agg AS (
+    SELECT
+        district_key,
+        year_label,
+        season_key,
+        sum(area_acres) AS total_acres,
+        COALESCE(sum(area_acres) FILTER (WHERE in_scope), 0) AS in_scope_acres,
+        -- unsourced is a crop-level fact (Moong has no national pass count
+        -- anywhere), unaffected by a state override that always fills in a
+        -- number where it applies
+        COALESCE(sum(area_acres) FILTER (WHERE in_scope AND national_base IS NULL), 0) AS unsourced_acres,
+        COALESCE(sum(area_acres) FILTER (WHERE NOT in_scope), 0) AS not_modelled_acres,
+        COALESCE(sum(area_acres * eff_low)  FILTER (WHERE eff_low  IS NOT NULL), 0) AS pp_spray_acres_low,
+        COALESCE(sum(area_acres * eff_base) FILTER (WHERE eff_base IS NOT NULL), 0) AS pp_spray_acres_base,
+        COALESCE(sum(area_acres * eff_high) FILTER (WHERE eff_high IS NOT NULL), 0) AS pp_spray_acres_high
+    FROM effective
+    GROUP BY district_key, year_label, season_key
 )
 SELECT
     a.*,
@@ -312,23 +411,36 @@ FROM by_mv bm
 JOIN by_fact bf ON bf.state = bm.state AND bf.year_label = bm.year_label
 WHERE bm.acres IS DISTINCT FROM bf.acres;
 
--- Independent recomputation of pp_spray_acres_base straight from the fact
--- and dim_crop, not by reusing the view's own SQL, so a bug shared between
--- the view and this check would still be very unlikely to agree by chance.
-DROP TABLE IF EXISTS staging.chk_mv_pp_base_recompute;
-CREATE TABLE staging.chk_mv_pp_base_recompute AS
+-- Independent recomputation of pp_spray_acres_low/base/high straight from
+-- the fact, dim_crop and the state override table, not by reusing the
+-- view's own SQL, so a bug shared between the view and this check would
+-- still be very unlikely to agree by chance. Uses staging.crop_state_-
+-- spray_passes directly (not marts.dim_crop_state_passes) to keep the
+-- recomputation's source independent of the dimension the view itself uses.
+DROP TABLE IF EXISTS staging.chk_mv_pp_recompute;
+CREATE TABLE staging.chk_mv_pp_recompute AS
 WITH recomputed AS (
-    SELECT f.district_key, f.year_label, f.season_key,
-           sum(f.area_acres * c.pp_passes_base) AS pp_spray_acres_base
+    SELECT
+        f.district_key, f.year_label, f.season_key,
+        sum(f.area_acres * COALESCE(csp.pp_passes_low,  c.pp_passes_low))  AS pp_spray_acres_low,
+        sum(f.area_acres * COALESCE(csp.pp_passes_base, c.pp_passes_base)) AS pp_spray_acres_base,
+        sum(f.area_acres * COALESCE(csp.pp_passes_high, c.pp_passes_high)) AS pp_spray_acres_high
     FROM marts.fct_crop_area f
+    JOIN marts.dim_district da ON da.district_key = f.district_key
     JOIN marts.dim_crop c ON c.crop_key = f.crop_key
-    WHERE c.pp_passes_base IS NOT NULL
+    LEFT JOIN staging.crop_state_spray_passes csp
+      ON csp.state = da.state AND csp.crop = f.crop_key
+    WHERE COALESCE(csp.pp_passes_base, c.pp_passes_base) IS NOT NULL
     GROUP BY f.district_key, f.year_label, f.season_key
 )
-SELECT m.district_key, m.year_label, m.season_key,
-       m.pp_spray_acres_base AS view_value, r.pp_spray_acres_base AS recomputed_value,
-       m.pp_spray_acres_base - COALESCE(r.pp_spray_acres_base, 0) AS diff
+SELECT
+    m.district_key, m.year_label, m.season_key,
+    m.pp_spray_acres_low,  r.pp_spray_acres_low  AS recomputed_low,
+    m.pp_spray_acres_base, r.pp_spray_acres_base AS recomputed_base,
+    m.pp_spray_acres_high, r.pp_spray_acres_high AS recomputed_high
 FROM marts.mv_spray_demand m
 LEFT JOIN recomputed r
   ON r.district_key = m.district_key AND r.year_label = m.year_label AND r.season_key = m.season_key
-WHERE m.pp_spray_acres_base IS DISTINCT FROM COALESCE(r.pp_spray_acres_base, 0);
+WHERE m.pp_spray_acres_low  IS DISTINCT FROM COALESCE(r.pp_spray_acres_low, 0)
+   OR m.pp_spray_acres_base IS DISTINCT FROM COALESCE(r.pp_spray_acres_base, 0)
+   OR m.pp_spray_acres_high IS DISTINCT FROM COALESCE(r.pp_spray_acres_high, 0);
