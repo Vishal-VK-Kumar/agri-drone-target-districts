@@ -57,7 +57,7 @@ over `cluster_edge = 'Y'`). Time-series measures (LAG, moving average, year-on-y
 change) run on stable units. Ranking on the latest complete year (2023-24) uses current
 district names, because the boundaries within a single year are consistent.
 
-Result: 752 names become 627 stable units. Most states barely change. The exceptions
+Result: 752 names become 629 stable units (627 before the 23 Sep 2026 review set the two Chennai edges to N; see Edge rules). Most states barely change. The exceptions
 are the cost of being correct:
 
 - Telangana: 32 names become 4 units. The 2016 reorganisation cut across old
@@ -78,32 +78,34 @@ across the reorganisation years. The analysis says so rather than hide it.
   but joining two states into one unit would break every state-level rollup. The
   effect is a small step in Khammam between 2013-14 and 2014-15.
 - `coverage_gap` rows map a district to itself and never create an edge.
-- Parents come from notifications, official district sites, RBI lead-bank circulars or
-  named press reports. None are inferred from the data. `source_grade` says which kind.
+- **Materiality (added 23 Sep 2026).** An edge is set to N only when the area that moved can be
+  bounded from the data and the bound is under 1% of every district it touches. The row stays in the
+  seed with its source, so the lineage check still passes. Only the Chennai rows meet this: Chennai
+  reports at most 254 ha in any year, so at most about 0.2% of Thiruvallur or Kancheepuram moved.
+  When the size cannot be bounded, the edge stays Y. A wrongly kept edge costs resolution; a wrongly
+  dropped one puts a fake step into the tre## Open items (`needs_check = 'Y'`)
 
-## Trend window
+Reviewed 23 Sep 2026. Cleared with a citation:
 
-The trend window is 2014-15 to 2023-24. 2013-14 stays in the fact table, flagged, but
-does not feed trend measures. It would add one year at the cost of a known hole: the
-Chhattisgarh gap, plus four boundary events that fall between 2013-14 and 2014-15
-(Gujarat's seven new districts, Palghar, Alipurduar, and the Khammam transfer).
-2024-25 is incomplete (five states missing), which is why 2023-24 is the latest
-complete year.
+- **East Godavari ← West Godavari** (Kovvur division, 2022). The official district portal lists
+  the eight Kovvuru mandals in East Godavari. The transfer is also visible in size: in 2022-23 AP
+  fell 11% statewide, while without this edge the East Godavari group is flat and the West Godavari
+  group falls 19%, roughly 70-80k ha moving. Edge kept.
+- **Sri Potti Sriramulu Nellore ← Prakasam** (Kandukur division, 2022). Confirmed (Census 2011
+  handbook for Prakasam, Sakshi Post). Its size is lost in normal year-to-year swings of 10-16%, so
+  under the materiality rule the edge stays. **Kandukur reverted to Prakasam from 31 Dec 2025**, and
+  the same notification creates new districts (Polavaram, Markapuram) and moves the Gudur mandals from
+  Tirupati to Nellore. None of this is in the current data, which ends at 2024-25. A 2025-26 export
+  will add names and the lineage check will fail on them by design.
+- **Chennai ← Thiruvallur, Kancheepuram** (2018). Parents confirmed (DT Next, 4 Jan 2018: 67
+  villages from Tiruvallur, 55 from Kancheepuram). Edge set to N under the materiality rule. Tamil
+  Nadu goes from 30 to 32 units and Thiruvallur can now be measured on its own.
+- **Gaurela-Pendra-Marwahi ← Bilaspur** (10 Feb 2020). PTI: "carved out of Bilaspur".
 
-## Open items (`needs_check = 'Y'`)
+Still open, and why they can wait:
 
-Only three change a stable unit if they turn out wrong:
-
-- **East Godavari ← West Godavari** (Kovvur division, 2022). This edge joins AP's north
-  coast with West Godavari and Krishna.
-- **Sri Potti Sriramulu Nellore ← Prakasam** (Kandukur division, 2022). This edge joins
-  the Tirupati/Chittoor/Kadapa group with Guntur/Prakasam.
-- **Chennai ← Thiruvallur, Kancheepuram** (2018 expansion). Encyclopedia source.
-
-These don't change any unit, because the parents are already linked another way:
-Jayashankar Bhupalapally, Hanumakonda (Telangana), and Gaurela-Pendra-Marwahi
-(single parent, encyclopedia source).
-
-These only affect 2024-25, which is outside the trend window: the eight Rajasthan
-districts (parents from the March 2023 announcement; Beawar may also have Pali and
-Bhilwara tehsils) and Mauganj (date approximate).
+- **Jayashankar Bhupalapally, Hanumakonda** (Telangana, 5 rows). No effect on units: the districts
+  are already joined through other edges. Documentation only.
+- **The eight Rajasthan districts and Mauganj** (10 rows). All first report in 2024-25, so they
+  touch neither the ranking year (2023-24) nor the trend window. Beawar may also have Pali and
+  Bhilwara tehsils. Resolve before any analysis uses 2024-25.

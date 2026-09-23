@@ -49,9 +49,16 @@ conservative case.
 ## Row by row, the ones that move the answer
 
 **Rice (C, needs check).** 4.32 sprays per farmer per season in Palnadu, rabi 2020-21,
-41 farmers. Palnadu is a high-input delta area, so a base of 4 probably overstates
-the national figure. Rice is 26% of modelled area, so this single row moves the
-ranking more than any other. First thing to test in the sensitivity analysis.
+41 farmers. A second Andhra survey (60 farmers, three southern districts, 2016-18) reports
+weekly spraying, which says Andhra is a high-use state rather than that 4 is typical.
+PAU's Kharif 2026 package for Punjab has one routine foliar spray (the post-emergence
+herbicide); insecticide and fungicide sprays are triggered by thresholds or symptoms, usually
+as a pair 15 days apart. So the range is 1 to 5, and the base of 4 sits near the top of it.
+Rice is 26% of modelled area, so this single row moves the ranking more than any other.
+Reviewed 23 Sep 2026: low lowered from 2 to 1 on the PAU schedule; base kept at 4 because it
+is the only observed figure. The one source that could settle it is the CSISA 2018 rice
+survey (8,355 farmers, eight states, open data on the CIMMYT Dataverse), if it records how
+many times each plot was sprayed. Not yet checked.
 
 **Cotton (B).** Modal answer in the Alwar survey is three applications (52%), two for
 41%. The Karnataka Bt cotton study (Sagar et al. 2013) gives 1 to 3 in most
