@@ -1,0 +1,19 @@
+# Source data is exported by hand from UPAg and is not redistributed here.
+# MANIFEST.json is the exception: it is checksums/sizes/row counts, not data.
+data/raw/*
+!data/raw/MANIFEST.json
+data/*.duckdb
+data/*.duckdb.wal
+
+# Local secrets and environment
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Results are regenerated, not committed; output/marts/ is the exception
+# because it is the file interface to the Power BI report
+output/*
+!output/marts/
+
+.DS_Store

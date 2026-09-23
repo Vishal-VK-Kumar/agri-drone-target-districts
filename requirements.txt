@@ -1,0 +1,3 @@
+psycopg2-binary>=2.9.10
+# Fallback warehouse for machines without Docker (DB_BACKEND=duckdb)
+duckdb>=1.1

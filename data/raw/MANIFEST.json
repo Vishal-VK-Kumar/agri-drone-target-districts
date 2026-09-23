@@ -1,0 +1,35 @@
+{
+  "source": "UPAg Complete APY Dataset (District Level), https://upag.gov.in/dash-reports/desdistrictwisecompletedatasetreport (credited to DA&FW)",
+  "export_settings": "Crop Category: Food Grains, Commercial Crops, Oilseeds; Crop: All; Metric: Area, Production, Yield; UOM: Actual; CSV. Site caps each export at three years.",
+  "coverage": "2013-14 to 2024-25; 2024-25 incomplete (see plan Part 3a)",
+  "files": [
+    {
+      "file": "DES-District-Data-For-2013-14-to-2015-16.csv",
+      "downloaded": "2026-09-23",
+      "sha256": "1a1072bdd543e9a591cf140a1a9fc8b07033ba89a78e11f4ed18d133f1364ba0",
+      "bytes": 4228449,
+      "data_rows": 33003
+    },
+    {
+      "file": "DES-District-Data-For-2016-17-to-2018-19.csv",
+      "downloaded": "2026-09-23",
+      "sha256": "8d2f689c7d0dbc2dcd5fd4236b3fb68dda30eafe3b6f947599592acd3c677ff8",
+      "bytes": 4620689,
+      "data_rows": 36157
+    },
+    {
+      "file": "DES-District-Data-For-2019-20-to-2021-22.csv",
+      "downloaded": "2026-09-23",
+      "sha256": "27ea8038dd7bb14fc6ba6e87909f8100c98e2c79ece6ac238add30e2de043e4b",
+      "bytes": 4845811,
+      "data_rows": 38143
+    },
+    {
+      "file": "DES-District-Data-For-2022-23-to-2024-25.csv",
+      "downloaded": "2026-09-23",
+      "sha256": "178c5708c0f6180c784cc6a861f3b58800b95ecb43c356a4983838c9aff97868",
+      "bytes": 5053531,
+      "data_rows": 40756
+    }
+  ]
+}
