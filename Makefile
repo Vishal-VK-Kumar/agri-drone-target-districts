@@ -7,7 +7,7 @@ PY     := $(VENV)/bin/python
 -include .env
 export
 
-.PHONY: up down manifest load stage alias demo analyse
+.PHONY: up down manifest load stage alias demo marts analyse
 
 .env:
 	cp .env.example .env
@@ -39,6 +39,9 @@ alias: stage
 demo: alias
 	$(PY) python/run_split_artefact_demo.py
 
+marts: alias
+	$(PY) python/05_marts.py
+
 analyse:
-	@echo "analyse: marts and analysis stages are not built yet" >&2
+	@echo "analyse: the analysis/ranking stage is not built yet" >&2
 	@exit 1
