@@ -1,7 +1,7 @@
 # agri-drone-target-districts
 
 > Work in progress. The finding will lead this page once the analysis stage is
-> built. So far the pipeline goes as far as staging and district lineage.
+> built. So far the pipeline goes as far as the marts.
 
 Which Indian districts should a one-drone, one-pilot spraying operator serve?
 This repo answers that with SQL over public district crop statistics. Sown area
@@ -38,11 +38,14 @@ docker compose up -d
 make load
 ```
 
-Without Docker, the same SQL runs on a local DuckDB file:
+Without Docker, `make load` and `make stage` run on a local DuckDB file:
 
 ```bash
 make load DB_BACKEND=duckdb
 ```
+
+`make marts` is PostgreSQL only - `sql/04_marts.sql` uses a materialised view,
+which DuckDB does not support.
 
 | Stage | Script | Reads | Writes |
 |---|---|---|---|
@@ -50,6 +53,7 @@ make load DB_BACKEND=duckdb
 | 02 | `python/02_load.py`, `sql/01_load_raw.sql` | `data/raw/*.csv` | `raw.crop_production_import`, all text, unaltered |
 | 03 | `python/03_stage.py`, `sql/02_stage.sql` | `raw.crop_production_import`, `seeds/*.csv` | `staging.stg_crop_production` (long format, one row per state x district x crop x season x year), plus `staging.chk_season_total` / `staging.chk_crop_group` / `staging.rej_empty_year` for the rows taken out |
 | 04 | `python/04_district_lineage.py`, `sql/03_district_lineage.sql` | `staging.stg_crop_production`, `seeds/district_lineage.csv` | `staging.district_alias` (one row per state x district, with a stable `unit_key` for districts joined by a split) - see `docs/district_alias_notes.md` for why a district-name series isn't safe to trend on its own |
+| 05 | `python/05_marts.py`, `sql/04_marts.sql` | `staging.stg_crop_production`, `staging.district_alias`, `seeds/crop_spray_passes.csv`, `seeds/season_calendar.csv`, `seeds/assumptions.csv` | `marts.dim_district` / `dim_crop` / `dim_season` / `dim_year`, `marts.fct_crop_area` (grain district x year x season x crop), `marts.mv_spray_demand` (materialised view: plant-protection and nutrient spray acres by scope) - see `docs/spray_passes_notes.md` for where each pass count comes from |
 
 `make stage` runs `make load` first, then `python/03_stage.py`.
 `make alias` runs `make stage` first, then `python/04_district_lineage.py`.
@@ -57,6 +61,7 @@ make load DB_BACKEND=duckdb
 writes `output/split_artefact_demo.txt` - before/after evidence that a stable
 unit removes the fake year-on-year collapse a raw district name shows at a
 split.
+`make marts` runs `make alias` first, then `python/05_marts.py`.
 
 ## Licence
 
