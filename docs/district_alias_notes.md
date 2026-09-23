@@ -83,7 +83,21 @@ across the reorganisation years. The analysis says so rather than hide it.
   seed with its source, so the lineage check still passes. Only the Chennai rows meet this: Chennai
   reports at most 254 ha in any year, so at most about 0.2% of Thiruvallur or Kancheepuram moved.
   When the size cannot be bounded, the edge stays Y. A wrongly kept edge costs resolution; a wrongly
-  dropped one puts a fake step into the tre## Open items (`needs_check = 'Y'`)
+  dropped one puts a fake step into the trend. The area data is used here only to size a transfer
+  that a source already confirms, never to decide whether a transfer happened.
+- Parents come from notifications, official district sites, RBI lead-bank circulars or
+  named press reports. None are inferred from the data. `source_grade` says which kind.
+
+## Trend window
+
+The trend window is 2014-15 to 2023-24. 2013-14 stays in the fact table, flagged, but
+does not feed trend measures. It would add one year at the cost of a known hole: the
+Chhattisgarh gap, plus four boundary events that fall between 2013-14 and 2014-15
+(Gujarat's seven new districts, Palghar, Alipurduar, and the Khammam transfer).
+2024-25 is incomplete (five states missing), which is why 2023-24 is the latest
+complete year.
+
+## Open items (`needs_check = 'Y'`)
 
 Reviewed 23 Sep 2026. Cleared with a citation:
 
