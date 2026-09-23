@@ -1,7 +1,7 @@
 # agri-drone-target-districts
 
 > Work in progress. The finding will lead this page once the analysis stage is
-> built. So far the pipeline goes as far as staging.
+> built. So far the pipeline goes as far as staging and district lineage.
 
 Which Indian districts should a one-drone, one-pilot spraying operator serve?
 This repo answers that with SQL over public district crop statistics. Sown area
@@ -49,8 +49,14 @@ make load DB_BACKEND=duckdb
 | 01 | `python/01_download.py` | `data/raw/*.csv` | `data/raw/MANIFEST.json` (checksums, sizes, row counts; fails if files changed) |
 | 02 | `python/02_load.py`, `sql/01_load_raw.sql` | `data/raw/*.csv` | `raw.crop_production_import`, all text, unaltered |
 | 03 | `python/03_stage.py`, `sql/02_stage.sql` | `raw.crop_production_import`, `seeds/*.csv` | `staging.stg_crop_production` (long format, one row per state x district x crop x season x year), plus `staging.chk_season_total` / `staging.chk_crop_group` / `staging.rej_empty_year` for the rows taken out |
+| 04 | `python/04_district_lineage.py`, `sql/03_district_lineage.sql` | `staging.stg_crop_production`, `seeds/district_lineage.csv` | `staging.district_alias` (one row per state x district, with a stable `unit_key` for districts joined by a split) - see `docs/district_alias_notes.md` for why a district-name series isn't safe to trend on its own |
 
 `make stage` runs `make load` first, then `python/03_stage.py`.
+`make alias` runs `make stage` first, then `python/04_district_lineage.py`.
+`make demo` runs `make alias` first, then `python/run_split_artefact_demo.py`, which
+writes `output/split_artefact_demo.txt` - before/after evidence that a stable
+unit removes the fake year-on-year collapse a raw district name shows at a
+split.
 
 ## Licence
 
