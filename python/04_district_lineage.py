@@ -39,8 +39,11 @@ ALIAS_TABLE = "staging.district_alias"
 # Independently verified (docs/district_alias_notes.md and a pure-Python
 # union-find over the seed CSV, done before this script was written).
 # Informational only: the real gates are the checks below, not this number.
-EXPECTED_TOTAL_UNITS = 627
-EXPECTED_UNITS_BY_STATE = {"Telangana": 4, "Andhra Pradesh": 5}
+# 627 -> 629 and Tamil Nadu 30 -> 32 after the 2026-09-23 materiality review
+# set Chennai's two edges to cluster_edge = 'N' (immaterial: at most ~0.2% of
+# either parent's area). See docs/district_alias_notes.md, Edge rules.
+EXPECTED_TOTAL_UNITS = 629
+EXPECTED_UNITS_BY_STATE = {"Telangana": 4, "Andhra Pradesh": 5, "Tamil Nadu": 32}
 # -----------------------------------------------------------------------------
 
 
