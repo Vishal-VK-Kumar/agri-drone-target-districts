@@ -1,0 +1,17 @@
+# Analysis assumptions for later stages (marts, not yet built). Nothing
+# downstream should hardcode a year - read trend_start_year and
+# latest_complete_year from here. Each has a one-line reason; the full
+# argument is docs/district_alias_notes.md, "Trend window" section.
+
+trend_start_year: "2014-15"
+trend_start_year_reason: >
+  2013-14 stays in the fact table, flagged, but is excluded from trend
+  measures: it carries the nine-district Chhattisgarh coverage gap, plus four
+  boundary events that land between 2013-14 and 2014-15 (Gujarat's seven new
+  districts, Palghar, Alipurduar, the Khammam-to-Godavari transfer). See
+  docs/district_alias_notes.md, "Trend window".
+
+latest_complete_year: "2023-24"
+latest_complete_year_reason: >
+  2024-25 is missing reports from five states, so 2023-24 is the newest year
+  with full state coverage. See docs/district_alias_notes.md, "Trend window".
