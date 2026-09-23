@@ -1,7 +1,7 @@
-# Analysis assumptions for later stages (marts, not yet built). Nothing
-# downstream should hardcode a year - read trend_start_year and
-# latest_complete_year from here. Each has a one-line reason; the full
-# argument is docs/district_alias_notes.md, "Trend window" section.
+# Analysis assumptions read by the marts stage. Nothing downstream should
+# hardcode a year or a unit conversion - the marts read every value here from
+# staging.assumptions (loaded from seeds/assumptions.csv, which must be kept
+# in sync with this file), not from a literal in a query.
 
 trend_start_year: "2014-15"
 trend_start_year_reason: >
@@ -15,3 +15,18 @@ latest_complete_year: "2023-24"
 latest_complete_year_reason: >
   2024-25 is missing reports from five states, so 2023-24 is the newest year
   with full state coverage. See docs/district_alias_notes.md, "Trend window".
+
+nutrient_passes_per_crop_season: 2
+nutrient_passes_per_crop_season_source: >
+  IFFCO nano urea application guide, https://nanourea.in/en/application;
+  scheme coverage for liquid fertilisers and pesticides via Lead Fertiliser
+  Companies: PIB press release, PRID 2070029, 1 Nov 2024.
+nutrient_passes_per_crop_season_reason: >
+  A manufacturer's recommendation, uniform across crops ("can be increased or
+  decreased depending upon crop"), kept separate from plant-protection passes
+  so the dashboard can switch nutrient passes off. See
+  docs/spray_passes_notes.md, "Two kinds of pass, kept separate".
+
+hectare_to_acre: 2.471
+hectare_to_acre_source: >
+  Standard unit conversion (1 hectare = 2.47105 acres, rounded to 3 dp).

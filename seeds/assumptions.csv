@@ -1,0 +1,5 @@
+key,value,source
+trend_start_year,2014-15,"See config/assumptions.yml and docs/district_alias_notes.md, Trend window"
+latest_complete_year,2023-24,"See config/assumptions.yml and docs/district_alias_notes.md, Trend window"
+nutrient_passes_per_crop_season,2,"IFFCO nano urea application guide, https://nanourea.in/en/application; scheme coverage: PIB press release PRID 2070029, 1 Nov 2024"
+hectare_to_acre,2.471,"Standard unit conversion (1 ha = 2.47105 acres, rounded to 3 dp)"

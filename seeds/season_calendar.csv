@@ -1,0 +1,4 @@
+season,start_month,end_month,source_title,source_url,source_grade,note
+Kharif,7,10,"Indian Economic Service, Arthapedia, 'Cropping seasons of India - Kharif & Rabi'",https://ies.gov.in/arthapedia/concept/cropping-seasons-india-kharif-rabi,A,'July-October during the south-west monsoon'. Agricultural year is July to June.
+Rabi,10,3,"Indian Economic Service, Arthapedia, 'Cropping seasons of India - Kharif & Rabi'",https://ies.gov.in/arthapedia/concept/cropping-seasons-india-kharif-rabi,A,'October-March (winter)'. Wraps the calendar year: end_month < start_month.
+Summer,3,6,"Indian Economic Service, Arthapedia, 'Cropping seasons of India - Kharif & Rabi'",https://ies.gov.in/arthapedia/concept/cropping-seasons-india-kharif-rabi,A,'The crops grown between March and June are summer crops.' Overlaps Rabi in March.
