@@ -24,7 +24,7 @@ So every row carries a low, base and high value, a basis (`observed_survey` or
 
 | Grade | Meaning |
 |---|---|
-| A | National or multi-state observed data. **No row reaches this.** |
+| A | National or multi-state observed data. Rice, since 24 Sep 2026 (CSISA survey). |
 | B | A survey of 100+ farmers, or an explicit count in an official ICAR / DPPQ&S schedule |
 | C | A survey under 100 farmers, a partial figure, or a count that needed judgement |
 
@@ -48,17 +48,38 @@ conservative case.
 
 ## Row by row, the ones that move the answer
 
-**Rice (C, needs check).** 4.32 sprays per farmer per season in Palnadu, rabi 2020-21,
-41 farmers. A second Andhra survey (60 farmers, three southern districts, 2016-18) reports
-weekly spraying, which says Andhra is a high-use state rather than that 4 is typical.
-PAU's Kharif 2026 package for Punjab has one routine foliar spray (the post-emergence
-herbicide); insecticide and fungicide sprays are triggered by thresholds or symptoms, usually
-as a pair 15 days apart. So the range is 1 to 5, and the base of 4 sits near the top of it.
-Rice is 26% of modelled area, so this single row moves the ranking more than any other.
-Reviewed 23 Sep 2026: low lowered from 2 to 1 on the PAU schedule; base kept at 4 because it
-is the only observed figure. The one source that could settle it is the CSISA 2018 rice
-survey (8,355 farmers, eight states, open data on the CIMMYT Dataverse), if it records how
-many times each plot was sprayed. Not yet checked.
+**Rice (A). Re-based 24 Sep 2026 on the CSISA 2018 survey, with state-level figures.** The
+CSISA Landscape Diagnostic Survey covers 8,355 farmers' largest rice plot in kharif 2018 across
+eight states (Andhra Pradesh, Bihar, Chhattisgarh, Haryana, Odisha, Punjab, Uttar Pradesh, West
+Bengal), which hold 65% of India's rice area. It counts herbicide applications and records
+insecticide and fungicide use as yes or no. One rule turns that into passes, per plot:
+
+| Value | Rule | Why |
+|---|---|---|
+| Low | herbicide count + 1 per yes | the observed floor |
+| Base | herbicide count + 1.5 per yes | between one spray and a pair |
+| High | herbicide count + 2 per yes | PAU's schedule gives fungicide sprays in pairs 15 days apart |
+
+State results (low / base / high): Bihar 0.39 / 0.47 / 0.54, Uttar Pradesh 0.88 / 1.00 / 1.12,
+Odisha 1.34 / 1.84 / 2.35, Haryana 1.58 / 1.96 / 2.35, West Bengal 1.77 / 2.38 / 2.99, Andhra
+Pradesh 2.33 / 3.19 / 4.05, Chhattisgarh 2.58 / 3.37 / 4.15, Punjab 2.98 / 3.96 / 4.95. These are
+in `seeds/crop_state_spray_passes.csv` and override the national row for rice in those states.
+
+Two cross-checks agree with the rule. Andhra Pradesh's high (4.05) sits next to the Palnadu
+survey's 4.32. Punjab's base (3.96) is what PAU's schedule gives when the herbicide, one
+insecticide and a fungicide pair are all applied.
+
+**Why state level.** The spread between states is bigger than the spread between most crops. A
+single national figure would rank Bihar and Uttar Pradesh rice districts too high and Punjab and
+Andhra Pradesh too low, and the finding is a district ranking.
+
+**National row** (the other 35% of rice area): low 1.66 and base 2.17 are the state figures
+weighted by 2018-19 rice area. High stays at 4 from the Palnadu survey, because the unsurveyed
+states include heavy-spraying southern rice states (Telangana, Tamil Nadu, Karnataka).
+
+The survey is kharif 2018 only; its state figures are applied to every rice season in that
+state. The dataset carries no licence, so only these derived figures are used; the data is not
+redistributed or committed.
 
 **Cotton (B).** Modal answer in the Alwar survey is three applications (52%), two for
 41%. The Karnataka Bt cotton study (Sagar et al. 2013) gives 1 to 3 in most
@@ -111,8 +132,22 @@ agricultural year July to June. Rabi wraps the calendar year. The spray window i
 days, which is what caps a single drone's capacity, is an M4 question and is not
 set here.
 
+**The source relabels seasons, mostly in 2023-24 (found 24 Sep 2026).** Eastern winter rice,
+sown in the monsoon and harvested around November, is labelled Rabi up to 2022-23 and Kharif
+from 2023-24: Bihar, Odisha, West Bengal, Assam, Tripura, Manipur and Meghalaya, about 10 million
+ha. Across all crops, 27 state-crop-years move more than half of a crop's area from one season
+label to another; Jharkhand rice flips back and forth. District totals are unaffected. Season-level
+trends are not: each relabel looks like a collapse in one season and a jump in another.
+
+**Rule for M4 (agreed 24 Sep 2026):** year-on-year and moving-average measures run on all-season
+totals only. Season is used only within the 2023-24 ranking year, where the labels match the
+agronomy.
+
 ## What an interviewer will ask
 
-"Where does four sprays of rice come from?" One Andhra Pradesh survey of 41 farmers,
-graded C, and the dashboard shows what happens to the ranking at two. That is the
-honest answer and it is on the assumptions page.
+"Where do the rice spray numbers come from?" A survey of 8,355 farmers in eight states,
+with one stated rule for turning yes/no answers into sprays, applied state by state: from
+under one a season in Bihar to about four in Punjab. The dashboard shows the ranking at the
+low and high ends of that rule. The first version used four from a single district,
+and checking it against the larger survey is why it changed. That is the honest answer and
+it is on the assumptions page.
