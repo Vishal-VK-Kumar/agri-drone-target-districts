@@ -7,7 +7,7 @@ PY     := $(VENV)/bin/python
 -include .env
 export
 
-.PHONY: up down manifest load stage analyse
+.PHONY: up down manifest load stage alias analyse
 
 .env:
 	cp .env.example .env
@@ -32,6 +32,9 @@ load: manifest
 
 stage: load
 	$(PY) python/03_stage.py
+
+alias: stage
+	$(PY) python/04_district_lineage.py
 
 analyse:
 	@echo "analyse: marts and analysis stages are not built yet" >&2
