@@ -13,7 +13,8 @@
 --             member. Internal.
 --         staging._unit_label - one row per component, with the ' + '-joined
 --             list of members that are not a split/split_and_rename child
---             (i.e. the unit's pre-split identities). Internal.
+--             (i.e. the unit's pre-split identities), or all of the unit's
+--             own members if that list would otherwise be empty. Internal.
 --         staging.chk_unit_label_missing - units with a NULL or empty label;
 --             python fails the run if this is non-empty.
 --         staging.district_alias - the stage output: one row per staging
@@ -132,16 +133,26 @@ GROUP BY state_name, node;
 -- parent_transfer/cross_state_transfer children are kept: those describe a
 -- boundary change to a district that already existed (Mahabubnagar, East
 -- Godavari, Sri Potti Sriramulu Nellore), never that district's origin.
+--
+-- Fallback: a unit can end up with NO pre-split member at all - Chennai is a
+-- split child of both Thiruvallur and Kancheepuram, but both edges are
+-- cluster_edge = 'N' (2026-09-23 materiality review: the transfer is real
+-- but immaterial, see Edge rules), so Chennai clusters with nobody and is
+-- its own unit, wholly made of a name the primary rule excludes. Rather than
+-- leave such a unit unlabelled, fall back to all of its members' own names.
 DROP TABLE IF EXISTS staging._unit_label;
 CREATE TABLE staging._unit_label AS
 SELECT
     dc.state_name,
     dc.unit_seed,
-    string_agg(dc.district_name, ' + ' ORDER BY dc.district_name) FILTER (
-        WHERE NOT EXISTS (
-            SELECT 1 FROM staging.district_lineage dl
-            WHERE dl.state = dc.state_name AND dl.child_district = dc.district_name
-              AND dl.event IN ('split', 'split_and_rename'))
+    COALESCE(
+        string_agg(dc.district_name, ' + ' ORDER BY dc.district_name) FILTER (
+            WHERE NOT EXISTS (
+                SELECT 1 FROM staging.district_lineage dl
+                WHERE dl.state = dc.state_name AND dl.child_district = dc.district_name
+                  AND dl.event IN ('split', 'split_and_rename'))
+        ),
+        string_agg(dc.district_name, ' + ' ORDER BY dc.district_name)
     ) AS unit_label
 FROM staging._district_component dc
 GROUP BY dc.state_name, dc.unit_seed;
