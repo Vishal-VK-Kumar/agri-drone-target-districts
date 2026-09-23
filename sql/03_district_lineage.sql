@@ -12,7 +12,10 @@
 --             labelled with its connected component's alphabetically first
 --             member. Internal.
 --         staging._unit_label - one row per component, with the ' + '-joined
---             list of members that report in 2013-14. Internal.
+--             list of members that are not a split/split_and_rename child
+--             (i.e. the unit's pre-split identities). Internal.
+--         staging.chk_unit_label_missing - units with a NULL or empty label;
+--             python fails the run if this is non-empty.
 --         staging.district_alias - the stage output: one row per staging
 --             (state, district), with district_key, unit_key, unit_label,
 --             first_year, last_year, lineage_event, is_coverage_gap.
@@ -120,22 +123,37 @@ FROM propagate
 GROUP BY state_name, node;
 
 -- unit_key is deterministic: state + the alphabetically first member
--- (unit_seed). unit_label lists only the members that report in 2013-14,
--- the series' first year, so the label reflects what a reader sees on day
--- one rather than a member that only exists after a later split.
+-- (unit_seed). unit_label lists the members that are NOT a split/split_and_-
+-- rename child - i.e. the pre-split identities the unit is made of - rather
+-- than members reporting in 2013-14: a coverage-gap district (Raigarh) can
+-- be absent from 2013-14 yet still be an original district, and a unit can
+-- join through a fragment (Sarangarh-Bilaigarh) that itself IS a split
+-- child, which must not stand in for the original it was split from.
+-- parent_transfer/cross_state_transfer children are kept: those describe a
+-- boundary change to a district that already existed (Mahabubnagar, East
+-- Godavari, Sri Potti Sriramulu Nellore), never that district's origin.
 DROP TABLE IF EXISTS staging._unit_label;
 CREATE TABLE staging._unit_label AS
 SELECT
     dc.state_name,
     dc.unit_seed,
     string_agg(dc.district_name, ' + ' ORDER BY dc.district_name) FILTER (
-        WHERE EXISTS (
-            SELECT 1 FROM staging.stg_crop_production sp
-            WHERE sp.state_name = dc.state_name AND sp.district_name = dc.district_name
-              AND sp.year_start = 2013)
+        WHERE NOT EXISTS (
+            SELECT 1 FROM staging.district_lineage dl
+            WHERE dl.state = dc.state_name AND dl.child_district = dc.district_name
+              AND dl.event IN ('split', 'split_and_rename'))
     ) AS unit_label
 FROM staging._district_component dc
 GROUP BY dc.state_name, dc.unit_seed;
+
+-- unit_label must never be NULL or empty: every unit needs at least one
+-- pre-split member, by construction (a chain of splits always bottoms out
+-- at an original district). Empty here means the label rule has a bug.
+DROP TABLE IF EXISTS staging.chk_unit_label_missing;
+CREATE TABLE staging.chk_unit_label_missing AS
+SELECT state_name, unit_seed
+FROM staging._unit_label
+WHERE unit_label IS NULL OR unit_label = '';
 
 DROP TABLE IF EXISTS staging.district_alias;
 CREATE TABLE staging.district_alias AS

@@ -8,12 +8,13 @@ What:   Loads seeds/district_lineage.csv (one row per child-parent district
         or through a chain, is one unit; a district with no edges is its own
         unit), and writes staging.district_alias: one row per staging (state,
         district) with district_key, unit_key, unit_label, first_year,
-        last_year, lineage_event and is_coverage_gap. Runs five checks: every
-        lineage child/parent name exists in staging; every staging district
-        appears in district_alias exactly once; every district first seen
-        after 2013-14 has an origin lineage row; and the area total per
-        state-year is identical summed by district or by unit. See
-        sql/03_district_lineage.sql's header for the full table list.
+        last_year, lineage_event and is_coverage_gap. Checks: every lineage
+        child/parent name exists in staging; every staging district appears
+        in district_alias exactly once; every district first seen after
+        2013-14 has an origin lineage row; every unit_label is non-NULL and
+        non-empty; and the area total per state-year is identical summed by
+        district or by unit. See sql/03_district_lineage.sql's header for
+        the full table list.
 Reads:  staging.stg_crop_production, sql/03_district_lineage.sql,
         seeds/district_lineage.csv
 Writes: staging.* (see sql/03_district_lineage.sql)
@@ -138,6 +139,14 @@ def main() -> None:
         fail_build(f"{len(unexplained_new)} district(s) first appear after 2013-14 with no "
                    "split/split_and_rename/coverage_gap lineage row: "
                    + ", ".join(f"{s}/{d} (first {y})" for s, d, y in unexplained_new))
+
+    # ---- every unit_label must be non-NULL and non-empty ----
+    cur.execute("SELECT state_name, unit_seed FROM staging.chk_unit_label_missing "
+                "ORDER BY state_name, unit_seed")
+    missing_label = cur.fetchall()
+    if missing_label:
+        fail_build(f"{len(missing_label)} unit(s) have a NULL or empty unit_label: "
+                   + ", ".join(f"{s}/{u}" for s, u in missing_label))
 
     # ---- area total by district must equal area total by unit ----
     cur.execute("SELECT state_name, year_label, by_district_ha, by_unit_ha, diff_ha "
