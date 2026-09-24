@@ -365,9 +365,9 @@ agg AS (
         season_key,
         sum(area_acres) AS total_acres,
         COALESCE(sum(area_acres) FILTER (WHERE in_scope), 0) AS in_scope_acres,
-        -- unsourced is a crop-level fact (Moong has no national pass count
-        -- anywhere), unaffected by a state override that always fills in a
-        -- number where it applies
+        -- unsourced is a crop-level fact (true whenever an in-scope crop has
+        -- no national pass count anywhere), unaffected by a state override
+        -- that always fills in a number where it applies
         COALESCE(sum(area_acres) FILTER (WHERE in_scope AND national_base IS NULL), 0) AS unsourced_acres,
         COALESCE(sum(area_acres) FILTER (WHERE NOT in_scope), 0) AS not_modelled_acres,
         COALESCE(sum(area_acres * eff_low)  FILTER (WHERE eff_low  IS NOT NULL), 0) AS pp_spray_acres_low,

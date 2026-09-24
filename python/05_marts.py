@@ -16,7 +16,9 @@ Checks: every staging crop is in the national seed and vice versa; low <=
         base <= high (both seeds); a pass count is null only when basis is
         unsourced or not_modelled; an in-scope row has a source unless
         unsourced; a state-override (state, crop) pair exists in staging and
-        is in scope nationally; fact row count and area match staging
+        is in scope nationally; the state-override load fails cleanly (not a
+        raw traceback) if a pass value or source_url is null - both are
+        NOT NULL columns; fact row count and area match staging
         exactly; the fact grain is unique and every foreign key resolves; no
         negative area (zero-area rows are printed, not failed); the view's
         total/in-scope/not-modelled acres agree and its total matches the
@@ -128,7 +130,12 @@ def main() -> None:
     # ---- seed tables: DDL, then load, before the transform can join on them
     cur.execute(seed_ddl)
     for table, path in SEED_PATHS.items():
-        copy_csv(cur, path, table)
+        try:
+            copy_csv(cur, path, table)
+        except Exception as exc:
+            fail_build(f"{path.relative_to(REPO_ROOT)} failed to load into {table} "
+                       f"(a NOT NULL column - e.g. a pass value or source_url in the "
+                       f"state-override seed - is empty): {exc}")
 
     # ---- transform: validate the seed, build the marts, run the checks
     try:
