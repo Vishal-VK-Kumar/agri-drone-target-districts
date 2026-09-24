@@ -1,0 +1,9 @@
+state,crop_key,pp_passes_low,pp_passes_base,pp_passes_high,n_farmers,source_grade
+Andhra Pradesh,Rice,2.33,3.19,4.05,1292,A
+Bihar,Rice,0.39,0.47,0.54,2428,A
+Chhattisgarh,Rice,2.58,3.37,4.15,504,A
+Haryana,Rice,1.58,1.96,2.35,417,A
+Odisha,Rice,1.34,1.84,2.35,784,A
+Punjab,Rice,2.98,3.96,4.95,388,A
+Uttar Pradesh,Rice,0.88,1.0,1.12,964,A
+West Bengal,Rice,1.77,2.38,2.99,1536,A

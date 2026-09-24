@@ -1,0 +1,31 @@
+crop_key,crop,in_scope,pp_passes_low,pp_passes_base,pp_passes_high,basis,source_grade,needs_check
+Bajra,Bajra,True,0.0,0.66,2.0,observed_survey,B,False
+Barley,Barley,False,,,,not_modelled,,False
+Castorseed,Castorseed,False,,,,not_modelled,,False
+Cotton,Cotton,True,2.0,2.4,5.0,observed_survey,B,False
+Gram,Gram,True,1.0,2.0,3.0,recommended_schedule,B,True
+Groundnut,Groundnut,True,1.0,2.0,4.0,recommended_schedule,B,False
+Guarseed,Guarseed,False,,,,not_modelled,,False
+Jowar,Jowar,False,,,,not_modelled,,False
+Jute,Jute,False,,,,not_modelled,,False
+Lentil,Lentil,False,,,,not_modelled,,False
+Linseed,Linseed,False,,,,not_modelled,,False
+Maize,Maize,True,1.0,2.0,3.0,recommended_schedule,B,True
+Mesta,Mesta,False,,,,not_modelled,,False
+Moong,Moong,True,1.0,2.0,4.0,recommended_schedule,C,True
+Nigerseed,Nigerseed,False,,,,not_modelled,,False
+Other Pulses,Other Pulses,False,,,,not_modelled,,False
+Ragi,Ragi,False,,,,not_modelled,,False
+Rapeseed & Mustard,Rapeseed & Mustard,True,0.13,0.13,2.0,observed_survey,B,False
+Rice,Rice,True,1.66,2.17,4.0,observed_survey,A,False
+Safflower,Safflower,False,,,,not_modelled,,False
+Sannhemp,Sannhemp,False,,,,not_modelled,,False
+Sesamum,Sesamum,False,,,,not_modelled,,False
+Small Millets,Small Millets,False,,,,not_modelled,,False
+Soybean,Soybean,True,2.0,3.0,5.0,recommended_schedule,B,False
+Sugarcane,Sugarcane,True,1.0,1.0,3.0,recommended_schedule,C,False
+Sunflower,Sunflower,False,,,,not_modelled,,False
+Tobacco,Tobacco,False,,,,not_modelled,,False
+Tur,Tur,False,,,,not_modelled,,False
+Urad,Urad,False,,,,not_modelled,,False
+Wheat,Wheat,True,0.97,0.97,2.0,observed_survey,B,False

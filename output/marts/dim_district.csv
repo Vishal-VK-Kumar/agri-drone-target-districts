@@ -1,0 +1,753 @@
+district_key,state,district_name,unit_key,unit_label,first_year,last_year,is_coverage_gap
+Andaman And Nicobar Islands:Nicobars,Andaman And Nicobar Islands,Nicobars,Andaman And Nicobar Islands:Nicobars,Nicobars,2013,2024,False
+Andaman And Nicobar Islands:North And Middle Andaman,Andaman And Nicobar Islands,North And Middle Andaman,Andaman And Nicobar Islands:North And Middle Andaman,North And Middle Andaman,2013,2024,False
+Andaman And Nicobar Islands:South Andamans,Andaman And Nicobar Islands,South Andamans,Andaman And Nicobar Islands:South Andamans,South Andamans,2013,2024,False
+Andhra Pradesh:Alluri Sitharama Raju,Andhra Pradesh,Alluri Sitharama Raju,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2022,2024,False
+Andhra Pradesh:Anakapalli,Andhra Pradesh,Anakapalli,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2022,2024,False
+Andhra Pradesh:Ananthapuramu,Andhra Pradesh,Ananthapuramu,Andhra Pradesh:Ananthapuramu,Ananthapuramu,2013,2024,False
+Andhra Pradesh:Annamayya,Andhra Pradesh,Annamayya,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2022,2024,False
+Andhra Pradesh:Bapatla,Andhra Pradesh,Bapatla,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2022,2024,False
+Andhra Pradesh:Chittoor,Andhra Pradesh,Chittoor,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2013,2024,False
+Andhra Pradesh:Dr. B.R. Ambedkar Konaseema,Andhra Pradesh,Dr. B.R. Ambedkar Konaseema,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2022,2024,False
+Andhra Pradesh:East Godavari,Andhra Pradesh,East Godavari,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2013,2024,False
+Andhra Pradesh:Eluru,Andhra Pradesh,Eluru,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2022,2024,False
+Andhra Pradesh:Guntur,Andhra Pradesh,Guntur,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2013,2024,False
+Andhra Pradesh:Kakinada,Andhra Pradesh,Kakinada,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2022,2024,False
+Andhra Pradesh:Krishna,Andhra Pradesh,Krishna,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2013,2024,False
+Andhra Pradesh:Kurnool,Andhra Pradesh,Kurnool,Andhra Pradesh:Kurnool,Kurnool,2013,2024,False
+Andhra Pradesh:Nandyal,Andhra Pradesh,Nandyal,Andhra Pradesh:Kurnool,Kurnool,2022,2024,False
+Andhra Pradesh:Ntr,Andhra Pradesh,Ntr,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2022,2024,False
+Andhra Pradesh:Palnadu,Andhra Pradesh,Palnadu,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2022,2024,False
+Andhra Pradesh:Parvathipuram Manyam,Andhra Pradesh,Parvathipuram Manyam,Andhra Pradesh:Parvathipuram Manyam,Srikakulam + Vizianagaram,2022,2024,False
+Andhra Pradesh:Prakasam,Andhra Pradesh,Prakasam,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2013,2024,False
+Andhra Pradesh:Srikakulam,Andhra Pradesh,Srikakulam,Andhra Pradesh:Parvathipuram Manyam,Srikakulam + Vizianagaram,2013,2024,False
+Andhra Pradesh:Sri Potti Sriramulu Nellore,Andhra Pradesh,Sri Potti Sriramulu Nellore,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2013,2024,False
+Andhra Pradesh:Sri Sathya Sai,Andhra Pradesh,Sri Sathya Sai,Andhra Pradesh:Ananthapuramu,Ananthapuramu,2022,2024,False
+Andhra Pradesh:Tirupati,Andhra Pradesh,Tirupati,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2022,2024,False
+Andhra Pradesh:Visakhapatnam,Andhra Pradesh,Visakhapatnam,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2013,2024,False
+Andhra Pradesh:Vizianagaram,Andhra Pradesh,Vizianagaram,Andhra Pradesh:Parvathipuram Manyam,Srikakulam + Vizianagaram,2013,2024,False
+Andhra Pradesh:West Godavari,Andhra Pradesh,West Godavari,Andhra Pradesh:Alluri Sitharama Raju,East Godavari + Krishna + Visakhapatnam + West Godavari,2013,2024,False
+Andhra Pradesh:Y.S.R. Kadapa,Andhra Pradesh,Y.S.R. Kadapa,Andhra Pradesh:Annamayya,Chittoor + Guntur + Prakasam + Sri Potti Sriramulu Nellore + Y.S.R. Kadapa,2013,2024,False
+Arunachal Pradesh:Anjaw,Arunachal Pradesh,Anjaw,Arunachal Pradesh:Anjaw,Anjaw,2013,2024,False
+Arunachal Pradesh:Changlang,Arunachal Pradesh,Changlang,Arunachal Pradesh:Changlang,Changlang,2013,2024,False
+Arunachal Pradesh:Dibang Valley,Arunachal Pradesh,Dibang Valley,Arunachal Pradesh:Dibang Valley,Dibang Valley,2013,2024,False
+Arunachal Pradesh:East Kameng,Arunachal Pradesh,East Kameng,Arunachal Pradesh:East Kameng,East Kameng,2013,2024,False
+Arunachal Pradesh:East Siang,Arunachal Pradesh,East Siang,Arunachal Pradesh:East Siang,East Siang + West Siang,2013,2024,False
+Arunachal Pradesh:Kamle,Arunachal Pradesh,Kamle,Arunachal Pradesh:Kamle,Lower Subansiri + Upper Subansiri,2018,2024,False
+Arunachal Pradesh:Kra Daadi,Arunachal Pradesh,Kra Daadi,Arunachal Pradesh:Kra Daadi,Kurung Kumey,2015,2024,False
+Arunachal Pradesh:Kurung Kumey,Arunachal Pradesh,Kurung Kumey,Arunachal Pradesh:Kra Daadi,Kurung Kumey,2013,2024,False
+Arunachal Pradesh:Leparada,Arunachal Pradesh,Leparada,Arunachal Pradesh:East Siang,East Siang + West Siang,2019,2024,False
+Arunachal Pradesh:Lohit,Arunachal Pradesh,Lohit,Arunachal Pradesh:Lohit,Lohit,2013,2024,False
+Arunachal Pradesh:Longding,Arunachal Pradesh,Longding,Arunachal Pradesh:Longding,Longding,2013,2024,False
+Arunachal Pradesh:Lower Dibang Valley,Arunachal Pradesh,Lower Dibang Valley,Arunachal Pradesh:Lower Dibang Valley,Lower Dibang Valley,2013,2024,False
+Arunachal Pradesh:Lower Siang,Arunachal Pradesh,Lower Siang,Arunachal Pradesh:East Siang,East Siang + West Siang,2018,2024,False
+Arunachal Pradesh:Lower Subansiri,Arunachal Pradesh,Lower Subansiri,Arunachal Pradesh:Kamle,Lower Subansiri + Upper Subansiri,2013,2024,False
+Arunachal Pradesh:Namsai,Arunachal Pradesh,Namsai,Arunachal Pradesh:Lohit,Lohit,2015,2024,False
+Arunachal Pradesh:Pakke Kessang,Arunachal Pradesh,Pakke Kessang,Arunachal Pradesh:East Kameng,East Kameng,2019,2024,False
+Arunachal Pradesh:Papum Pare,Arunachal Pradesh,Papum Pare,Arunachal Pradesh:Papum Pare,Papum Pare,2013,2024,False
+Arunachal Pradesh:Shi Yomi,Arunachal Pradesh,Shi Yomi,Arunachal Pradesh:East Siang,East Siang + West Siang,2019,2024,False
+Arunachal Pradesh:Siang,Arunachal Pradesh,Siang,Arunachal Pradesh:East Siang,East Siang + West Siang,2015,2024,False
+Arunachal Pradesh:Tawang,Arunachal Pradesh,Tawang,Arunachal Pradesh:Tawang,Tawang,2013,2024,False
+Arunachal Pradesh:Tirap,Arunachal Pradesh,Tirap,Arunachal Pradesh:Tirap,Tirap,2013,2024,False
+Arunachal Pradesh:Upper Siang,Arunachal Pradesh,Upper Siang,Arunachal Pradesh:Upper Siang,Upper Siang,2013,2024,False
+Arunachal Pradesh:Upper Subansiri,Arunachal Pradesh,Upper Subansiri,Arunachal Pradesh:Kamle,Lower Subansiri + Upper Subansiri,2013,2024,False
+Arunachal Pradesh:West Kameng,Arunachal Pradesh,West Kameng,Arunachal Pradesh:West Kameng,West Kameng,2013,2024,False
+Arunachal Pradesh:West Siang,Arunachal Pradesh,West Siang,Arunachal Pradesh:East Siang,East Siang + West Siang,2013,2024,False
+Assam:Baksa,Assam,Baksa,Assam:Baksa,Baksa,2013,2024,False
+Assam:Barpeta,Assam,Barpeta,Assam:Barpeta,Barpeta,2013,2024,False
+Assam:Biswanath,Assam,Biswanath,Assam:Biswanath,Sonitpur,2020,2024,False
+Assam:Bongaigaon,Assam,Bongaigaon,Assam:Bongaigaon,Bongaigaon,2013,2024,False
+Assam:Cachar,Assam,Cachar,Assam:Cachar,Cachar,2013,2024,False
+Assam:Charaideo,Assam,Charaideo,Assam:Charaideo,Sivasagar,2020,2024,False
+Assam:Chirang,Assam,Chirang,Assam:Chirang,Chirang,2013,2024,False
+Assam:Darrang,Assam,Darrang,Assam:Darrang,Darrang,2013,2024,False
+Assam:Dhemaji,Assam,Dhemaji,Assam:Dhemaji,Dhemaji,2013,2024,False
+Assam:Dhubri,Assam,Dhubri,Assam:Dhubri,Dhubri,2013,2024,False
+Assam:Dibrugarh,Assam,Dibrugarh,Assam:Dibrugarh,Dibrugarh,2013,2024,False
+Assam:Dima Hasao,Assam,Dima Hasao,Assam:Dima Hasao,Dima Hasao,2013,2024,False
+Assam:Goalpara,Assam,Goalpara,Assam:Goalpara,Goalpara,2013,2024,False
+Assam:Golaghat,Assam,Golaghat,Assam:Golaghat,Golaghat,2013,2024,False
+Assam:Hailakandi,Assam,Hailakandi,Assam:Hailakandi,Hailakandi,2013,2024,False
+Assam:Hojai,Assam,Hojai,Assam:Hojai,Nagaon,2020,2024,False
+Assam:Jorhat,Assam,Jorhat,Assam:Jorhat,Jorhat,2013,2024,False
+Assam:Kamrup,Assam,Kamrup,Assam:Kamrup,Kamrup,2013,2024,False
+Assam:Kamrup Metro,Assam,Kamrup Metro,Assam:Kamrup Metro,Kamrup Metro,2013,2024,False
+Assam:Karbi Anglong,Assam,Karbi Anglong,Assam:Karbi Anglong,Karbi Anglong,2013,2024,False
+Assam:Kokrajhar,Assam,Kokrajhar,Assam:Kokrajhar,Kokrajhar,2013,2024,False
+Assam:Lakhimpur,Assam,Lakhimpur,Assam:Lakhimpur,Lakhimpur,2013,2024,False
+Assam:Majuli,Assam,Majuli,Assam:Jorhat,Jorhat,2020,2024,False
+Assam:Marigaon,Assam,Marigaon,Assam:Marigaon,Marigaon,2013,2024,False
+Assam:Nagaon,Assam,Nagaon,Assam:Hojai,Nagaon,2013,2024,False
+Assam:Nalbari,Assam,Nalbari,Assam:Nalbari,Nalbari,2013,2024,False
+Assam:Sivasagar,Assam,Sivasagar,Assam:Charaideo,Sivasagar,2013,2024,False
+Assam:Sonitpur,Assam,Sonitpur,Assam:Biswanath,Sonitpur,2013,2024,False
+Assam:South Salmara Mancachar,Assam,South Salmara Mancachar,Assam:Dhubri,Dhubri,2020,2024,False
+Assam:Sribhumi,Assam,Sribhumi,Assam:Sribhumi,Sribhumi,2013,2024,False
+Assam:Tinsukia,Assam,Tinsukia,Assam:Tinsukia,Tinsukia,2013,2024,False
+Assam:Udalguri,Assam,Udalguri,Assam:Udalguri,Udalguri,2013,2024,False
+Assam:West Karbi Anglong,Assam,West Karbi Anglong,Assam:Karbi Anglong,Karbi Anglong,2020,2024,False
+Bihar:Araria,Bihar,Araria,Bihar:Araria,Araria,2013,2024,False
+Bihar:Arwal,Bihar,Arwal,Bihar:Arwal,Arwal,2013,2024,False
+Bihar:Aurangabad,Bihar,Aurangabad,Bihar:Aurangabad,Aurangabad,2013,2024,False
+Bihar:Banka,Bihar,Banka,Bihar:Banka,Banka,2013,2024,False
+Bihar:Begusarai,Bihar,Begusarai,Bihar:Begusarai,Begusarai,2013,2024,False
+Bihar:Bhagalpur,Bihar,Bhagalpur,Bihar:Bhagalpur,Bhagalpur,2013,2024,False
+Bihar:Bhojpur,Bihar,Bhojpur,Bihar:Bhojpur,Bhojpur,2013,2024,False
+Bihar:Buxar,Bihar,Buxar,Bihar:Buxar,Buxar,2013,2024,False
+Bihar:Darbhanga,Bihar,Darbhanga,Bihar:Darbhanga,Darbhanga,2013,2024,False
+Bihar:Gaya,Bihar,Gaya,Bihar:Gaya,Gaya,2013,2024,False
+Bihar:Gopalganj,Bihar,Gopalganj,Bihar:Gopalganj,Gopalganj,2013,2024,False
+Bihar:Jamui,Bihar,Jamui,Bihar:Jamui,Jamui,2013,2024,False
+Bihar:Jehanabad,Bihar,Jehanabad,Bihar:Jehanabad,Jehanabad,2013,2024,False
+Bihar:Kaimur (Bhabua),Bihar,Kaimur (Bhabua),Bihar:Kaimur (Bhabua),Kaimur (Bhabua),2013,2024,False
+Bihar:Katihar,Bihar,Katihar,Bihar:Katihar,Katihar,2013,2024,False
+Bihar:Khagaria,Bihar,Khagaria,Bihar:Khagaria,Khagaria,2013,2024,False
+Bihar:Kishanganj,Bihar,Kishanganj,Bihar:Kishanganj,Kishanganj,2013,2024,False
+Bihar:Lakhisarai,Bihar,Lakhisarai,Bihar:Lakhisarai,Lakhisarai,2013,2024,False
+Bihar:Madhepura,Bihar,Madhepura,Bihar:Madhepura,Madhepura,2013,2024,False
+Bihar:Madhubani,Bihar,Madhubani,Bihar:Madhubani,Madhubani,2013,2024,False
+Bihar:Munger,Bihar,Munger,Bihar:Munger,Munger,2013,2024,False
+Bihar:Muzaffarpur,Bihar,Muzaffarpur,Bihar:Muzaffarpur,Muzaffarpur,2013,2024,False
+Bihar:Nalanda,Bihar,Nalanda,Bihar:Nalanda,Nalanda,2013,2024,False
+Bihar:Nawada,Bihar,Nawada,Bihar:Nawada,Nawada,2013,2024,False
+Bihar:Pashchim Champaran,Bihar,Pashchim Champaran,Bihar:Pashchim Champaran,Pashchim Champaran,2013,2024,False
+Bihar:Patna,Bihar,Patna,Bihar:Patna,Patna,2013,2024,False
+Bihar:Purbi Champaran,Bihar,Purbi Champaran,Bihar:Purbi Champaran,Purbi Champaran,2013,2024,False
+Bihar:Purnia,Bihar,Purnia,Bihar:Purnia,Purnia,2013,2024,False
+Bihar:Rohtas,Bihar,Rohtas,Bihar:Rohtas,Rohtas,2013,2024,False
+Bihar:Saharsa,Bihar,Saharsa,Bihar:Saharsa,Saharsa,2013,2024,False
+Bihar:Samastipur,Bihar,Samastipur,Bihar:Samastipur,Samastipur,2013,2024,False
+Bihar:Saran,Bihar,Saran,Bihar:Saran,Saran,2013,2024,False
+Bihar:Sheikhpura,Bihar,Sheikhpura,Bihar:Sheikhpura,Sheikhpura,2013,2024,False
+Bihar:Sheohar,Bihar,Sheohar,Bihar:Sheohar,Sheohar,2013,2024,False
+Bihar:Sitamarhi,Bihar,Sitamarhi,Bihar:Sitamarhi,Sitamarhi,2013,2024,False
+Bihar:Siwan,Bihar,Siwan,Bihar:Siwan,Siwan,2013,2024,False
+Bihar:Supaul,Bihar,Supaul,Bihar:Supaul,Supaul,2013,2024,False
+Bihar:Vaishali,Bihar,Vaishali,Bihar:Vaishali,Vaishali,2013,2024,False
+Chandigarh:Chandigarh,Chandigarh,Chandigarh,Chandigarh:Chandigarh,Chandigarh,2013,2024,False
+Chhattisgarh:Balod,Chhattisgarh,Balod,Chhattisgarh:Balod,Balod,2013,2023,False
+Chhattisgarh:Balodabazar-Bhatapara,Chhattisgarh,Balodabazar-Bhatapara,Chhattisgarh:Balodabazar-Bhatapara,Balodabazar-Bhatapara + Raigarh,2013,2023,False
+Chhattisgarh:Balrampur-Ramanujganj,Chhattisgarh,Balrampur-Ramanujganj,Chhattisgarh:Balrampur-Ramanujganj,Balrampur-Ramanujganj,2013,2023,False
+Chhattisgarh:Bastar,Chhattisgarh,Bastar,Chhattisgarh:Bastar,Bastar,2013,2023,False
+Chhattisgarh:Bemetara,Chhattisgarh,Bemetara,Chhattisgarh:Bemetara,Bemetara,2013,2023,False
+Chhattisgarh:Bijapur,Chhattisgarh,Bijapur,Chhattisgarh:Bijapur,Bijapur,2013,2023,False
+Chhattisgarh:Bilaspur,Chhattisgarh,Bilaspur,Chhattisgarh:Bilaspur,Bilaspur,2013,2023,False
+Chhattisgarh:Dakshin Bastar Dantewada,Chhattisgarh,Dakshin Bastar Dantewada,Chhattisgarh:Dakshin Bastar Dantewada,Dakshin Bastar Dantewada,2013,2023,False
+Chhattisgarh:Dhamtari,Chhattisgarh,Dhamtari,Chhattisgarh:Dhamtari,Dhamtari,2013,2023,False
+Chhattisgarh:Durg,Chhattisgarh,Durg,Chhattisgarh:Durg,Durg,2013,2023,False
+Chhattisgarh:Gariyaband,Chhattisgarh,Gariyaband,Chhattisgarh:Gariyaband,Gariyaband,2013,2023,False
+Chhattisgarh:Gaurela-Pendra-Marwahi,Chhattisgarh,Gaurela-Pendra-Marwahi,Chhattisgarh:Bilaspur,Bilaspur,2019,2023,False
+Chhattisgarh:Janjgir-Champa,Chhattisgarh,Janjgir-Champa,Chhattisgarh:Janjgir-Champa,Janjgir-Champa,2013,2023,False
+Chhattisgarh:Jashpur,Chhattisgarh,Jashpur,Chhattisgarh:Jashpur,Jashpur,2014,2023,True
+Chhattisgarh:Kabeerdham,Chhattisgarh,Kabeerdham,Chhattisgarh:Kabeerdham,Kabeerdham,2014,2023,True
+Chhattisgarh:Khairagarh-Chhuikhadan-Gandai,Chhattisgarh,Khairagarh-Chhuikhadan-Gandai,Chhattisgarh:Khairagarh-Chhuikhadan-Gandai,Rajnandgaon,2022,2023,False
+Chhattisgarh:Kondagaon,Chhattisgarh,Kondagaon,Chhattisgarh:Kondagaon,Kondagaon,2013,2023,False
+Chhattisgarh:Korba,Chhattisgarh,Korba,Chhattisgarh:Korba,Korba,2014,2023,True
+Chhattisgarh:Korea,Chhattisgarh,Korea,Chhattisgarh:Korea,Korea,2014,2023,True
+Chhattisgarh:Mahasamund,Chhattisgarh,Mahasamund,Chhattisgarh:Mahasamund,Mahasamund,2014,2023,True
+Chhattisgarh:Manendragarh-Chirmiri-Bharatpur(M C B),Chhattisgarh,Manendragarh-Chirmiri-Bharatpur(M C B),Chhattisgarh:Korea,Korea,2022,2023,False
+Chhattisgarh:Mohla-Manpur-Ambagarh Chouki,Chhattisgarh,Mohla-Manpur-Ambagarh Chouki,Chhattisgarh:Khairagarh-Chhuikhadan-Gandai,Rajnandgaon,2022,2023,False
+Chhattisgarh:Mungeli,Chhattisgarh,Mungeli,Chhattisgarh:Mungeli,Mungeli,2013,2023,False
+Chhattisgarh:Narayanpur,Chhattisgarh,Narayanpur,Chhattisgarh:Narayanpur,Narayanpur,2013,2023,False
+Chhattisgarh:Raigarh,Chhattisgarh,Raigarh,Chhattisgarh:Balodabazar-Bhatapara,Balodabazar-Bhatapara + Raigarh,2014,2023,True
+Chhattisgarh:Raipur,Chhattisgarh,Raipur,Chhattisgarh:Raipur,Raipur,2014,2023,True
+Chhattisgarh:Rajnandgaon,Chhattisgarh,Rajnandgaon,Chhattisgarh:Khairagarh-Chhuikhadan-Gandai,Rajnandgaon,2014,2023,True
+Chhattisgarh:Sakti,Chhattisgarh,Sakti,Chhattisgarh:Janjgir-Champa,Janjgir-Champa,2022,2023,False
+Chhattisgarh:Sarangarh-Bilaigarh,Chhattisgarh,Sarangarh-Bilaigarh,Chhattisgarh:Balodabazar-Bhatapara,Balodabazar-Bhatapara + Raigarh,2022,2023,False
+Chhattisgarh:Sukma,Chhattisgarh,Sukma,Chhattisgarh:Sukma,Sukma,2013,2023,False
+Chhattisgarh:Surajpur,Chhattisgarh,Surajpur,Chhattisgarh:Surajpur,Surajpur,2013,2023,False
+Chhattisgarh:Surguja,Chhattisgarh,Surguja,Chhattisgarh:Surguja,Surguja,2013,2023,False
+Chhattisgarh:Uttar Bastar Kanker,Chhattisgarh,Uttar Bastar Kanker,Chhattisgarh:Uttar Bastar Kanker,Uttar Bastar Kanker,2014,2023,True
+Goa:North Goa,Goa,North Goa,Goa:North Goa,North Goa,2013,2024,False
+Goa:South Goa,Goa,South Goa,Goa:South Goa,South Goa,2013,2024,False
+Gujarat:Ahmedabad,Gujarat,Ahmedabad,Gujarat:Ahmedabad,Ahmedabad + Bhavnagar,2013,2024,False
+Gujarat:Amreli,Gujarat,Amreli,Gujarat:Amreli,Amreli,2013,2024,False
+Gujarat:Anand,Gujarat,Anand,Gujarat:Anand,Anand,2013,2024,False
+Gujarat:Arvalli,Gujarat,Arvalli,Gujarat:Arvalli,Sabar Kantha,2014,2024,False
+Gujarat:Banas Kantha,Gujarat,Banas Kantha,Gujarat:Banas Kantha,Banas Kantha,2013,2024,False
+Gujarat:Bharuch,Gujarat,Bharuch,Gujarat:Bharuch,Bharuch,2013,2024,False
+Gujarat:Bhavnagar,Gujarat,Bhavnagar,Gujarat:Ahmedabad,Ahmedabad + Bhavnagar,2013,2024,False
+Gujarat:Botad,Gujarat,Botad,Gujarat:Ahmedabad,Ahmedabad + Bhavnagar,2014,2024,False
+Gujarat:Chhotaudepur,Gujarat,Chhotaudepur,Gujarat:Chhotaudepur,Vadodara,2014,2024,False
+Gujarat:Dahod,Gujarat,Dahod,Gujarat:Dahod,Dahod,2013,2024,False
+Gujarat:Dangs,Gujarat,Dangs,Gujarat:Dangs,Dangs,2013,2024,False
+Gujarat:Devbhumi Dwarka,Gujarat,Devbhumi Dwarka,Gujarat:Devbhumi Dwarka,Jamnagar + Rajkot + Surendranagar,2014,2024,False
+Gujarat:Gandhinagar,Gujarat,Gandhinagar,Gujarat:Gandhinagar,Gandhinagar,2013,2024,False
+Gujarat:Gir Somnath,Gujarat,Gir Somnath,Gujarat:Gir Somnath,Junagadh,2014,2024,False
+Gujarat:Jamnagar,Gujarat,Jamnagar,Gujarat:Devbhumi Dwarka,Jamnagar + Rajkot + Surendranagar,2013,2024,False
+Gujarat:Junagadh,Gujarat,Junagadh,Gujarat:Gir Somnath,Junagadh,2013,2024,False
+Gujarat:Kachchh,Gujarat,Kachchh,Gujarat:Kachchh,Kachchh,2013,2024,False
+Gujarat:Kheda,Gujarat,Kheda,Gujarat:Kheda,Kheda + Panch Mahals,2013,2024,False
+Gujarat:Mahesana,Gujarat,Mahesana,Gujarat:Mahesana,Mahesana,2013,2024,False
+Gujarat:Mahisagar,Gujarat,Mahisagar,Gujarat:Kheda,Kheda + Panch Mahals,2014,2024,False
+Gujarat:Morbi,Gujarat,Morbi,Gujarat:Devbhumi Dwarka,Jamnagar + Rajkot + Surendranagar,2014,2024,False
+Gujarat:Narmada,Gujarat,Narmada,Gujarat:Narmada,Narmada,2013,2024,False
+Gujarat:Navsari,Gujarat,Navsari,Gujarat:Navsari,Navsari,2013,2024,False
+Gujarat:Panch Mahals,Gujarat,Panch Mahals,Gujarat:Kheda,Kheda + Panch Mahals,2013,2024,False
+Gujarat:Patan,Gujarat,Patan,Gujarat:Patan,Patan,2013,2024,False
+Gujarat:Porbandar,Gujarat,Porbandar,Gujarat:Porbandar,Porbandar,2013,2024,False
+Gujarat:Rajkot,Gujarat,Rajkot,Gujarat:Devbhumi Dwarka,Jamnagar + Rajkot + Surendranagar,2013,2024,False
+Gujarat:Sabar Kantha,Gujarat,Sabar Kantha,Gujarat:Arvalli,Sabar Kantha,2013,2024,False
+Gujarat:Surat,Gujarat,Surat,Gujarat:Surat,Surat,2013,2024,False
+Gujarat:Surendranagar,Gujarat,Surendranagar,Gujarat:Devbhumi Dwarka,Jamnagar + Rajkot + Surendranagar,2013,2024,False
+Gujarat:Tapi,Gujarat,Tapi,Gujarat:Tapi,Tapi,2013,2024,False
+Gujarat:Vadodara,Gujarat,Vadodara,Gujarat:Chhotaudepur,Vadodara,2013,2024,False
+Gujarat:Valsad,Gujarat,Valsad,Gujarat:Valsad,Valsad,2013,2024,False
+Haryana:Ambala,Haryana,Ambala,Haryana:Ambala,Ambala,2013,2024,False
+Haryana:Bhiwani,Haryana,Bhiwani,Haryana:Bhiwani,Bhiwani,2013,2024,False
+Haryana:Charkhi Dadri,Haryana,Charkhi Dadri,Haryana:Bhiwani,Bhiwani,2014,2024,False
+Haryana:Faridabad,Haryana,Faridabad,Haryana:Faridabad,Faridabad,2013,2024,False
+Haryana:Fatehabad,Haryana,Fatehabad,Haryana:Fatehabad,Fatehabad,2013,2024,False
+Haryana:Gurugram,Haryana,Gurugram,Haryana:Gurugram,Gurugram,2013,2024,False
+Haryana:Hisar,Haryana,Hisar,Haryana:Hisar,Hisar,2013,2024,False
+Haryana:Jhajjar,Haryana,Jhajjar,Haryana:Jhajjar,Jhajjar,2013,2024,False
+Haryana:Jind,Haryana,Jind,Haryana:Jind,Jind,2013,2024,False
+Haryana:Kaithal,Haryana,Kaithal,Haryana:Kaithal,Kaithal,2013,2024,False
+Haryana:Karnal,Haryana,Karnal,Haryana:Karnal,Karnal,2013,2024,False
+Haryana:Kurukshetra,Haryana,Kurukshetra,Haryana:Kurukshetra,Kurukshetra,2013,2024,False
+Haryana:Mahendragarh,Haryana,Mahendragarh,Haryana:Mahendragarh,Mahendragarh,2013,2024,False
+Haryana:Nuh,Haryana,Nuh,Haryana:Nuh,Nuh,2013,2024,False
+Haryana:Palwal,Haryana,Palwal,Haryana:Palwal,Palwal,2013,2024,False
+Haryana:Panchkula,Haryana,Panchkula,Haryana:Panchkula,Panchkula,2013,2024,False
+Haryana:Panipat,Haryana,Panipat,Haryana:Panipat,Panipat,2013,2024,False
+Haryana:Rewari,Haryana,Rewari,Haryana:Rewari,Rewari,2013,2024,False
+Haryana:Rohtak,Haryana,Rohtak,Haryana:Rohtak,Rohtak,2013,2024,False
+Haryana:Sirsa,Haryana,Sirsa,Haryana:Sirsa,Sirsa,2013,2024,False
+Haryana:Sonipat,Haryana,Sonipat,Haryana:Sonipat,Sonipat,2013,2024,False
+Haryana:Yamunanagar,Haryana,Yamunanagar,Haryana:Yamunanagar,Yamunanagar,2013,2024,False
+Himachal Pradesh:Bilaspur,Himachal Pradesh,Bilaspur,Himachal Pradesh:Bilaspur,Bilaspur,2013,2024,False
+Himachal Pradesh:Chamba,Himachal Pradesh,Chamba,Himachal Pradesh:Chamba,Chamba,2013,2024,False
+Himachal Pradesh:Hamirpur,Himachal Pradesh,Hamirpur,Himachal Pradesh:Hamirpur,Hamirpur,2013,2024,False
+Himachal Pradesh:Kangra,Himachal Pradesh,Kangra,Himachal Pradesh:Kangra,Kangra,2013,2024,False
+Himachal Pradesh:Kinnaur,Himachal Pradesh,Kinnaur,Himachal Pradesh:Kinnaur,Kinnaur,2013,2024,False
+Himachal Pradesh:Kullu,Himachal Pradesh,Kullu,Himachal Pradesh:Kullu,Kullu,2013,2024,False
+Himachal Pradesh:Lahaul And Spiti,Himachal Pradesh,Lahaul And Spiti,Himachal Pradesh:Lahaul And Spiti,Lahaul And Spiti,2013,2024,False
+Himachal Pradesh:Mandi,Himachal Pradesh,Mandi,Himachal Pradesh:Mandi,Mandi,2013,2024,False
+Himachal Pradesh:Shimla,Himachal Pradesh,Shimla,Himachal Pradesh:Shimla,Shimla,2013,2024,False
+Himachal Pradesh:Sirmaur,Himachal Pradesh,Sirmaur,Himachal Pradesh:Sirmaur,Sirmaur,2013,2024,False
+Himachal Pradesh:Solan,Himachal Pradesh,Solan,Himachal Pradesh:Solan,Solan,2013,2024,False
+Himachal Pradesh:Una,Himachal Pradesh,Una,Himachal Pradesh:Una,Una,2013,2024,False
+Jammu And Kashmir:Anantnag,Jammu And Kashmir,Anantnag,Jammu And Kashmir:Anantnag,Anantnag,2013,2024,False
+Jammu And Kashmir:Bandipora,Jammu And Kashmir,Bandipora,Jammu And Kashmir:Bandipora,Bandipora,2013,2024,False
+Jammu And Kashmir:Baramulla,Jammu And Kashmir,Baramulla,Jammu And Kashmir:Baramulla,Baramulla,2013,2024,False
+Jammu And Kashmir:Budgam,Jammu And Kashmir,Budgam,Jammu And Kashmir:Budgam,Budgam,2013,2024,False
+Jammu And Kashmir:Doda,Jammu And Kashmir,Doda,Jammu And Kashmir:Doda,Doda,2013,2024,False
+Jammu And Kashmir:Ganderbal,Jammu And Kashmir,Ganderbal,Jammu And Kashmir:Ganderbal,Ganderbal,2013,2024,False
+Jammu And Kashmir:Jammu,Jammu And Kashmir,Jammu,Jammu And Kashmir:Jammu,Jammu,2013,2024,False
+Jammu And Kashmir:Kathua,Jammu And Kashmir,Kathua,Jammu And Kashmir:Kathua,Kathua,2013,2024,False
+Jammu And Kashmir:Kishtwar,Jammu And Kashmir,Kishtwar,Jammu And Kashmir:Kishtwar,Kishtwar,2013,2024,False
+Jammu And Kashmir:Kulgam,Jammu And Kashmir,Kulgam,Jammu And Kashmir:Kulgam,Kulgam,2013,2024,False
+Jammu And Kashmir:Kupwara,Jammu And Kashmir,Kupwara,Jammu And Kashmir:Kupwara,Kupwara,2014,2024,True
+Jammu And Kashmir:Poonch,Jammu And Kashmir,Poonch,Jammu And Kashmir:Poonch,Poonch,2013,2024,False
+Jammu And Kashmir:Pulwama,Jammu And Kashmir,Pulwama,Jammu And Kashmir:Pulwama,Pulwama,2013,2024,False
+Jammu And Kashmir:Rajouri,Jammu And Kashmir,Rajouri,Jammu And Kashmir:Rajouri,Rajouri,2013,2024,False
+Jammu And Kashmir:Ramban,Jammu And Kashmir,Ramban,Jammu And Kashmir:Ramban,Ramban,2013,2024,False
+Jammu And Kashmir:Reasi,Jammu And Kashmir,Reasi,Jammu And Kashmir:Reasi,Reasi,2013,2024,False
+Jammu And Kashmir:Samba,Jammu And Kashmir,Samba,Jammu And Kashmir:Samba,Samba,2013,2024,False
+Jammu And Kashmir:Shopian,Jammu And Kashmir,Shopian,Jammu And Kashmir:Shopian,Shopian,2013,2024,False
+Jammu And Kashmir:Srinagar,Jammu And Kashmir,Srinagar,Jammu And Kashmir:Srinagar,Srinagar,2013,2024,False
+Jammu And Kashmir:Udhampur,Jammu And Kashmir,Udhampur,Jammu And Kashmir:Udhampur,Udhampur,2013,2024,False
+Jharkhand:Bokaro,Jharkhand,Bokaro,Jharkhand:Bokaro,Bokaro,2013,2024,False
+Jharkhand:Chatra,Jharkhand,Chatra,Jharkhand:Chatra,Chatra,2013,2024,False
+Jharkhand:Deoghar,Jharkhand,Deoghar,Jharkhand:Deoghar,Deoghar,2013,2024,False
+Jharkhand:Dhanbad,Jharkhand,Dhanbad,Jharkhand:Dhanbad,Dhanbad,2013,2024,False
+Jharkhand:Dumka,Jharkhand,Dumka,Jharkhand:Dumka,Dumka,2013,2024,False
+Jharkhand:East Singhbum,Jharkhand,East Singhbum,Jharkhand:East Singhbum,East Singhbum,2013,2024,False
+Jharkhand:Garhwa,Jharkhand,Garhwa,Jharkhand:Garhwa,Garhwa,2013,2024,False
+Jharkhand:Giridih,Jharkhand,Giridih,Jharkhand:Giridih,Giridih,2013,2024,False
+Jharkhand:Godda,Jharkhand,Godda,Jharkhand:Godda,Godda,2013,2024,False
+Jharkhand:Gumla,Jharkhand,Gumla,Jharkhand:Gumla,Gumla,2013,2024,False
+Jharkhand:Hazaribagh,Jharkhand,Hazaribagh,Jharkhand:Hazaribagh,Hazaribagh,2013,2024,False
+Jharkhand:Jamtara,Jharkhand,Jamtara,Jharkhand:Jamtara,Jamtara,2013,2024,False
+Jharkhand:Khunti,Jharkhand,Khunti,Jharkhand:Khunti,Khunti,2013,2024,False
+Jharkhand:Koderma,Jharkhand,Koderma,Jharkhand:Koderma,Koderma,2013,2024,False
+Jharkhand:Latehar,Jharkhand,Latehar,Jharkhand:Latehar,Latehar,2013,2024,False
+Jharkhand:Lohardaga,Jharkhand,Lohardaga,Jharkhand:Lohardaga,Lohardaga,2013,2024,False
+Jharkhand:Pakur,Jharkhand,Pakur,Jharkhand:Pakur,Pakur,2013,2024,False
+Jharkhand:Palamu,Jharkhand,Palamu,Jharkhand:Palamu,Palamu,2013,2024,False
+Jharkhand:Ramgarh,Jharkhand,Ramgarh,Jharkhand:Ramgarh,Ramgarh,2013,2024,False
+Jharkhand:Ranchi,Jharkhand,Ranchi,Jharkhand:Ranchi,Ranchi,2013,2024,False
+Jharkhand:Sahebganj,Jharkhand,Sahebganj,Jharkhand:Sahebganj,Sahebganj,2013,2024,False
+Jharkhand:Saraikela Kharsawan,Jharkhand,Saraikela Kharsawan,Jharkhand:Saraikela Kharsawan,Saraikela Kharsawan,2013,2024,False
+Jharkhand:Simdega,Jharkhand,Simdega,Jharkhand:Simdega,Simdega,2013,2024,False
+Jharkhand:West Singhbhum,Jharkhand,West Singhbhum,Jharkhand:West Singhbhum,West Singhbhum,2013,2024,False
+Karnataka:Bagalkote,Karnataka,Bagalkote,Karnataka:Bagalkote,Bagalkote,2013,2024,False
+Karnataka:Ballari,Karnataka,Ballari,Karnataka:Ballari,Ballari,2013,2024,False
+Karnataka:Belagavi,Karnataka,Belagavi,Karnataka:Belagavi,Belagavi,2013,2024,False
+Karnataka:Bengaluru Rural,Karnataka,Bengaluru Rural,Karnataka:Bengaluru Rural,Bengaluru Rural,2013,2024,False
+Karnataka:Bengaluru South,Karnataka,Bengaluru South,Karnataka:Bengaluru South,Bengaluru South,2013,2024,False
+Karnataka:Bengaluru Urban,Karnataka,Bengaluru Urban,Karnataka:Bengaluru Urban,Bengaluru Urban,2013,2024,False
+Karnataka:Bidar,Karnataka,Bidar,Karnataka:Bidar,Bidar,2013,2024,False
+Karnataka:Chamarajanagar,Karnataka,Chamarajanagar,Karnataka:Chamarajanagar,Chamarajanagar,2013,2024,False
+Karnataka:Chikkaballapura,Karnataka,Chikkaballapura,Karnataka:Chikkaballapura,Chikkaballapura,2013,2024,False
+Karnataka:Chikkamagaluru,Karnataka,Chikkamagaluru,Karnataka:Chikkamagaluru,Chikkamagaluru,2013,2024,False
+Karnataka:Chitradurga,Karnataka,Chitradurga,Karnataka:Chitradurga,Chitradurga,2013,2024,False
+Karnataka:Dakshina Kannada,Karnataka,Dakshina Kannada,Karnataka:Dakshina Kannada,Dakshina Kannada,2013,2024,False
+Karnataka:Davanagere,Karnataka,Davanagere,Karnataka:Davanagere,Davanagere,2013,2024,False
+Karnataka:Dharwad,Karnataka,Dharwad,Karnataka:Dharwad,Dharwad,2013,2024,False
+Karnataka:Gadag,Karnataka,Gadag,Karnataka:Gadag,Gadag,2013,2024,False
+Karnataka:Hassan,Karnataka,Hassan,Karnataka:Hassan,Hassan,2013,2024,False
+Karnataka:Haveri,Karnataka,Haveri,Karnataka:Haveri,Haveri,2013,2024,False
+Karnataka:Kalaburagi,Karnataka,Kalaburagi,Karnataka:Kalaburagi,Kalaburagi,2013,2024,False
+Karnataka:Kodagu,Karnataka,Kodagu,Karnataka:Kodagu,Kodagu,2013,2024,False
+Karnataka:Kolar,Karnataka,Kolar,Karnataka:Kolar,Kolar,2013,2024,False
+Karnataka:Koppal,Karnataka,Koppal,Karnataka:Koppal,Koppal,2013,2024,False
+Karnataka:Mandya,Karnataka,Mandya,Karnataka:Mandya,Mandya,2013,2024,False
+Karnataka:Mysuru,Karnataka,Mysuru,Karnataka:Mysuru,Mysuru,2013,2024,False
+Karnataka:Raichur,Karnataka,Raichur,Karnataka:Raichur,Raichur,2013,2024,False
+Karnataka:Shivamogga,Karnataka,Shivamogga,Karnataka:Shivamogga,Shivamogga,2013,2024,False
+Karnataka:Tumakuru,Karnataka,Tumakuru,Karnataka:Tumakuru,Tumakuru,2013,2024,False
+Karnataka:Udupi,Karnataka,Udupi,Karnataka:Udupi,Udupi,2013,2024,False
+Karnataka:Uttara Kannada,Karnataka,Uttara Kannada,Karnataka:Uttara Kannada,Uttara Kannada,2013,2024,False
+Karnataka:Vijayanagara,Karnataka,Vijayanagara,Karnataka:Ballari,Ballari,2022,2024,False
+Karnataka:Vijayapura,Karnataka,Vijayapura,Karnataka:Vijayapura,Vijayapura,2013,2024,False
+Karnataka:Yadgir,Karnataka,Yadgir,Karnataka:Yadgir,Yadgir,2013,2024,False
+Kerala:Alappuzha,Kerala,Alappuzha,Kerala:Alappuzha,Alappuzha,2013,2024,False
+Kerala:Ernakulam,Kerala,Ernakulam,Kerala:Ernakulam,Ernakulam,2013,2024,False
+Kerala:Idukki,Kerala,Idukki,Kerala:Idukki,Idukki,2013,2024,False
+Kerala:Kannur,Kerala,Kannur,Kerala:Kannur,Kannur,2013,2024,False
+Kerala:Kasaragod,Kerala,Kasaragod,Kerala:Kasaragod,Kasaragod,2013,2024,False
+Kerala:Kollam,Kerala,Kollam,Kerala:Kollam,Kollam,2013,2024,False
+Kerala:Kottayam,Kerala,Kottayam,Kerala:Kottayam,Kottayam,2013,2024,False
+Kerala:Kozhikode,Kerala,Kozhikode,Kerala:Kozhikode,Kozhikode,2013,2024,False
+Kerala:Malappuram,Kerala,Malappuram,Kerala:Malappuram,Malappuram,2013,2024,False
+Kerala:Palakkad,Kerala,Palakkad,Kerala:Palakkad,Palakkad,2013,2024,False
+Kerala:Pathanamthitta,Kerala,Pathanamthitta,Kerala:Pathanamthitta,Pathanamthitta,2013,2024,False
+Kerala:Thiruvananthapuram,Kerala,Thiruvananthapuram,Kerala:Thiruvananthapuram,Thiruvananthapuram,2013,2024,False
+Kerala:Thrissur,Kerala,Thrissur,Kerala:Thrissur,Thrissur,2013,2024,False
+Kerala:Wayanad,Kerala,Wayanad,Kerala:Wayanad,Wayanad,2013,2024,False
+Ladakh:Kargil,Ladakh,Kargil,Ladakh:Kargil,Kargil,2013,2024,False
+Ladakh:Leh Ladakh,Ladakh,Leh Ladakh,Ladakh:Leh Ladakh,Leh Ladakh,2013,2024,False
+Madhya Pradesh:Agar-Malwa,Madhya Pradesh,Agar-Malwa,Madhya Pradesh:Agar-Malwa,Agar-Malwa,2013,2024,False
+Madhya Pradesh:Alirajpur,Madhya Pradesh,Alirajpur,Madhya Pradesh:Alirajpur,Alirajpur,2013,2024,False
+Madhya Pradesh:Anuppur,Madhya Pradesh,Anuppur,Madhya Pradesh:Anuppur,Anuppur,2013,2024,False
+Madhya Pradesh:Ashoknagar,Madhya Pradesh,Ashoknagar,Madhya Pradesh:Ashoknagar,Ashoknagar,2013,2024,False
+Madhya Pradesh:Balaghat,Madhya Pradesh,Balaghat,Madhya Pradesh:Balaghat,Balaghat,2013,2024,False
+Madhya Pradesh:Barwani,Madhya Pradesh,Barwani,Madhya Pradesh:Barwani,Barwani,2013,2024,False
+Madhya Pradesh:Betul,Madhya Pradesh,Betul,Madhya Pradesh:Betul,Betul,2013,2024,False
+Madhya Pradesh:Bhind,Madhya Pradesh,Bhind,Madhya Pradesh:Bhind,Bhind,2013,2024,False
+Madhya Pradesh:Bhopal,Madhya Pradesh,Bhopal,Madhya Pradesh:Bhopal,Bhopal,2013,2024,False
+Madhya Pradesh:Burhanpur,Madhya Pradesh,Burhanpur,Madhya Pradesh:Burhanpur,Burhanpur,2013,2024,False
+Madhya Pradesh:Chhatarpur,Madhya Pradesh,Chhatarpur,Madhya Pradesh:Chhatarpur,Chhatarpur,2013,2024,False
+Madhya Pradesh:Chhindwara,Madhya Pradesh,Chhindwara,Madhya Pradesh:Chhindwara,Chhindwara,2013,2024,False
+Madhya Pradesh:Damoh,Madhya Pradesh,Damoh,Madhya Pradesh:Damoh,Damoh,2013,2024,False
+Madhya Pradesh:Datia,Madhya Pradesh,Datia,Madhya Pradesh:Datia,Datia,2013,2024,False
+Madhya Pradesh:Dewas,Madhya Pradesh,Dewas,Madhya Pradesh:Dewas,Dewas,2013,2024,False
+Madhya Pradesh:Dhar,Madhya Pradesh,Dhar,Madhya Pradesh:Dhar,Dhar,2013,2024,False
+Madhya Pradesh:Dindori,Madhya Pradesh,Dindori,Madhya Pradesh:Dindori,Dindori,2013,2024,False
+Madhya Pradesh:Guna,Madhya Pradesh,Guna,Madhya Pradesh:Guna,Guna,2013,2024,False
+Madhya Pradesh:Gwalior,Madhya Pradesh,Gwalior,Madhya Pradesh:Gwalior,Gwalior,2013,2024,False
+Madhya Pradesh:Harda,Madhya Pradesh,Harda,Madhya Pradesh:Harda,Harda,2013,2024,False
+Madhya Pradesh:Indore,Madhya Pradesh,Indore,Madhya Pradesh:Indore,Indore,2013,2024,False
+Madhya Pradesh:Jabalpur,Madhya Pradesh,Jabalpur,Madhya Pradesh:Jabalpur,Jabalpur,2013,2024,False
+Madhya Pradesh:Jhabua,Madhya Pradesh,Jhabua,Madhya Pradesh:Jhabua,Jhabua,2013,2024,False
+Madhya Pradesh:Katni,Madhya Pradesh,Katni,Madhya Pradesh:Katni,Katni,2013,2024,False
+Madhya Pradesh:Khandwa (East Nimar),Madhya Pradesh,Khandwa (East Nimar),Madhya Pradesh:Khandwa (East Nimar),Khandwa (East Nimar),2013,2024,False
+Madhya Pradesh:Khargone (West Nimar),Madhya Pradesh,Khargone (West Nimar),Madhya Pradesh:Khargone (West Nimar),Khargone (West Nimar),2013,2024,False
+Madhya Pradesh:Maihar,Madhya Pradesh,Maihar,Madhya Pradesh:Maihar,Satna,2024,2024,False
+Madhya Pradesh:Mandla,Madhya Pradesh,Mandla,Madhya Pradesh:Mandla,Mandla,2013,2024,False
+Madhya Pradesh:Mandsaur,Madhya Pradesh,Mandsaur,Madhya Pradesh:Mandsaur,Mandsaur,2013,2024,False
+Madhya Pradesh:Mauganj,Madhya Pradesh,Mauganj,Madhya Pradesh:Mauganj,Rewa,2024,2024,False
+Madhya Pradesh:Morena,Madhya Pradesh,Morena,Madhya Pradesh:Morena,Morena,2013,2024,False
+Madhya Pradesh:Narmadapuram,Madhya Pradesh,Narmadapuram,Madhya Pradesh:Narmadapuram,Narmadapuram,2013,2024,False
+Madhya Pradesh:Narsimhapur,Madhya Pradesh,Narsimhapur,Madhya Pradesh:Narsimhapur,Narsimhapur,2013,2024,False
+Madhya Pradesh:Neemuch,Madhya Pradesh,Neemuch,Madhya Pradesh:Neemuch,Neemuch,2013,2024,False
+Madhya Pradesh:Niwari,Madhya Pradesh,Niwari,Madhya Pradesh:Niwari,Tikamgarh,2019,2024,False
+Madhya Pradesh:Pandhurna,Madhya Pradesh,Pandhurna,Madhya Pradesh:Chhindwara,Chhindwara,2024,2024,False
+Madhya Pradesh:Panna,Madhya Pradesh,Panna,Madhya Pradesh:Panna,Panna,2013,2024,False
+Madhya Pradesh:Raisen,Madhya Pradesh,Raisen,Madhya Pradesh:Raisen,Raisen,2013,2024,False
+Madhya Pradesh:Rajgarh,Madhya Pradesh,Rajgarh,Madhya Pradesh:Rajgarh,Rajgarh,2013,2024,False
+Madhya Pradesh:Ratlam,Madhya Pradesh,Ratlam,Madhya Pradesh:Ratlam,Ratlam,2013,2024,False
+Madhya Pradesh:Rewa,Madhya Pradesh,Rewa,Madhya Pradesh:Mauganj,Rewa,2013,2024,False
+Madhya Pradesh:Sagar,Madhya Pradesh,Sagar,Madhya Pradesh:Sagar,Sagar,2013,2024,False
+Madhya Pradesh:Satna,Madhya Pradesh,Satna,Madhya Pradesh:Maihar,Satna,2013,2024,False
+Madhya Pradesh:Sehore,Madhya Pradesh,Sehore,Madhya Pradesh:Sehore,Sehore,2013,2024,False
+Madhya Pradesh:Seoni,Madhya Pradesh,Seoni,Madhya Pradesh:Seoni,Seoni,2013,2024,False
+Madhya Pradesh:Shahdol,Madhya Pradesh,Shahdol,Madhya Pradesh:Shahdol,Shahdol,2013,2024,False
+Madhya Pradesh:Shajapur,Madhya Pradesh,Shajapur,Madhya Pradesh:Shajapur,Shajapur,2013,2024,False
+Madhya Pradesh:Sheopur,Madhya Pradesh,Sheopur,Madhya Pradesh:Sheopur,Sheopur,2013,2024,False
+Madhya Pradesh:Shivpuri,Madhya Pradesh,Shivpuri,Madhya Pradesh:Shivpuri,Shivpuri,2013,2024,False
+Madhya Pradesh:Sidhi,Madhya Pradesh,Sidhi,Madhya Pradesh:Sidhi,Sidhi,2013,2024,False
+Madhya Pradesh:Singrauli,Madhya Pradesh,Singrauli,Madhya Pradesh:Singrauli,Singrauli,2013,2024,False
+Madhya Pradesh:Tikamgarh,Madhya Pradesh,Tikamgarh,Madhya Pradesh:Niwari,Tikamgarh,2013,2024,False
+Madhya Pradesh:Ujjain,Madhya Pradesh,Ujjain,Madhya Pradesh:Ujjain,Ujjain,2013,2024,False
+Madhya Pradesh:Umaria,Madhya Pradesh,Umaria,Madhya Pradesh:Umaria,Umaria,2013,2024,False
+Madhya Pradesh:Vidisha,Madhya Pradesh,Vidisha,Madhya Pradesh:Vidisha,Vidisha,2013,2024,False
+Maharashtra:Ahilyanagar,Maharashtra,Ahilyanagar,Maharashtra:Ahilyanagar,Ahilyanagar,2013,2024,False
+Maharashtra:Akola,Maharashtra,Akola,Maharashtra:Akola,Akola,2013,2024,False
+Maharashtra:Amravati,Maharashtra,Amravati,Maharashtra:Amravati,Amravati,2013,2024,False
+Maharashtra:Beed,Maharashtra,Beed,Maharashtra:Beed,Beed,2013,2024,False
+Maharashtra:Bhandara,Maharashtra,Bhandara,Maharashtra:Bhandara,Bhandara,2013,2024,False
+Maharashtra:Buldhana,Maharashtra,Buldhana,Maharashtra:Buldhana,Buldhana,2013,2024,False
+Maharashtra:Chandrapur,Maharashtra,Chandrapur,Maharashtra:Chandrapur,Chandrapur,2013,2024,False
+Maharashtra:Chhatrapati Sambhajinagar,Maharashtra,Chhatrapati Sambhajinagar,Maharashtra:Chhatrapati Sambhajinagar,Chhatrapati Sambhajinagar,2013,2024,False
+Maharashtra:Dharashiv,Maharashtra,Dharashiv,Maharashtra:Dharashiv,Dharashiv,2013,2024,False
+Maharashtra:Dhule,Maharashtra,Dhule,Maharashtra:Dhule,Dhule,2013,2024,False
+Maharashtra:Gadchiroli,Maharashtra,Gadchiroli,Maharashtra:Gadchiroli,Gadchiroli,2013,2024,False
+Maharashtra:Gondia,Maharashtra,Gondia,Maharashtra:Gondia,Gondia,2013,2024,False
+Maharashtra:Hingoli,Maharashtra,Hingoli,Maharashtra:Hingoli,Hingoli,2013,2024,False
+Maharashtra:Jalgaon,Maharashtra,Jalgaon,Maharashtra:Jalgaon,Jalgaon,2013,2024,False
+Maharashtra:Jalna,Maharashtra,Jalna,Maharashtra:Jalna,Jalna,2013,2024,False
+Maharashtra:Kolhapur,Maharashtra,Kolhapur,Maharashtra:Kolhapur,Kolhapur,2013,2024,False
+Maharashtra:Latur,Maharashtra,Latur,Maharashtra:Latur,Latur,2013,2024,False
+Maharashtra:Mumbai Suburban,Maharashtra,Mumbai Suburban,Maharashtra:Mumbai Suburban,Mumbai Suburban,2016,2019,True
+Maharashtra:Nagpur,Maharashtra,Nagpur,Maharashtra:Nagpur,Nagpur,2013,2024,False
+Maharashtra:Nanded,Maharashtra,Nanded,Maharashtra:Nanded,Nanded,2013,2024,False
+Maharashtra:Nandurbar,Maharashtra,Nandurbar,Maharashtra:Nandurbar,Nandurbar,2013,2024,False
+Maharashtra:Nashik,Maharashtra,Nashik,Maharashtra:Nashik,Nashik,2013,2024,False
+Maharashtra:Palghar,Maharashtra,Palghar,Maharashtra:Palghar,Thane,2014,2024,False
+Maharashtra:Parbhani,Maharashtra,Parbhani,Maharashtra:Parbhani,Parbhani,2013,2024,False
+Maharashtra:Pune,Maharashtra,Pune,Maharashtra:Pune,Pune,2013,2024,False
+Maharashtra:Raigad,Maharashtra,Raigad,Maharashtra:Raigad,Raigad,2013,2024,False
+Maharashtra:Ratnagiri,Maharashtra,Ratnagiri,Maharashtra:Ratnagiri,Ratnagiri,2013,2024,False
+Maharashtra:Sangli,Maharashtra,Sangli,Maharashtra:Sangli,Sangli,2013,2024,False
+Maharashtra:Satara,Maharashtra,Satara,Maharashtra:Satara,Satara,2013,2024,False
+Maharashtra:Sindhudurg,Maharashtra,Sindhudurg,Maharashtra:Sindhudurg,Sindhudurg,2013,2024,False
+Maharashtra:Solapur,Maharashtra,Solapur,Maharashtra:Solapur,Solapur,2013,2024,False
+Maharashtra:Thane,Maharashtra,Thane,Maharashtra:Palghar,Thane,2013,2024,False
+Maharashtra:Wardha,Maharashtra,Wardha,Maharashtra:Wardha,Wardha,2013,2024,False
+Maharashtra:Washim,Maharashtra,Washim,Maharashtra:Washim,Washim,2013,2024,False
+Maharashtra:Yavatmal,Maharashtra,Yavatmal,Maharashtra:Yavatmal,Yavatmal,2013,2024,False
+Manipur:Bishnupur,Manipur,Bishnupur,Manipur:Bishnupur,Bishnupur,2013,2023,False
+Manipur:Chandel,Manipur,Chandel,Manipur:Chandel,Chandel,2013,2023,False
+Manipur:Churachandpur,Manipur,Churachandpur,Manipur:Churachandpur,Churachandpur,2013,2023,False
+Manipur:Imphal East,Manipur,Imphal East,Manipur:Imphal East,Imphal East,2013,2023,False
+Manipur:Imphal West,Manipur,Imphal West,Manipur:Imphal West,Imphal West,2013,2023,False
+Manipur:Senapati,Manipur,Senapati,Manipur:Senapati,Senapati,2013,2023,False
+Manipur:Tamenglong,Manipur,Tamenglong,Manipur:Tamenglong,Tamenglong,2013,2023,False
+Manipur:Thoubal,Manipur,Thoubal,Manipur:Thoubal,Thoubal,2013,2023,False
+Manipur:Ukhrul,Manipur,Ukhrul,Manipur:Ukhrul,Ukhrul,2013,2023,False
+Meghalaya:Eastern West Khasi Hills,Meghalaya,Eastern West Khasi Hills,Meghalaya:Eastern West Khasi Hills,West Khasi Hills,2023,2023,False
+Meghalaya:East Garo Hills,Meghalaya,East Garo Hills,Meghalaya:East Garo Hills,East Garo Hills,2013,2023,False
+Meghalaya:East Jaintia Hills,Meghalaya,East Jaintia Hills,Meghalaya:East Jaintia Hills,East Jaintia Hills,2013,2023,False
+Meghalaya:East Khasi Hills,Meghalaya,East Khasi Hills,Meghalaya:East Khasi Hills,East Khasi Hills,2013,2023,False
+Meghalaya:North Garo Hills,Meghalaya,North Garo Hills,Meghalaya:North Garo Hills,North Garo Hills,2013,2023,False
+Meghalaya:Ri Bhoi,Meghalaya,Ri Bhoi,Meghalaya:Ri Bhoi,Ri Bhoi,2013,2023,False
+Meghalaya:South Garo Hills,Meghalaya,South Garo Hills,Meghalaya:South Garo Hills,South Garo Hills,2013,2023,False
+Meghalaya:South West Garo Hills,Meghalaya,South West Garo Hills,Meghalaya:South West Garo Hills,South West Garo Hills,2013,2023,False
+Meghalaya:South West Khasi Hills,Meghalaya,South West Khasi Hills,Meghalaya:South West Khasi Hills,South West Khasi Hills,2013,2023,False
+Meghalaya:West Garo Hills,Meghalaya,West Garo Hills,Meghalaya:West Garo Hills,West Garo Hills,2013,2023,False
+Meghalaya:West Jaintia Hills,Meghalaya,West Jaintia Hills,Meghalaya:West Jaintia Hills,West Jaintia Hills,2013,2023,False
+Meghalaya:West Khasi Hills,Meghalaya,West Khasi Hills,Meghalaya:Eastern West Khasi Hills,West Khasi Hills,2013,2023,False
+Mizoram:Aizawl,Mizoram,Aizawl,Mizoram:Aizawl,Aizawl + Champhai,2013,2024,False
+Mizoram:Champhai,Mizoram,Champhai,Mizoram:Aizawl,Aizawl + Champhai,2013,2024,False
+Mizoram:Hnahthial,Mizoram,Hnahthial,Mizoram:Hnahthial,Lunglei,2020,2024,False
+Mizoram:Khawzawl,Mizoram,Khawzawl,Mizoram:Aizawl,Aizawl + Champhai,2020,2024,False
+Mizoram:Kolasib,Mizoram,Kolasib,Mizoram:Kolasib,Kolasib,2013,2024,False
+Mizoram:Lawngtlai,Mizoram,Lawngtlai,Mizoram:Lawngtlai,Lawngtlai,2013,2024,False
+Mizoram:Lunglei,Mizoram,Lunglei,Mizoram:Hnahthial,Lunglei,2013,2024,False
+Mizoram:Mamit,Mizoram,Mamit,Mizoram:Mamit,Mamit,2013,2024,False
+Mizoram:Saitual,Mizoram,Saitual,Mizoram:Aizawl,Aizawl + Champhai,2020,2024,False
+Mizoram:Serchhip,Mizoram,Serchhip,Mizoram:Serchhip,Serchhip,2013,2024,False
+Mizoram:Siaha,Mizoram,Siaha,Mizoram:Siaha,Siaha,2013,2024,False
+Nagaland:Chumoukedima,Nagaland,Chumoukedima,Nagaland:Chumoukedima,Dimapur,2022,2024,False
+Nagaland:Dimapur,Nagaland,Dimapur,Nagaland:Chumoukedima,Dimapur,2013,2024,False
+Nagaland:Kiphire,Nagaland,Kiphire,Nagaland:Kiphire,Kiphire + Tuensang,2013,2024,False
+Nagaland:Kohima,Nagaland,Kohima,Nagaland:Kohima,Kohima,2013,2024,False
+Nagaland:Longleng,Nagaland,Longleng,Nagaland:Longleng,Longleng,2013,2024,False
+Nagaland:Mokokchung,Nagaland,Mokokchung,Nagaland:Mokokchung,Mokokchung,2013,2024,False
+Nagaland:Mon,Nagaland,Mon,Nagaland:Mon,Mon,2013,2024,False
+Nagaland:Niuland,Nagaland,Niuland,Nagaland:Chumoukedima,Dimapur,2022,2024,False
+Nagaland:Noklak,Nagaland,Noklak,Nagaland:Kiphire,Kiphire + Tuensang,2021,2024,False
+Nagaland:Peren,Nagaland,Peren,Nagaland:Peren,Peren,2013,2024,False
+Nagaland:Phek,Nagaland,Phek,Nagaland:Phek,Phek,2013,2024,False
+Nagaland:Shamator,Nagaland,Shamator,Nagaland:Kiphire,Kiphire + Tuensang,2022,2024,False
+Nagaland:Tseminyu,Nagaland,Tseminyu,Nagaland:Kohima,Kohima,2022,2024,False
+Nagaland:Tuensang,Nagaland,Tuensang,Nagaland:Kiphire,Kiphire + Tuensang,2013,2024,False
+Nagaland:Wokha,Nagaland,Wokha,Nagaland:Wokha,Wokha,2013,2024,False
+Nagaland:Zunheboto,Nagaland,Zunheboto,Nagaland:Zunheboto,Zunheboto,2013,2024,False
+Odisha:Angul,Odisha,Angul,Odisha:Angul,Angul,2013,2024,False
+Odisha:Balangir,Odisha,Balangir,Odisha:Balangir,Balangir,2013,2024,False
+Odisha:Balasore,Odisha,Balasore,Odisha:Balasore,Balasore,2013,2024,False
+Odisha:Bargarh,Odisha,Bargarh,Odisha:Bargarh,Bargarh,2013,2024,False
+Odisha:Bhadrak,Odisha,Bhadrak,Odisha:Bhadrak,Bhadrak,2013,2024,False
+Odisha:Boudh,Odisha,Boudh,Odisha:Boudh,Boudh,2013,2024,False
+Odisha:Cuttack,Odisha,Cuttack,Odisha:Cuttack,Cuttack,2013,2024,False
+Odisha:Deogarh,Odisha,Deogarh,Odisha:Deogarh,Deogarh,2013,2024,False
+Odisha:Dhenkanal,Odisha,Dhenkanal,Odisha:Dhenkanal,Dhenkanal,2013,2024,False
+Odisha:Gajapati,Odisha,Gajapati,Odisha:Gajapati,Gajapati,2013,2024,False
+Odisha:Ganjam,Odisha,Ganjam,Odisha:Ganjam,Ganjam,2013,2024,False
+Odisha:Jagatsinghapur,Odisha,Jagatsinghapur,Odisha:Jagatsinghapur,Jagatsinghapur,2013,2024,False
+Odisha:Jajpur,Odisha,Jajpur,Odisha:Jajpur,Jajpur,2013,2024,False
+Odisha:Jharsuguda,Odisha,Jharsuguda,Odisha:Jharsuguda,Jharsuguda,2013,2024,False
+Odisha:Kalahandi,Odisha,Kalahandi,Odisha:Kalahandi,Kalahandi,2013,2024,False
+Odisha:Kandhamal,Odisha,Kandhamal,Odisha:Kandhamal,Kandhamal,2013,2024,False
+Odisha:Kendrapara,Odisha,Kendrapara,Odisha:Kendrapara,Kendrapara,2013,2024,False
+Odisha:Keonjhar,Odisha,Keonjhar,Odisha:Keonjhar,Keonjhar,2013,2024,False
+Odisha:Khordha,Odisha,Khordha,Odisha:Khordha,Khordha,2013,2024,False
+Odisha:Koraput,Odisha,Koraput,Odisha:Koraput,Koraput,2013,2024,False
+Odisha:Malkangiri,Odisha,Malkangiri,Odisha:Malkangiri,Malkangiri,2013,2024,False
+Odisha:Mayurbhanj,Odisha,Mayurbhanj,Odisha:Mayurbhanj,Mayurbhanj,2013,2024,False
+Odisha:Nabarangpur,Odisha,Nabarangpur,Odisha:Nabarangpur,Nabarangpur,2013,2024,False
+Odisha:Nayagarh,Odisha,Nayagarh,Odisha:Nayagarh,Nayagarh,2013,2024,False
+Odisha:Nuapada,Odisha,Nuapada,Odisha:Nuapada,Nuapada,2013,2024,False
+Odisha:Puri,Odisha,Puri,Odisha:Puri,Puri,2013,2024,False
+Odisha:Rayagada,Odisha,Rayagada,Odisha:Rayagada,Rayagada,2013,2024,False
+Odisha:Sambalpur,Odisha,Sambalpur,Odisha:Sambalpur,Sambalpur,2013,2024,False
+Odisha:Sonepur,Odisha,Sonepur,Odisha:Sonepur,Sonepur,2013,2024,False
+Odisha:Sundargarh,Odisha,Sundargarh,Odisha:Sundargarh,Sundargarh,2013,2024,False
+Puducherry:Karaikal,Puducherry,Karaikal,Puducherry:Karaikal,Karaikal,2013,2024,False
+Puducherry:Mahe,Puducherry,Mahe,Puducherry:Mahe,Mahe,2015,2021,True
+Puducherry:Puducherry,Puducherry,Puducherry,Puducherry:Puducherry,Puducherry,2013,2024,False
+Puducherry:Yanam,Puducherry,Yanam,Puducherry:Yanam,Yanam,2013,2024,False
+Punjab:Amritsar,Punjab,Amritsar,Punjab:Amritsar,Amritsar,2013,2024,False
+Punjab:Barnala,Punjab,Barnala,Punjab:Barnala,Barnala,2013,2024,False
+Punjab:Bathinda,Punjab,Bathinda,Punjab:Bathinda,Bathinda,2013,2024,False
+Punjab:Faridkot,Punjab,Faridkot,Punjab:Faridkot,Faridkot,2013,2024,False
+Punjab:Fatehgarh Sahib,Punjab,Fatehgarh Sahib,Punjab:Fatehgarh Sahib,Fatehgarh Sahib,2013,2024,False
+Punjab:Fazilka,Punjab,Fazilka,Punjab:Fazilka,Fazilka,2013,2024,False
+Punjab:Ferozepur,Punjab,Ferozepur,Punjab:Ferozepur,Ferozepur,2013,2024,False
+Punjab:Gurdaspur,Punjab,Gurdaspur,Punjab:Gurdaspur,Gurdaspur,2013,2024,False
+Punjab:Hoshiarpur,Punjab,Hoshiarpur,Punjab:Hoshiarpur,Hoshiarpur,2013,2024,False
+Punjab:Jalandhar,Punjab,Jalandhar,Punjab:Jalandhar,Jalandhar,2013,2024,False
+Punjab:Kapurthala,Punjab,Kapurthala,Punjab:Kapurthala,Kapurthala,2013,2024,False
+Punjab:Ludhiana,Punjab,Ludhiana,Punjab:Ludhiana,Ludhiana,2013,2024,False
+Punjab:Malerkotla,Punjab,Malerkotla,Punjab:Malerkotla,Sangrur,2021,2024,False
+Punjab:Mansa,Punjab,Mansa,Punjab:Mansa,Mansa,2013,2024,False
+Punjab:Moga,Punjab,Moga,Punjab:Moga,Moga,2013,2024,False
+Punjab:Pathankot,Punjab,Pathankot,Punjab:Pathankot,Pathankot,2013,2024,False
+Punjab:Patiala,Punjab,Patiala,Punjab:Patiala,Patiala,2013,2024,False
+Punjab:Rupnagar,Punjab,Rupnagar,Punjab:Rupnagar,Rupnagar,2013,2024,False
+Punjab:Sangrur,Punjab,Sangrur,Punjab:Malerkotla,Sangrur,2013,2024,False
+Punjab:S.A.S Nagar,Punjab,S.A.S Nagar,Punjab:S.A.S Nagar,S.A.S Nagar,2013,2024,False
+Punjab:Shahid Bhagat Singh Nagar,Punjab,Shahid Bhagat Singh Nagar,Punjab:Shahid Bhagat Singh Nagar,Shahid Bhagat Singh Nagar,2013,2024,False
+Punjab:Sri Muktsar Sahib,Punjab,Sri Muktsar Sahib,Punjab:Sri Muktsar Sahib,Sri Muktsar Sahib,2013,2024,False
+Punjab:Tarn Taran,Punjab,Tarn Taran,Punjab:Tarn Taran,Tarn Taran,2013,2024,False
+Rajasthan:Ajmer,Rajasthan,Ajmer,Rajasthan:Ajmer,Ajmer,2013,2024,False
+Rajasthan:Alwar,Rajasthan,Alwar,Rajasthan:Alwar,Alwar + Jaipur,2013,2024,False
+Rajasthan:Balotra,Rajasthan,Balotra,Rajasthan:Balotra,Barmer,2024,2024,False
+Rajasthan:Banswara,Rajasthan,Banswara,Rajasthan:Banswara,Banswara,2013,2024,False
+Rajasthan:Baran,Rajasthan,Baran,Rajasthan:Baran,Baran,2013,2024,False
+Rajasthan:Barmer,Rajasthan,Barmer,Rajasthan:Balotra,Barmer,2013,2024,False
+Rajasthan:Beawar,Rajasthan,Beawar,Rajasthan:Ajmer,Ajmer,2024,2024,False
+Rajasthan:Bharatpur,Rajasthan,Bharatpur,Rajasthan:Bharatpur,Bharatpur,2013,2024,False
+Rajasthan:Bhilwara,Rajasthan,Bhilwara,Rajasthan:Bhilwara,Bhilwara,2013,2024,False
+Rajasthan:Bikaner,Rajasthan,Bikaner,Rajasthan:Bikaner,Bikaner,2013,2024,False
+Rajasthan:Bundi,Rajasthan,Bundi,Rajasthan:Bundi,Bundi,2013,2024,False
+Rajasthan:Chittorgarh,Rajasthan,Chittorgarh,Rajasthan:Chittorgarh,Chittorgarh,2013,2024,False
+Rajasthan:Churu,Rajasthan,Churu,Rajasthan:Churu,Churu,2013,2024,False
+Rajasthan:Dausa,Rajasthan,Dausa,Rajasthan:Dausa,Dausa,2013,2024,False
+Rajasthan:Deeg,Rajasthan,Deeg,Rajasthan:Bharatpur,Bharatpur,2024,2024,False
+Rajasthan:Dholpur,Rajasthan,Dholpur,Rajasthan:Dholpur,Dholpur,2013,2024,False
+Rajasthan:Didwana-Kuchaman,Rajasthan,Didwana-Kuchaman,Rajasthan:Didwana-Kuchaman,Nagaur,2024,2024,False
+Rajasthan:Dungarpur,Rajasthan,Dungarpur,Rajasthan:Dungarpur,Dungarpur,2013,2024,False
+Rajasthan:Ganganagar,Rajasthan,Ganganagar,Rajasthan:Ganganagar,Ganganagar,2013,2024,False
+Rajasthan:Hanumangarh,Rajasthan,Hanumangarh,Rajasthan:Hanumangarh,Hanumangarh,2013,2024,False
+Rajasthan:Jaipur,Rajasthan,Jaipur,Rajasthan:Alwar,Alwar + Jaipur,2013,2024,False
+Rajasthan:Jaisalmer,Rajasthan,Jaisalmer,Rajasthan:Jaisalmer,Jaisalmer,2013,2024,False
+Rajasthan:Jalore,Rajasthan,Jalore,Rajasthan:Jalore,Jalore,2013,2024,False
+Rajasthan:Jhalawar,Rajasthan,Jhalawar,Rajasthan:Jhalawar,Jhalawar,2013,2024,False
+Rajasthan:Jhunjhunu,Rajasthan,Jhunjhunu,Rajasthan:Jhunjhunu,Jhunjhunu,2013,2024,False
+Rajasthan:Jodhpur,Rajasthan,Jodhpur,Rajasthan:Jodhpur,Jodhpur,2013,2024,False
+Rajasthan:Karauli,Rajasthan,Karauli,Rajasthan:Karauli,Karauli,2013,2024,False
+Rajasthan:Khairthal-Tijara,Rajasthan,Khairthal-Tijara,Rajasthan:Alwar,Alwar + Jaipur,2024,2024,False
+Rajasthan:Kota,Rajasthan,Kota,Rajasthan:Kota,Kota,2013,2024,False
+Rajasthan:Kotputli-Behror,Rajasthan,Kotputli-Behror,Rajasthan:Alwar,Alwar + Jaipur,2024,2024,False
+Rajasthan:Nagaur,Rajasthan,Nagaur,Rajasthan:Didwana-Kuchaman,Nagaur,2013,2024,False
+Rajasthan:Pali,Rajasthan,Pali,Rajasthan:Pali,Pali,2013,2024,False
+Rajasthan:Phalodi,Rajasthan,Phalodi,Rajasthan:Jodhpur,Jodhpur,2024,2024,False
+Rajasthan:Pratapgarh,Rajasthan,Pratapgarh,Rajasthan:Pratapgarh,Pratapgarh,2013,2024,False
+Rajasthan:Rajsamand,Rajasthan,Rajsamand,Rajasthan:Rajsamand,Rajsamand,2013,2024,False
+Rajasthan:Salumbar,Rajasthan,Salumbar,Rajasthan:Salumbar,Udaipur,2024,2024,False
+Rajasthan:Sawai Madhopur,Rajasthan,Sawai Madhopur,Rajasthan:Sawai Madhopur,Sawai Madhopur,2013,2024,False
+Rajasthan:Sikar,Rajasthan,Sikar,Rajasthan:Sikar,Sikar,2013,2024,False
+Rajasthan:Sirohi,Rajasthan,Sirohi,Rajasthan:Sirohi,Sirohi,2013,2024,False
+Rajasthan:Tonk,Rajasthan,Tonk,Rajasthan:Tonk,Tonk,2013,2024,False
+Rajasthan:Udaipur,Rajasthan,Udaipur,Rajasthan:Salumbar,Udaipur,2013,2024,False
+Sikkim:Gangtok,Sikkim,Gangtok,Sikkim:Gangtok,Gangtok,2013,2024,False
+Sikkim:Gyalshing,Sikkim,Gyalshing,Sikkim:Gyalshing,Gyalshing,2013,2024,False
+Sikkim:Mangan,Sikkim,Mangan,Sikkim:Mangan,Mangan,2013,2024,False
+Sikkim:Namchi,Sikkim,Namchi,Sikkim:Namchi,Namchi,2013,2024,False
+Sikkim:Pakyong,Sikkim,Pakyong,Sikkim:Gangtok,Gangtok,2021,2024,False
+Sikkim:Soreng,Sikkim,Soreng,Sikkim:Gyalshing,Gyalshing,2022,2024,False
+Tamil Nadu:Ariyalur,Tamil Nadu,Ariyalur,Tamil Nadu:Ariyalur,Ariyalur,2013,2024,False
+Tamil Nadu:Chengalpattu,Tamil Nadu,Chengalpattu,Tamil Nadu:Chengalpattu,Kancheepuram,2019,2024,False
+Tamil Nadu:Chennai,Tamil Nadu,Chennai,Tamil Nadu:Chennai,Chennai,2018,2024,False
+Tamil Nadu:Coimbatore,Tamil Nadu,Coimbatore,Tamil Nadu:Coimbatore,Coimbatore,2013,2024,False
+Tamil Nadu:Cuddalore,Tamil Nadu,Cuddalore,Tamil Nadu:Cuddalore,Cuddalore,2013,2024,False
+Tamil Nadu:Dharmapuri,Tamil Nadu,Dharmapuri,Tamil Nadu:Dharmapuri,Dharmapuri,2013,2024,False
+Tamil Nadu:Dindigul,Tamil Nadu,Dindigul,Tamil Nadu:Dindigul,Dindigul,2013,2024,False
+Tamil Nadu:Erode,Tamil Nadu,Erode,Tamil Nadu:Erode,Erode,2013,2024,False
+Tamil Nadu:Kallakurichi,Tamil Nadu,Kallakurichi,Tamil Nadu:Kallakurichi,Viluppuram,2019,2024,False
+Tamil Nadu:Kancheepuram,Tamil Nadu,Kancheepuram,Tamil Nadu:Chengalpattu,Kancheepuram,2013,2024,False
+Tamil Nadu:Kanniyakumari,Tamil Nadu,Kanniyakumari,Tamil Nadu:Kanniyakumari,Kanniyakumari,2013,2024,False
+Tamil Nadu:Karur,Tamil Nadu,Karur,Tamil Nadu:Karur,Karur,2013,2024,False
+Tamil Nadu:Krishnagiri,Tamil Nadu,Krishnagiri,Tamil Nadu:Krishnagiri,Krishnagiri,2013,2024,False
+Tamil Nadu:Madurai,Tamil Nadu,Madurai,Tamil Nadu:Madurai,Madurai,2013,2024,False
+Tamil Nadu:Mayiladuthurai,Tamil Nadu,Mayiladuthurai,Tamil Nadu:Mayiladuthurai,Nagapattinam,2020,2024,False
+Tamil Nadu:Nagapattinam,Tamil Nadu,Nagapattinam,Tamil Nadu:Mayiladuthurai,Nagapattinam,2013,2024,False
+Tamil Nadu:Namakkal,Tamil Nadu,Namakkal,Tamil Nadu:Namakkal,Namakkal,2013,2024,False
+Tamil Nadu:Perambalur,Tamil Nadu,Perambalur,Tamil Nadu:Perambalur,Perambalur,2013,2024,False
+Tamil Nadu:Pudukkottai,Tamil Nadu,Pudukkottai,Tamil Nadu:Pudukkottai,Pudukkottai,2013,2024,False
+Tamil Nadu:Ramanathapuram,Tamil Nadu,Ramanathapuram,Tamil Nadu:Ramanathapuram,Ramanathapuram,2013,2024,False
+Tamil Nadu:Ranipet,Tamil Nadu,Ranipet,Tamil Nadu:Ranipet,Vellore,2020,2024,False
+Tamil Nadu:Salem,Tamil Nadu,Salem,Tamil Nadu:Salem,Salem,2013,2024,False
+Tamil Nadu:Sivaganga,Tamil Nadu,Sivaganga,Tamil Nadu:Sivaganga,Sivaganga,2013,2024,False
+Tamil Nadu:Tenkasi,Tamil Nadu,Tenkasi,Tamil Nadu:Tenkasi,Tirunelveli,2019,2024,False
+Tamil Nadu:Thanjavur,Tamil Nadu,Thanjavur,Tamil Nadu:Thanjavur,Thanjavur,2013,2024,False
+Tamil Nadu:Theni,Tamil Nadu,Theni,Tamil Nadu:Theni,Theni,2013,2024,False
+Tamil Nadu:The Nilgiris,Tamil Nadu,The Nilgiris,Tamil Nadu:The Nilgiris,The Nilgiris,2013,2024,False
+Tamil Nadu:Thiruvallur,Tamil Nadu,Thiruvallur,Tamil Nadu:Thiruvallur,Thiruvallur,2013,2024,False
+Tamil Nadu:Thiruvarur,Tamil Nadu,Thiruvarur,Tamil Nadu:Thiruvarur,Thiruvarur,2013,2024,False
+Tamil Nadu:Thoothukkudi,Tamil Nadu,Thoothukkudi,Tamil Nadu:Thoothukkudi,Thoothukkudi,2013,2024,False
+Tamil Nadu:Tiruchirappalli,Tamil Nadu,Tiruchirappalli,Tamil Nadu:Tiruchirappalli,Tiruchirappalli,2013,2024,False
+Tamil Nadu:Tirunelveli,Tamil Nadu,Tirunelveli,Tamil Nadu:Tenkasi,Tirunelveli,2013,2024,False
+Tamil Nadu:Tirupathur,Tamil Nadu,Tirupathur,Tamil Nadu:Ranipet,Vellore,2019,2024,False
+Tamil Nadu:Tiruppur,Tamil Nadu,Tiruppur,Tamil Nadu:Tiruppur,Tiruppur,2013,2024,False
+Tamil Nadu:Tiruvannamalai,Tamil Nadu,Tiruvannamalai,Tamil Nadu:Tiruvannamalai,Tiruvannamalai,2013,2024,False
+Tamil Nadu:Vellore,Tamil Nadu,Vellore,Tamil Nadu:Ranipet,Vellore,2013,2024,False
+Tamil Nadu:Viluppuram,Tamil Nadu,Viluppuram,Tamil Nadu:Kallakurichi,Viluppuram,2013,2024,False
+Tamil Nadu:Virudhunagar,Tamil Nadu,Virudhunagar,Tamil Nadu:Virudhunagar,Virudhunagar,2013,2024,False
+Telangana:Adilabad,Telangana,Adilabad,Telangana:Adilabad,Adilabad,2013,2024,False
+Telangana:Bhadradri Kothagudem,Telangana,Bhadradri Kothagudem,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Hanumakonda,Telangana,Hanumakonda,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Jagitial,Telangana,Jagitial,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Jangoan,Telangana,Jangoan,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Jayashankar Bhupalapally,Telangana,Jayashankar Bhupalapally,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Jogulamba Gadwal,Telangana,Jogulamba Gadwal,Telangana:Jogulamba Gadwal,Mahabubnagar + Ranga Reddy,2016,2024,False
+Telangana:Kamareddy,Telangana,Kamareddy,Telangana:Kamareddy,Nizamabad,2016,2024,False
+Telangana:Karimnagar,Telangana,Karimnagar,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2013,2024,False
+Telangana:Khammam,Telangana,Khammam,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2013,2024,False
+Telangana:Kumuram Bheem Asifabad,Telangana,Kumuram Bheem Asifabad,Telangana:Adilabad,Adilabad,2016,2024,False
+Telangana:Mahabubabad,Telangana,Mahabubabad,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Mahabubnagar,Telangana,Mahabubnagar,Telangana:Jogulamba Gadwal,Mahabubnagar + Ranga Reddy,2013,2024,False
+Telangana:Mancherial,Telangana,Mancherial,Telangana:Adilabad,Adilabad,2016,2024,False
+Telangana:Medak,Telangana,Medak,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2013,2024,False
+Telangana:Medchal Malkajgiri,Telangana,Medchal Malkajgiri,Telangana:Jogulamba Gadwal,Mahabubnagar + Ranga Reddy,2016,2024,False
+Telangana:Mulugu,Telangana,Mulugu,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2018,2024,False
+Telangana:Nagarkurnool,Telangana,Nagarkurnool,Telangana:Jogulamba Gadwal,Mahabubnagar + Ranga Reddy,2016,2024,False
+Telangana:Nalgonda,Telangana,Nalgonda,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2013,2024,False
+Telangana:Narayanpet,Telangana,Narayanpet,Telangana:Jogulamba Gadwal,Mahabubnagar + Ranga Reddy,2018,2024,False
+Telangana:Nirmal,Telangana,Nirmal,Telangana:Adilabad,Adilabad,2016,2024,False
+Telangana:Nizamabad,Telangana,Nizamabad,Telangana:Kamareddy,Nizamabad,2013,2024,False
+Telangana:Peddapalli,Telangana,Peddapalli,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Rajanna Sircilla,Telangana,Rajanna Sircilla,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Ranga Reddy,Telangana,Ranga Reddy,Telangana:Jogulamba Gadwal,Mahabubnagar + Ranga Reddy,2013,2024,False
+Telangana:Sangareddy,Telangana,Sangareddy,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Siddipet,Telangana,Siddipet,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Suryapet,Telangana,Suryapet,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+Telangana:Vikarabad,Telangana,Vikarabad,Telangana:Jogulamba Gadwal,Mahabubnagar + Ranga Reddy,2016,2024,False
+Telangana:Wanaparthy,Telangana,Wanaparthy,Telangana:Jogulamba Gadwal,Mahabubnagar + Ranga Reddy,2016,2024,False
+Telangana:Warangal,Telangana,Warangal,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2013,2024,False
+Telangana:Yadadri Bhuvanagiri,Telangana,Yadadri Bhuvanagiri,Telangana:Bhadradri Kothagudem,Karimnagar + Khammam + Medak + Nalgonda + Warangal,2016,2024,False
+The Dadra And Nagar Haveli And Daman And Diu:Dadra And Nagar Haveli,The Dadra And Nagar Haveli And Daman And Diu,Dadra And Nagar Haveli,The Dadra And Nagar Haveli And Daman And Diu:Dadra And Nagar Haveli,Dadra And Nagar Haveli,2013,2023,False
+The Dadra And Nagar Haveli And Daman And Diu:Daman,The Dadra And Nagar Haveli And Daman And Diu,Daman,The Dadra And Nagar Haveli And Daman And Diu:Daman,Daman,2013,2023,False
+The Dadra And Nagar Haveli And Daman And Diu:Diu,The Dadra And Nagar Haveli And Daman And Diu,Diu,The Dadra And Nagar Haveli And Daman And Diu:Diu,Diu,2013,2023,False
+Tripura:Dhalai,Tripura,Dhalai,Tripura:Dhalai,Dhalai,2013,2024,False
+Tripura:Gomati,Tripura,Gomati,Tripura:Gomati,Gomati,2013,2024,False
+Tripura:Khowai,Tripura,Khowai,Tripura:Khowai,Khowai,2013,2024,False
+Tripura:North Tripura,Tripura,North Tripura,Tripura:North Tripura,North Tripura,2013,2024,False
+Tripura:Sepahijala,Tripura,Sepahijala,Tripura:Sepahijala,Sepahijala,2013,2024,False
+Tripura:South Tripura,Tripura,South Tripura,Tripura:South Tripura,South Tripura,2013,2024,False
+Tripura:Unakoti,Tripura,Unakoti,Tripura:Unakoti,Unakoti,2013,2024,False
+Tripura:West Tripura,Tripura,West Tripura,Tripura:West Tripura,West Tripura,2013,2024,False
+Uttarakhand:Almora,Uttarakhand,Almora,Uttarakhand:Almora,Almora,2013,2024,False
+Uttarakhand:Bageshwar,Uttarakhand,Bageshwar,Uttarakhand:Bageshwar,Bageshwar,2013,2024,False
+Uttarakhand:Chamoli,Uttarakhand,Chamoli,Uttarakhand:Chamoli,Chamoli,2013,2024,False
+Uttarakhand:Champawat,Uttarakhand,Champawat,Uttarakhand:Champawat,Champawat,2013,2024,False
+Uttarakhand:Dehradun,Uttarakhand,Dehradun,Uttarakhand:Dehradun,Dehradun,2013,2024,False
+Uttarakhand:Haridwar,Uttarakhand,Haridwar,Uttarakhand:Haridwar,Haridwar,2013,2024,False
+Uttarakhand:Nainital,Uttarakhand,Nainital,Uttarakhand:Nainital,Nainital,2013,2024,False
+Uttarakhand:Pauri Garhwal,Uttarakhand,Pauri Garhwal,Uttarakhand:Pauri Garhwal,Pauri Garhwal,2013,2024,False
+Uttarakhand:Pithoragarh,Uttarakhand,Pithoragarh,Uttarakhand:Pithoragarh,Pithoragarh,2013,2024,False
+Uttarakhand:Rudraprayag,Uttarakhand,Rudraprayag,Uttarakhand:Rudraprayag,Rudraprayag,2013,2024,False
+Uttarakhand:Tehri Garhwal,Uttarakhand,Tehri Garhwal,Uttarakhand:Tehri Garhwal,Tehri Garhwal,2013,2024,False
+Uttarakhand:Udham Singh Nagar,Uttarakhand,Udham Singh Nagar,Uttarakhand:Udham Singh Nagar,Udham Singh Nagar,2013,2024,False
+Uttarakhand:Uttarkashi,Uttarakhand,Uttarkashi,Uttarakhand:Uttarkashi,Uttarkashi,2013,2024,False
+Uttar Pradesh:Agra,Uttar Pradesh,Agra,Uttar Pradesh:Agra,Agra,2013,2024,False
+Uttar Pradesh:Aligarh,Uttar Pradesh,Aligarh,Uttar Pradesh:Aligarh,Aligarh,2013,2024,False
+Uttar Pradesh:Ambedkar Nagar,Uttar Pradesh,Ambedkar Nagar,Uttar Pradesh:Ambedkar Nagar,Ambedkar Nagar,2013,2024,False
+Uttar Pradesh:Amethi,Uttar Pradesh,Amethi,Uttar Pradesh:Amethi,Amethi,2013,2024,False
+Uttar Pradesh:Amroha,Uttar Pradesh,Amroha,Uttar Pradesh:Amroha,Amroha,2013,2024,False
+Uttar Pradesh:Auraiya,Uttar Pradesh,Auraiya,Uttar Pradesh:Auraiya,Auraiya,2013,2024,False
+Uttar Pradesh:Ayodhya,Uttar Pradesh,Ayodhya,Uttar Pradesh:Ayodhya,Ayodhya,2013,2024,False
+Uttar Pradesh:Azamgarh,Uttar Pradesh,Azamgarh,Uttar Pradesh:Azamgarh,Azamgarh,2013,2024,False
+Uttar Pradesh:Baghpat,Uttar Pradesh,Baghpat,Uttar Pradesh:Baghpat,Baghpat,2013,2024,False
+Uttar Pradesh:Bahraich,Uttar Pradesh,Bahraich,Uttar Pradesh:Bahraich,Bahraich,2013,2024,False
+Uttar Pradesh:Ballia,Uttar Pradesh,Ballia,Uttar Pradesh:Ballia,Ballia,2013,2024,False
+Uttar Pradesh:Balrampur,Uttar Pradesh,Balrampur,Uttar Pradesh:Balrampur,Balrampur,2013,2024,False
+Uttar Pradesh:Banda,Uttar Pradesh,Banda,Uttar Pradesh:Banda,Banda,2013,2024,False
+Uttar Pradesh:Bara Banki,Uttar Pradesh,Bara Banki,Uttar Pradesh:Bara Banki,Bara Banki,2013,2024,False
+Uttar Pradesh:Bareilly,Uttar Pradesh,Bareilly,Uttar Pradesh:Bareilly,Bareilly,2013,2024,False
+Uttar Pradesh:Basti,Uttar Pradesh,Basti,Uttar Pradesh:Basti,Basti,2013,2024,False
+Uttar Pradesh:Bhadohi,Uttar Pradesh,Bhadohi,Uttar Pradesh:Bhadohi,Bhadohi,2013,2024,False
+Uttar Pradesh:Bijnor,Uttar Pradesh,Bijnor,Uttar Pradesh:Bijnor,Bijnor,2013,2024,False
+Uttar Pradesh:Budaun,Uttar Pradesh,Budaun,Uttar Pradesh:Budaun,Budaun,2013,2024,False
+Uttar Pradesh:Bulandshahr,Uttar Pradesh,Bulandshahr,Uttar Pradesh:Bulandshahr,Bulandshahr,2013,2024,False
+Uttar Pradesh:Chandauli,Uttar Pradesh,Chandauli,Uttar Pradesh:Chandauli,Chandauli,2013,2024,False
+Uttar Pradesh:Chitrakoot,Uttar Pradesh,Chitrakoot,Uttar Pradesh:Chitrakoot,Chitrakoot,2013,2024,False
+Uttar Pradesh:Deoria,Uttar Pradesh,Deoria,Uttar Pradesh:Deoria,Deoria,2013,2024,False
+Uttar Pradesh:Etah,Uttar Pradesh,Etah,Uttar Pradesh:Etah,Etah,2013,2024,False
+Uttar Pradesh:Etawah,Uttar Pradesh,Etawah,Uttar Pradesh:Etawah,Etawah,2013,2024,False
+Uttar Pradesh:Farrukhabad,Uttar Pradesh,Farrukhabad,Uttar Pradesh:Farrukhabad,Farrukhabad,2013,2024,False
+Uttar Pradesh:Fatehpur,Uttar Pradesh,Fatehpur,Uttar Pradesh:Fatehpur,Fatehpur,2013,2024,False
+Uttar Pradesh:Firozabad,Uttar Pradesh,Firozabad,Uttar Pradesh:Firozabad,Firozabad,2013,2024,False
+Uttar Pradesh:Gautam Buddha Nagar,Uttar Pradesh,Gautam Buddha Nagar,Uttar Pradesh:Gautam Buddha Nagar,Gautam Buddha Nagar,2013,2024,False
+Uttar Pradesh:Ghaziabad,Uttar Pradesh,Ghaziabad,Uttar Pradesh:Ghaziabad,Ghaziabad,2013,2024,False
+Uttar Pradesh:Ghazipur,Uttar Pradesh,Ghazipur,Uttar Pradesh:Ghazipur,Ghazipur,2013,2024,False
+Uttar Pradesh:Gonda,Uttar Pradesh,Gonda,Uttar Pradesh:Gonda,Gonda,2013,2024,False
+Uttar Pradesh:Gorakhpur,Uttar Pradesh,Gorakhpur,Uttar Pradesh:Gorakhpur,Gorakhpur,2013,2024,False
+Uttar Pradesh:Hamirpur,Uttar Pradesh,Hamirpur,Uttar Pradesh:Hamirpur,Hamirpur,2013,2024,False
+Uttar Pradesh:Hapur,Uttar Pradesh,Hapur,Uttar Pradesh:Hapur,Hapur,2013,2024,False
+Uttar Pradesh:Hardoi,Uttar Pradesh,Hardoi,Uttar Pradesh:Hardoi,Hardoi,2013,2024,False
+Uttar Pradesh:Hathras,Uttar Pradesh,Hathras,Uttar Pradesh:Hathras,Hathras,2013,2024,False
+Uttar Pradesh:Jalaun,Uttar Pradesh,Jalaun,Uttar Pradesh:Jalaun,Jalaun,2013,2024,False
+Uttar Pradesh:Jaunpur,Uttar Pradesh,Jaunpur,Uttar Pradesh:Jaunpur,Jaunpur,2013,2024,False
+Uttar Pradesh:Jhansi,Uttar Pradesh,Jhansi,Uttar Pradesh:Jhansi,Jhansi,2013,2024,False
+Uttar Pradesh:Kannauj,Uttar Pradesh,Kannauj,Uttar Pradesh:Kannauj,Kannauj,2013,2024,False
+Uttar Pradesh:Kanpur Dehat,Uttar Pradesh,Kanpur Dehat,Uttar Pradesh:Kanpur Dehat,Kanpur Dehat,2013,2024,False
+Uttar Pradesh:Kanpur Nagar,Uttar Pradesh,Kanpur Nagar,Uttar Pradesh:Kanpur Nagar,Kanpur Nagar,2013,2024,False
+Uttar Pradesh:Kasganj,Uttar Pradesh,Kasganj,Uttar Pradesh:Kasganj,Kasganj,2013,2024,False
+Uttar Pradesh:Kaushambi,Uttar Pradesh,Kaushambi,Uttar Pradesh:Kaushambi,Kaushambi,2013,2024,False
+Uttar Pradesh:Kheri,Uttar Pradesh,Kheri,Uttar Pradesh:Kheri,Kheri,2013,2024,False
+Uttar Pradesh:Kushinagar,Uttar Pradesh,Kushinagar,Uttar Pradesh:Kushinagar,Kushinagar,2013,2024,False
+Uttar Pradesh:Lalitpur,Uttar Pradesh,Lalitpur,Uttar Pradesh:Lalitpur,Lalitpur,2013,2024,False
+Uttar Pradesh:Lucknow,Uttar Pradesh,Lucknow,Uttar Pradesh:Lucknow,Lucknow,2013,2024,False
+Uttar Pradesh:Mahoba,Uttar Pradesh,Mahoba,Uttar Pradesh:Mahoba,Mahoba,2013,2024,False
+Uttar Pradesh:Mahrajganj,Uttar Pradesh,Mahrajganj,Uttar Pradesh:Mahrajganj,Mahrajganj,2013,2024,False
+Uttar Pradesh:Mainpuri,Uttar Pradesh,Mainpuri,Uttar Pradesh:Mainpuri,Mainpuri,2013,2024,False
+Uttar Pradesh:Mathura,Uttar Pradesh,Mathura,Uttar Pradesh:Mathura,Mathura,2013,2024,False
+Uttar Pradesh:Mau,Uttar Pradesh,Mau,Uttar Pradesh:Mau,Mau,2013,2024,False
+Uttar Pradesh:Meerut,Uttar Pradesh,Meerut,Uttar Pradesh:Meerut,Meerut,2013,2024,False
+Uttar Pradesh:Mirzapur,Uttar Pradesh,Mirzapur,Uttar Pradesh:Mirzapur,Mirzapur,2013,2024,False
+Uttar Pradesh:Moradabad,Uttar Pradesh,Moradabad,Uttar Pradesh:Moradabad,Moradabad,2013,2024,False
+Uttar Pradesh:Muzaffarnagar,Uttar Pradesh,Muzaffarnagar,Uttar Pradesh:Muzaffarnagar,Muzaffarnagar,2013,2024,False
+Uttar Pradesh:Pilibhit,Uttar Pradesh,Pilibhit,Uttar Pradesh:Pilibhit,Pilibhit,2013,2024,False
+Uttar Pradesh:Pratapgarh,Uttar Pradesh,Pratapgarh,Uttar Pradesh:Pratapgarh,Pratapgarh,2013,2024,False
+Uttar Pradesh:Prayagraj,Uttar Pradesh,Prayagraj,Uttar Pradesh:Prayagraj,Prayagraj,2013,2024,False
+Uttar Pradesh:Rae Bareli,Uttar Pradesh,Rae Bareli,Uttar Pradesh:Rae Bareli,Rae Bareli,2013,2024,False
+Uttar Pradesh:Rampur,Uttar Pradesh,Rampur,Uttar Pradesh:Rampur,Rampur,2013,2024,False
+Uttar Pradesh:Saharanpur,Uttar Pradesh,Saharanpur,Uttar Pradesh:Saharanpur,Saharanpur,2013,2024,False
+Uttar Pradesh:Sambhal,Uttar Pradesh,Sambhal,Uttar Pradesh:Sambhal,Sambhal,2013,2024,False
+Uttar Pradesh:Sant Kabir Nagar,Uttar Pradesh,Sant Kabir Nagar,Uttar Pradesh:Sant Kabir Nagar,Sant Kabir Nagar,2013,2024,False
+Uttar Pradesh:Shahjahanpur,Uttar Pradesh,Shahjahanpur,Uttar Pradesh:Shahjahanpur,Shahjahanpur,2013,2024,False
+Uttar Pradesh:Shamli,Uttar Pradesh,Shamli,Uttar Pradesh:Shamli,Shamli,2013,2024,False
+Uttar Pradesh:Shrawasti,Uttar Pradesh,Shrawasti,Uttar Pradesh:Shrawasti,Shrawasti,2013,2024,False
+Uttar Pradesh:Siddharthnagar,Uttar Pradesh,Siddharthnagar,Uttar Pradesh:Siddharthnagar,Siddharthnagar,2013,2024,False
+Uttar Pradesh:Sitapur,Uttar Pradesh,Sitapur,Uttar Pradesh:Sitapur,Sitapur,2013,2024,False
+Uttar Pradesh:Sonbhadra,Uttar Pradesh,Sonbhadra,Uttar Pradesh:Sonbhadra,Sonbhadra,2013,2024,False
+Uttar Pradesh:Sultanpur,Uttar Pradesh,Sultanpur,Uttar Pradesh:Sultanpur,Sultanpur,2013,2024,False
+Uttar Pradesh:Unnao,Uttar Pradesh,Unnao,Uttar Pradesh:Unnao,Unnao,2013,2024,False
+Uttar Pradesh:Varanasi,Uttar Pradesh,Varanasi,Uttar Pradesh:Varanasi,Varanasi,2013,2024,False
+West Bengal:Alipurduar,West Bengal,Alipurduar,West Bengal:Alipurduar,Jalpaiguri,2016,2023,False
+West Bengal:Bankura,West Bengal,Bankura,West Bengal:Bankura,Bankura,2013,2023,False
+West Bengal:Birbhum,West Bengal,Birbhum,West Bengal:Birbhum,Birbhum,2013,2023,False
+West Bengal:Cooch Behar,West Bengal,Cooch Behar,West Bengal:Cooch Behar,Cooch Behar,2013,2023,False
+West Bengal:Dakshin Dinajpur,West Bengal,Dakshin Dinajpur,West Bengal:Dakshin Dinajpur,Dakshin Dinajpur,2013,2023,False
+West Bengal:Darjeeling,West Bengal,Darjeeling,West Bengal:Darjeeling,Darjeeling,2013,2023,False
+West Bengal:Hooghly,West Bengal,Hooghly,West Bengal:Hooghly,Hooghly,2013,2023,False
+West Bengal:Howrah,West Bengal,Howrah,West Bengal:Howrah,Howrah,2013,2023,False
+West Bengal:Jalpaiguri,West Bengal,Jalpaiguri,West Bengal:Alipurduar,Jalpaiguri,2013,2023,False
+West Bengal:Jhargram,West Bengal,Jhargram,West Bengal:Jhargram,Paschim Medinipur,2016,2023,False
+West Bengal:Kalimpong,West Bengal,Kalimpong,West Bengal:Darjeeling,Darjeeling,2016,2023,False
+West Bengal:Malda,West Bengal,Malda,West Bengal:Malda,Malda,2013,2023,False
+West Bengal:Murshidabad,West Bengal,Murshidabad,West Bengal:Murshidabad,Murshidabad,2013,2023,False
+West Bengal:Nadia,West Bengal,Nadia,West Bengal:Nadia,Nadia,2013,2023,False
+West Bengal:North 24 Parganas,West Bengal,North 24 Parganas,West Bengal:North 24 Parganas,North 24 Parganas,2013,2023,False
+West Bengal:Paschim Bardhaman,West Bengal,Paschim Bardhaman,West Bengal:Paschim Bardhaman,Purba Bardhaman,2016,2023,False
+West Bengal:Paschim Medinipur,West Bengal,Paschim Medinipur,West Bengal:Jhargram,Paschim Medinipur,2013,2023,False
+West Bengal:Purba Bardhaman,West Bengal,Purba Bardhaman,West Bengal:Paschim Bardhaman,Purba Bardhaman,2013,2023,False
+West Bengal:Purba Medinipur,West Bengal,Purba Medinipur,West Bengal:Purba Medinipur,Purba Medinipur,2013,2023,False
+West Bengal:Purulia,West Bengal,Purulia,West Bengal:Purulia,Purulia,2013,2023,False
+West Bengal:South 24 Parganas,West Bengal,South 24 Parganas,West Bengal:South 24 Parganas,South 24 Parganas,2013,2023,False
+West Bengal:Uttar Dinajpur,West Bengal,Uttar Dinajpur,West Bengal:Uttar Dinajpur,Uttar Dinajpur,2013,2023,False

@@ -7,7 +7,7 @@ PY     := $(VENV)/bin/python
 -include .env
 export
 
-.PHONY: up down manifest load stage alias demo marts analyse
+.PHONY: up down manifest load stage alias demo marts analyse export
 
 .env:
 	cp .env.example .env
@@ -44,3 +44,6 @@ marts: alias
 
 analyse: marts
 	$(PY) python/06_analysis.py
+
+export: analyse
+	$(PY) python/07_export.py

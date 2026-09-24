@@ -1,0 +1,13 @@
+year_label,start_year,is_complete,in_trend_window
+2013-14,2013,True,False
+2014-15,2014,True,True
+2015-16,2015,True,True
+2016-17,2016,True,True
+2017-18,2017,True,True
+2018-19,2018,True,True
+2019-20,2019,True,True
+2020-21,2020,True,True
+2021-22,2021,True,True
+2022-23,2022,True,True
+2023-24,2023,True,True
+2024-25,2024,False,False
