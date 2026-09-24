@@ -1,69 +1,102 @@
-# agri-drone-target-districts
+**In 2023-24, half of India's modelled crop-spraying demand sat in one tenth of
+district-seasons. The top 50 are all Kharif, and most of them are soybean and cotton
+districts in Maharashtra and western Madhya Pradesh.**
 
-> Work in progress. The finding will lead this page once the analysis stage is
-> built. So far the pipeline goes as far as the marts.
+| | Share of national demand | Share of district-seasons |
+|---|---|---|
+| Top 10 | 6.2% | 0.5% |
+| Top 50 | 21.9% | 2.7% |
+| Top decile (189) | 49.6% | 10.0% |
 
-Which Indian districts should a one-drone, one-pilot spraying operator serve?
-This repo answers that with SQL over public district crop statistics. Sown area
-alone ranks them wrongly, because spray passes per crop and the length of each
-season's spray window matter more than raw acreage.
+**Source:** UPAg (Unified Portal for Agricultural Statistics, Ministry of Agriculture &
+Farmers Welfare), Complete APY Dataset (District Level). The series runs 2013-14 to
+2024-25; the latest complete year is 2023-24, since 2024-25 is missing several states'
+reports. Downloaded 2026-09-23. Field crops only; horticulture is not covered.
 
-**Source:** UPAg (Unified Portal for Agricultural Statistics, Ministry of
-Agriculture & Farmers Welfare), Complete APY Dataset (District Level),
-2013-14 to 2024-25, exported 2026-09-23. 2024-25 is incomplete (several states
-have not reported it), so the latest complete year is 2023-24.
+The full finding, with the crop mix, the stability check and what the ranking does not
+answer, is in [`output/finding.md`](output/finding.md).
 
-## Getting the data
+## Reproduce
 
-The report is a Dash app with no public API, so the data is exported by hand
-and not redistributed in this repo.
+Prerequisites: Docker, Python 3.11+, and make.
 
-1. Open UPAg: Reports → Area, Production & Yield → Complete APY Dataset
-   (District Level),
-   <https://upag.gov.in/dash-reports/desdistrictwisecompletedatasetreport>.
-2. Export settings: UOM = Actual; Crop Category = Food Grains, Commercial Crops
-   and Oilseeds; Crop = All; From Year = earliest offered; To Year = 2024-25;
-   Metric = Area, Production, Yield; Apply; CSV.
-3. The report caps each export at three years (From to To), so export four
-   files: 2013-14 to 2015-16, 2016-17 to 2018-19, 2019-20 to 2021-22,
-   2022-23 to 2024-25. Keep the file names UPAg gives them
-   (`DES-District-Data-For-<from>-to-<to>.csv`) and put all four in `data/raw/`.
+1. Export the data by hand; the report has no public API.
+   - Open UPAg: Reports → Area, Production & Yield → Complete APY Dataset (District
+     Level), <https://upag.gov.in/dash-reports/desdistrictwisecompletedatasetreport>.
+   - Export settings: UOM = Actual; Crop Category = Food Grains, Commercial Crops and
+     Oilseeds; Crop = All; From Year = earliest offered; To Year = 2024-25; Metric =
+     Area, Production, Yield; Apply; CSV.
+   - The report caps each export at three years, so export four files: 2013-14 to
+     2015-16, 2016-17 to 2018-19, 2019-20 to 2021-22, 2022-23 to 2024-25. Keep the file
+     names UPAg gives them (`DES-District-Data-For-<from>-to-<to>.csv`) and put all
+     four in `data/raw/`.
+2. Run the pipeline:
 
-## Reproducing
+   ```bash
+   make up
+   make analyse
+   ```
 
-Requires Python 3.11+ and either Docker or nothing else (DuckDB fallback).
+`make analyse` runs `make marts`, which runs `make alias`, which runs `make stage`,
+which runs `make load`, which runs `make manifest` - each stage runs the one before it,
+so this one command reproduces the whole build from the four raw CSVs to
+`output/top_districts.csv` and `output/state_rollup.csv`. `make marts` and `make
+analyse` need PostgreSQL, started by `make up`.
 
-```bash
-docker compose up -d
-make load
-```
+## Method
 
-Without Docker, `make load` and `make stage` run on a local DuckDB file:
+**Stable units.** 752 raw district names collapse to 629 stable units by joining
+districts that split from a common parent (`seeds/district_lineage.csv`). Ranking uses
+current district names; trend measures (year-on-year change, the moving average) use
+the stable unit, so a split district is never mistaken for a collapse. See
+`docs/district_alias_notes.md`.
 
-```bash
-make load DB_BACKEND=duckdb
-```
+**Seasons.** The source relabels seasons before 2023-24 (eastern winter rice moves from
+Rabi to Kharif in several states), so year-on-year and moving-average measures run on
+all-season totals only. Season is used within the 2023-24 ranking year, where the
+labels match the agronomy. See `docs/spray_passes_notes.md`, Seasons.
 
-`make marts` is PostgreSQL only - `sql/04_marts.sql` uses a materialised view,
-which DuckDB does not support.
+**Spray passes.** Each in-scope crop carries a low, base and high spray-pass count with
+a source grade (`seeds/crop_spray_passes.csv`, documented row by row in
+`docs/spray_passes_notes.md`). Rice uses state-level figures for the eight CSISA survey
+states (`seeds/crop_state_spray_passes.csv`, 65% of national rice area) and the
+national figure elsewhere.
 
-| Stage | Script | Reads | Writes |
-|---|---|---|---|
-| 01 | `python/01_download.py` | `data/raw/*.csv` | `data/raw/MANIFEST.json` (checksums, sizes, row counts; fails if files changed) |
-| 02 | `python/02_load.py`, `sql/01_load_raw.sql` | `data/raw/*.csv` | `raw.crop_production_import`, all text, unaltered |
-| 03 | `python/03_stage.py`, `sql/02_stage.sql` | `raw.crop_production_import`, `seeds/*.csv` | `staging.stg_crop_production` (long format, one row per state x district x crop x season x year), plus `staging.chk_season_total` / `staging.chk_crop_group` / `staging.rej_empty_year` for the rows taken out |
-| 04 | `python/04_district_lineage.py`, `sql/03_district_lineage.sql` | `staging.stg_crop_production`, `seeds/district_lineage.csv` | `staging.district_alias` (one row per state x district, with a stable `unit_key` for districts joined by a split) - see `docs/district_alias_notes.md` for why a district-name series isn't safe to trend on its own |
-| 05 | `python/05_marts.py`, `sql/04_marts.sql` | `staging.stg_crop_production`, `staging.district_alias`, `seeds/crop_spray_passes.csv`, `seeds/season_calendar.csv`, `seeds/assumptions.csv` | `marts.dim_district` / `dim_crop` / `dim_season` / `dim_year`, `marts.fct_crop_area` (grain district x year x season x crop), `marts.mv_spray_demand` (materialised view: plant-protection and nutrient spray acres by scope) - see `docs/spray_passes_notes.md` for where each pass count comes from |
+## Open items
 
-`make stage` runs `make load` first, then `python/03_stage.py`.
-`make alias` runs `make stage` first, then `python/04_district_lineage.py`.
-`make demo` runs `make alias` first, then `python/run_split_artefact_demo.py`, which
-writes `output/split_artefact_demo.txt` - before/after evidence that a stable
-unit removes the fake year-on-year collapse a raw district name shows at a
-split.
-`make marts` runs `make alias` first, then `python/05_marts.py`.
+- Spray-pass counts for maize, gram and moong are open (`needs_check = 'Y'`). No
+  Indian survey with a spray count was found for any of the three; reasons are in
+  `docs/spray_passes_notes.md`.
+- The eight Rajasthan districts and Mauganj first report in 2024-25, so their lineage
+  is unresolved. They touch neither the 2023-24 ranking year nor the trend window; no
+  analysis in this repo uses 2024-25. See `docs/district_alias_notes.md`, Open items.
+- Two Telangana districts (Jayashankar Bhupalapally, Hanumakonda) have documentation-
+  only open lineage rows: no effect on units, since the districts are already joined
+  through other edges.
+- A 2025-26 export will fail the lineage check by design, once Andhra Pradesh's new
+  districts appear in the data.
+
+## Not yet built
+
+The Parquet export for the Power BI layer is not built.
+The break-even model, whether one drone pays, is not built; that is a Power BI layer
+question, not answered by this ranking.
+
+## Repo layout
+
+- `config/` - assumptions every marts number reads, instead of a literal in a query.
+- `data/` - `data/raw/` holds the manually exported UPAg CSVs (not committed) and their
+  manifest.
+- `docs/` - the reasoning behind the two weakest assumptions: district lineage and
+  spray passes.
+- `output/` - pipeline results. Only `finding.md` and `split_artefact_demo.txt` (before/
+  after evidence for the stable-unit fix) are committed; everything else is
+  regenerated.
+- `python/` - one script per pipeline stage, run through the Makefile.
+- `seeds/` - reference data joined against the source: crop names, spray-pass counts,
+  the season calendar, district lineage.
+- `sql/` - one file per pipeline stage, run by its matching Python script.
 
 ## Licence
 
-MIT, see `LICENSE`. The source data belongs to its publisher and is not
-included.
+MIT, see `LICENSE`. The source data belongs to its publisher and is not included.
