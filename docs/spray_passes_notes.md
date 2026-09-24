@@ -81,37 +81,64 @@ The survey is kharif 2018 only; its state figures are applied to every rice seas
 state. The dataset carries no licence, so only these derived figures are used; the data is not
 redistributed or committed.
 
-**Cotton (B).** Modal answer in the Alwar survey is three applications (52%), two for
-41%. The Karnataka Bt cotton study (Sagar et al. 2013) gives 1 to 3 in most
+**Cotton (B).** In the Alwar survey, 52% of cotton growers apply three times, 41% twice and
+6% not at all: a mean of 2.40, which is the base (it was the modal 3 until 24 Sep 2026). Low
+stays 2. The Karnataka Bt cotton study (Sagar et al. 2013) gives 1 to 3 in most
 districts and up to 4 to 5 in Raichur and Yadgir, which sets the high.
 
-**Wheat, bajra (B).** Same Alwar survey; the modal answer is one application.
+**Wheat, bajra (B).** Same Alwar survey, base on the mean over all farmers since 24 Sep 2026.
+Wheat: 37% once, 27% twice, 2% three times, 34% none, a mean of 0.97 (low and base; was 1 / 1).
+Bajra: 39% once, 13% twice, 47% none, a mean of 0.66 (base; was 1, the modal answer among
+farmers who spray). Low stays 0.
 
-**Mustard (C, needs check).** DRMR's advice is threshold-based with a 15-day repeat.
-The survey only reports that 12.6% of mustard farmers sprayed once.
+**Mustard (B, cleared 24 Sep 2026).** Earlier this row read the Alwar survey as partial.
+It is not: Table 3 gives the whole distribution, 12.6% of 500 farmers sprayed once and
+87.4% did not spray at all. The mean is 0.13 passes a season, and low and base are set to
+that mean, the same rule as rice (a mean over all farmers, non-sprayers counted as zero).
+High stays at 2, DRMR's threshold spray plus its 15-day repeat in a heavy aphid year. This
+cuts mustard's base from 1 to 0.13. The risk is that it rests on one tehsil in 2016-18.
 
 **Soybean (B).** Counted from ICAR-NSRI's 2023 bulletin: one post-emergence herbicide
 (the 10-12 and 15-20 DAS options are alternatives, not two sprays), one insecticide
 before flowering, one against defoliators at flowering. The two fungicide sprays for
 rust are conditional and only in the high.
 
-**Maize (B, needs check).** ICAR-IIMR caps chemical sprays at two for the whole crop.
-Biological and neem sprays are threshold-triggered on top.
+**Maize (B, left open 24 Sep 2026).** ICAR-IIMR caps chemical sprays at two for the whole crop.
+Biological and neem sprays are threshold-triggered on top. No Indian survey with a spray
+count was found. The base sits at the top of IIMR's cap, and one field study points lower:
+Pal et al. 2024 (Scientific Reports; rabi maize, 10 districts of West Bengal and Bihar,
+2021-22) found that 18-71% of farmers at a location applied any insecticide. Eastern maize
+districts are probably overstated at base; the low case (1) is the better read there.
 
-**Gram (B, needs check).** Pod borer sprays at flowering and podding, threshold
-triggered. The NCIPM package recommends HaNPV as three weekly sprays.
+**Gram (B, left open 24 Sep 2026).** Pod borer sprays at flowering and podding, threshold
+triggered. The NCIPM package recommends HaNPV as three weekly sprays. No crop-level survey
+was found; the one Karnataka Helicoverpa survey (Honnakerappa & Udikeri 2018, 20 farmers per
+district) does not split sprays by crop.
 
 **Groundnut (B).** The DPPQ&S package gives an explicit "two spray ... at 15 days
 interval" for leaf spot and rust. Insecticides are need-based and only in the high.
 Herbicide is pre-emergence, so not a foliar pass.
 
-**Sugarcane (C, needs check).** The NIPHM package's pest control is almost all
-soil, sett or parasitoid based. The only routine foliar pass is the early herbicide.
-The source records sugarcane under Kharif only although the crop stands 10 to 12
-months; that matters for the spray window in M4, not here.
+**Sugarcane (C, cleared 24 Sep 2026).** Values unchanged (1 / 1 / 3); the reasoning is
+corrected. The earlier note said the package's pest control is almost all soil, sett or
+parasitoid based. That understated it: the package also lists foliar insecticide sprays for
+shoot borers, pyrilla and stalk borers, all conditional. Base is one herbicide pass (the
+package's herbicides are alternatives, at sowing or metsulfuron methyl at tillering). High
+adds two of the conditional insecticide sprays. ICAR-SBI's weed schedule (pre-emergence
+atrazine, then a directed spray at 90 DAP) adds no broadcast foliar pass. The source records
+sugarcane under Kharif only although the crop stands 10 to 12 months; that matters for the
+spray window in M4, not here.
 
-**Moong (in scope, unsourced).** Left null on purpose. The marts must count it as
-missing, not as zero.
+**Moong (C, sourced 24 Sep 2026, left open).** From the NIPHM / DPPQ&S package for blackgram
+and greengram (2014): low 1 is the pod borer spray at pod development; base 2 adds one
+post-emergence grass herbicide at 15-20 DAS, which the package ranks behind mechanical weeding;
+high 4 adds the conditional whitefly and powdery mildew sprays. No survey was found, and the
+count needed judgement, so the row stays open.
+
+**One rule for observed rows (agreed 24 Sep 2026).** Every `observed_survey` base is a mean over
+all farmers, with non-sprayers counted as zero, because the model multiplies area by passes and
+only a mean gives the right total. Rice, mustard, cotton, wheat and bajra all follow it. Until
+then the Alwar rows used the modal answer, which overstated cotton by a quarter and bajra by half.
 
 ## Coverage
 
@@ -119,7 +146,8 @@ Checked against the 2023-24 rows of the raw export (field crops, summary rows
 excluded, 183.4 million ha):
 
 - The eleven in-scope crops cover **86.2%** of area.
-- The ten with a pass count cover **83.4%**.
+- All eleven have a pass count since 24 Sep 2026, when moong was sourced, so **86.2%**
+  (83.4% before).
 - The other nineteen crops (jowar, tur, urad, guarseed and smaller) are
   `in_scope = N`. They are about 14% of area. Every crop in the data appears in the
   seed, so a new crop name in a future export fails a check instead of vanishing.
