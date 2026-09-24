@@ -11,11 +11,13 @@ data/*.duckdb.wal
 __pycache__/
 *.pyc
 
-# Results are regenerated, not committed. Two exceptions: output/marts/ is
-# the file interface to the Power BI report, and split_artefact_demo.txt is
-# evidence referenced directly from the README, not disposable scratch output
+# Results are regenerated, not committed. Three exceptions: output/marts/ is
+# the file interface to the Power BI report, split_artefact_demo.txt is
+# evidence referenced directly from the README, and finding.md is the
+# write-up itself, not disposable scratch output
 output/*
 !output/marts/
 !output/split_artefact_demo.txt
+!output/finding.md
 
 .DS_Store

@@ -103,6 +103,28 @@ cuts mustard's base from 1 to 0.13. The risk is that it rests on one tehsil in 2
 before flowering, one against defoliators at flowering. The two fungicide sprays for
 rust are conditional and only in the high.
 
+*Checked against farmer data, 24 Sep 2026, values unchanged.* Soybean carries 47% of the
+top-50 districts' demand, so the schedule count was tested against what farmers report.
+No survey gives a total pass count; three pieces bracket it:
+
+- **Insecticide:** an average of **2.36 insecticide sprays per cultivator**, Vidisha district,
+  Madhya Pradesh (Garg 2014, *Indian J Trop Biodiv* 22(2): 202-204; sample size not in the
+  abstract). A 2014-15 roving survey of seven districts in four states (Gandhi Kiran, Patil
+  & Katiyar, *Bhartiya Krishi Anusandhan Patrika* 32(2): 105-111) found 1 to 3 sprays against
+  leaf-eating caterpillars and ranks Maharashtra and Telangana as high-use states and Madhya Pradesh as low-use.
+- **Herbicide:** 92% of 240 farmers applied herbicide, six Vidarbha districts including
+  Yavatmal, Buldhana and Amravati, 2013-14 (Kale et al. 2017, *Legume Research* 40(5)).
+- **Tank-mixing:** 75-80% of Madhya Pradesh farmers spray imazethapyr tank-mixed with
+  triazophos (NAAS Strategy Paper 4, 2017, stated as current practice without a cited survey).
+  A tank-mix is one pass, not two.
+
+Read together: about 2.5 passes if the herbicide nearly always rides with an insecticide spray
+(2.36 + 0.92 × ~0.2), about 3.3 if never (2.36 + 0.92), both from the low-use state. The
+base of 3 sits inside that range, and Maharashtra, which holds most of the top 10, is the
+higher-use state. Low 2 / base 3 / high 5 stand. This is thinner evidence than rice: one
+district's mean with an unknown sample, one herbicide adoption rate, and one uncited
+practice statement. Fungicide use is not quantified anywhere found.
+
 **Maize (B, left open 24 Sep 2026).** ICAR-IIMR caps chemical sprays at two for the whole crop.
 Biological and neem sprays are threshold-triggered on top. No Indian survey with a spray
 count was found. The base sits at the top of IIMR's cap, and one field study points lower:
