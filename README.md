@@ -44,6 +44,7 @@ Prerequisites: Docker, Python 3.11+, and make.
    ```bash
    make up
    make analyse
+   make export
    ```
 
 Each make target runs the stage before it (manifest, load, stage, alias, marts,
@@ -51,6 +52,10 @@ analyse), so `make analyse` rebuilds everything from the four raw CSVs and write
 `output/top_districts.csv` and `output/state_rollup.csv`. `make up` starts PostgreSQL
 16 in Docker. Quality checks written in SQL run inside the build and stop it on any
 mismatch in row counts, keys or totals.
+
+`make export` writes the marts to `output/marts/` as Parquet (CSV as well for the
+dimension tables and the ranking). It fails if any file's row count differs from its
+source table.
 
 ## Method
 
@@ -87,8 +92,8 @@ national figure elsewhere.
 
 ## Next
 
-A Parquet export of the marts, and a Power BI model that asks whether one drone pays in
-a top-ranked district. Neither is built yet.
+A Power BI model that asks whether one drone pays in a top-ranked district. It reads
+`output/marts/`, so it opens from a clean clone with no database running. Not built yet.
 
 ## Repo layout
 
@@ -96,8 +101,8 @@ a top-ranked district. Neither is built yet.
 - `data/`: `data/raw/` holds the manually exported UPAg CSVs (not committed) and their
   manifest.
 - `docs/`: the reasoning behind district lineage and spray passes, row by row.
-- `output/`: pipeline results. Only `finding.md` and `split_artefact_demo.txt` (before and
-  after evidence for the stable-unit fix) are committed; everything else is
+- `output/`: pipeline results. `finding.md`, `split_artefact_demo.txt` and `marts/` (the
+  Parquet interface to the Power BI report) are committed; everything else is
   regenerated.
 - `python/`: one script per pipeline stage, run through the Makefile.
 - `seeds/`: reference data joined against the source: crop names, spray-pass counts,
