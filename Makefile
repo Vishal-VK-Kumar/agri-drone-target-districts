@@ -42,6 +42,5 @@ demo: alias
 marts: alias
 	$(PY) python/05_marts.py
 
-analyse:
-	@echo "analyse: the analysis/ranking stage is not built yet" >&2
-	@exit 1
+analyse: marts
+	$(PY) python/06_analysis.py
