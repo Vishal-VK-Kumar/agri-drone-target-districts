@@ -1,3 +1,9 @@
+# agri-drone-target-districts
+
+With one agricultural drone and one spray season, which Indian districts would you serve
+first? This repo ranks 1,886 district-seasons by spraying demand, built in PostgreSQL from
+government crop statistics.
+
 **In 2023-24, half of India's modelled crop-spraying demand sat in one tenth of
 district-seasons. The top 50 are all Kharif, and most of them are soybean and cotton
 districts in Maharashtra and western Madhya Pradesh.**
@@ -7,6 +13,9 @@ districts in Maharashtra and western Madhya Pradesh.**
 | Top 10 | 6.2% | 0.5% |
 | Top 50 | 21.9% | 2.7% |
 | Top decile (189) | 49.6% | 10.0% |
+
+Spray demand is the sown acres of each in-scope crop multiplied by how many times that
+crop is sprayed in a season, summed by district and season (acre-passes).
 
 **Source:** UPAg (Unified Portal for Agricultural Statistics, Ministry of Agriculture &
 Farmers Welfare), Complete APY Dataset (District Level). The series runs 2013-14 to
@@ -37,11 +46,11 @@ Prerequisites: Docker, Python 3.11+, and make.
    make analyse
    ```
 
-`make analyse` runs `make marts`, which runs `make alias`, which runs `make stage`,
-which runs `make load`, which runs `make manifest` - each stage runs the one before it,
-so this one command reproduces the whole build from the four raw CSVs to
-`output/top_districts.csv` and `output/state_rollup.csv`. `make marts` and `make
-analyse` need PostgreSQL, started by `make up`.
+Each make target runs the stage before it (manifest, load, stage, alias, marts,
+analyse), so `make analyse` rebuilds everything from the four raw CSVs and writes
+`output/top_districts.csv` and `output/state_rollup.csv`. `make up` starts PostgreSQL
+16 in Docker. Quality checks written in SQL run inside the build and stop it on any
+mismatch in row counts, keys or totals.
 
 ## Method
 
@@ -76,26 +85,24 @@ national figure elsewhere.
 - A 2025-26 export will fail the lineage check by design, once Andhra Pradesh's new
   districts appear in the data.
 
-## Not yet built
+## Next
 
-The Parquet export for the Power BI layer is not built.
-The break-even model, whether one drone pays, is not built; that is a Power BI layer
-question, not answered by this ranking.
+A Parquet export of the marts, and a Power BI model that asks whether one drone pays in
+a top-ranked district. Neither is built yet.
 
 ## Repo layout
 
-- `config/` - assumptions every marts number reads, instead of a literal in a query.
-- `data/` - `data/raw/` holds the manually exported UPAg CSVs (not committed) and their
+- `config/`: assumptions every marts number reads, instead of a literal in a query.
+- `data/`: `data/raw/` holds the manually exported UPAg CSVs (not committed) and their
   manifest.
-- `docs/` - the reasoning behind the two weakest assumptions: district lineage and
-  spray passes.
-- `output/` - pipeline results. Only `finding.md` and `split_artefact_demo.txt` (before/
+- `docs/`: the reasoning behind district lineage and spray passes, row by row.
+- `output/`: pipeline results. Only `finding.md` and `split_artefact_demo.txt` (before and
   after evidence for the stable-unit fix) are committed; everything else is
   regenerated.
-- `python/` - one script per pipeline stage, run through the Makefile.
-- `seeds/` - reference data joined against the source: crop names, spray-pass counts,
+- `python/`: one script per pipeline stage, run through the Makefile.
+- `seeds/`: reference data joined against the source: crop names, spray-pass counts,
   the season calendar, district lineage.
-- `sql/` - one file per pipeline stage, run by its matching Python script.
+- `sql/`: one file per pipeline stage, run by its matching Python script.
 
 ## Licence
 

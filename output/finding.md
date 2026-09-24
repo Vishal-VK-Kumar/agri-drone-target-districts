@@ -26,9 +26,9 @@ each sourced. Of the top 50 at base, 40 are still in the top 50 at both low and 
 Of the top 10, 7 are. Yavatmal is first at all three.
 
 **What it rests on.** Soybean carries almost half of the top 50 on a count of 3 sprays
-per season, taken from the ICAR-NSRI schedule. Farmer surveys on insecticide and herbicide
-use together imply 2.5 to 3.3 passes, depending on how many sprays are tank-mixed. Cotton uses a survey mean of 2.40 and rice
-a state-level survey (CSISA 2018, 8,355 farmers). Three crops still have an open count:
+per season, taken from the ICAR-NSRI schedule. Farmer surveys on insecticide and herbicide use
+together imply 2.5 to 3.3 passes, depending on how many sprays are tank-mixed. Cotton
+uses a survey mean of 2.40 and rice a state-level survey (CSISA 2018, 8,355 farmers). Three crops still have an open count:
 maize, gram and moong, together 18.7% of national demand. Seven of the top 50 take more
 than a quarter of their demand from them. The largest is Nagaur (rank 5, 72.7% moong),
 which falls to rank 18 at the low count.
