@@ -16,7 +16,11 @@ Diagnostics: share of national base acre-passes by crop, and the same
         restricted to the top 50 by national rank; how many of the top
         10/25/50 by base also sit in the top 10/25/50 at both low and high;
         how many of the top 50 take more than 25% of their base from open
-        (needs_check = 'Y') crops, and which ones.
+        (needs_check = 'Y') crops, and which ones; for rice, soybean and
+        cotton, how many ranking-year district-seasons - sorted by that
+        crop's own base acre-passes - it takes to reach half of that crop's
+        national base acre-passes (from rpt_crop_base, i.e. the fact and
+        seed tables, not the top-three-crop columns on rpt_top_districts).
 Reads:  marts.dim_year, marts.rpt_top_districts, marts.rpt_state_rollup,
         marts.rpt_crop_base, sql/05_analysis.sql
 Writes: marts.* (see sql/05_analysis.sql), output/top_districts.csv,
@@ -53,6 +57,7 @@ STATE_ROLLUP_COLUMNS = [
 ]
 TOP_N_STABILITY = (10, 25, 50)
 OPEN_CROP_SHARE_THRESHOLD_PCT = 25
+CONCENTRATION_CROPS = ("Rice", "Soybean", "Cotton")
 # -----------------------------------------------------------------------------
 
 
@@ -204,6 +209,31 @@ def main() -> None:
     """)
     open_total = float(cur.fetchone()[0])
     print(f"\nOpen crops (needs_check = 'Y'): {100*open_total/float(national_total):.1f}% of national base")
+
+    print("\nRanking-year district-seasons needed to reach half of national base "
+          "acre-passes, by crop (from rpt_crop_base, not the top-three-crop columns):")
+    cur.execute("""
+        WITH ranked_crop_rows AS (
+            SELECT
+                crop_key,
+                crop_base_acres,
+                sum(crop_base_acres) OVER (
+                    PARTITION BY crop_key ORDER BY crop_base_acres DESC
+                    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+                ) AS running_total,
+                sum(crop_base_acres) OVER (PARTITION BY crop_key) AS crop_total,
+                row_number() OVER (PARTITION BY crop_key ORDER BY crop_base_acres DESC) AS rn
+            FROM marts.rpt_crop_base
+            WHERE crop_key = ANY(%s)
+        )
+        SELECT crop_key, min(rn) AS n_for_half
+        FROM ranked_crop_rows
+        WHERE running_total >= crop_total / 2.0
+        GROUP BY crop_key
+        ORDER BY crop_key
+    """, (list(CONCENTRATION_CROPS),))
+    for crop_key, n_for_half in cur.fetchall():
+        print(f"  {crop_key:<10}{n_for_half}")
 
     cur.execute("SELECT count(*) FROM marts.rpt_unit_trend WHERE yoy_change_pct IS NOT NULL "
                 "AND year_label = (SELECT year_label FROM marts.dim_year WHERE is_complete "
