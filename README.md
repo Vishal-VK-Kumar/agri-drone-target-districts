@@ -104,6 +104,9 @@ A Power BI model that asks whether one drone pays in a top-ranked district. It r
 - `output/`: pipeline results. `finding.md`, `split_artefact_demo.txt` and `marts/` (the
   Parquet interface to the Power BI report) are committed; everything else is
   regenerated.
+- `config/cost_assumptions.yml`: cost and utilisation inputs for the Power BI break-even
+  model, each with its source, date and grade. `make export` writes it to
+  `output/marts/dim_cost_item.parquet`.
 - `python/`: one script per pipeline stage, run through the Makefile.
 - `seeds/`: reference data joined against the source: crop names, spray-pass counts,
   the season calendar, district lineage.
