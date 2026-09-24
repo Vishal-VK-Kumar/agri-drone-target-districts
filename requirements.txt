@@ -3,3 +3,5 @@ psycopg2-binary>=2.9.10
 duckdb>=1.1
 # Parquet export for the Power BI report (python/07_export.py)
 pyarrow>=18.1.0
+# Reads config/cost_assumptions.yml (python/08_cost_items.py)
+pyyaml>=6.0.2

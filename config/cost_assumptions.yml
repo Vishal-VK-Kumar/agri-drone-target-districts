@@ -1,0 +1,117 @@
+# Cost and utilisation inputs for the break-even model in the Power BI report.
+# Every row carries its source and a grade: A official, B survey or university, C vendor, retailer or
+# non-Indian. The grade applies to the base value; `basis` says where low or high come from a weaker source.
+# low / base / high feed what-if parameters. The base is a cited figure unless `basis` says otherwise.
+# Checked against sources on 2026-09-24. Money in Indian rupees.
+version: "2026-09-24"
+items:
+  - key: price_per_acre
+    label: Service price charged to the farmer
+    unit: INR per acre
+    role: price
+    low: 300
+    base: 550
+    high: 800
+    basis: base is the midpoint of the cited range
+    source: "Agri Farming, drone spraying cost per acre (2026-06-07): Rs 400-800 service only; Leher, drone spraying cost per acre: Rs 300-700"
+    grade: C
+  - key: drone_capex
+    label: Drone purchase price
+    unit: INR
+    role: capex
+    low: 349000
+    base: 499000
+    high: 1000000
+    basis: "low 10 L drone, base 16 L drone (retail list prices); high is the largest package the scheme subsidises in full (Rs 8 lakh cap / 80%)"
+    source: "xboom.in agriculture drone prices (updated 2026-08-29); PIB PRID 2070029 (2024-11-01)"
+    grade: C
+  - key: subsidy_share
+    label: Namo Drone Didi central assistance, share of package cost
+    unit: share
+    role: subsidy
+    low: 0.8
+    base: 0.8
+    high: 0.8
+    basis: scheme terms; the report toggles subsidy on or off, default off (no extension past 2025-26 found as of 2026-09-24)
+    source: "PIB PRID 2070029 (2024-11-01); Lok Sabha answer, PIB PRID 2244648 (2026-03-24)"
+    grade: A
+  - key: subsidy_cap
+    label: Namo Drone Didi assistance cap
+    unit: INR
+    role: subsidy
+    low: 800000
+    base: 800000
+    high: 800000
+    basis: scheme terms
+    source: "PIB PRID 2070029 (2024-11-01)"
+    grade: A
+  - key: acres_per_day
+    label: Acres sprayed per working day
+    unit: acres per day
+    role: capacity
+    low: 20
+    base: 20
+    high: 40
+    basis: "low and base from the scheme guidelines; high is the low end of a vendor's 40-50 claim"
+    source: "PIB PRID 2070029 (2024-11-01): 20 acres a day; Leher, drone spraying cost per acre: 40-50 acres a day"
+    grade: A
+  - key: annual_acres
+    label: Acres sprayed per drone per year
+    unit: acres per year
+    role: utilisation
+    low: 1000
+    base: 2000
+    high: 2500
+    basis: "base and high are the scheme's target range (a target, not an observed figure); low from a vendor's operator figure"
+    source: "PIB PRID 2070029 (2024-11-01): at least 2,000 to 2,500 acres a year; Leher, drone spraying cost per acre: operators handling 1,000+ acres a year"
+    grade: A
+  - key: battery_cycle_life
+    label: Battery charge cycles before replacement
+    unit: cycles
+    role: battery
+    low: 1000
+    base: 1000
+    high: 1500
+    basis: "no Indian source found; figures are for larger, non-Indian drones. Treat as a what-if parameter"
+    source: "University of Missouri Extension G1274 (1,000 cycles or 5 years); Leher (DJI Agras T10, 1,000 cycles); DJI Agras T25/T50 battery listings (1,500-cycle warranty)"
+    grade: C
+  - key: battery_set_price
+    label: Price of one battery set
+    unit: INR
+    role: battery
+    low: 18500
+    base: 38940
+    high: 38940
+    basis: "base is an Indian maker's list price for a 12S 21,000 mAh pack (2026-09-24)"
+    source: "mPower agriculture spraying batteries, list price 2026-09-24; Leher: about Rs 18,500 per pack"
+    grade: C
+  - key: acres_per_battery_cycle
+    label: Acres sprayed per battery charge
+    unit: acres per cycle
+    role: battery
+    low: 1.9
+    base: 2.0
+    high: 2.1
+    basis: "derived: 15-minute flight time of a 10 L drone divided by 7-8 minutes per acre"
+    source: "ADRTC study via PIB PRID 2149706 (2025-07-29): one acre in 7-8 minutes; Garuda Kissan 10 L specification on xboom.in: 15-minute flight time"
+    grade: C
+  - key: drone_life_acres
+    label: Drone useful life
+    unit: acres
+    role: depreciation
+    low: 8000
+    base: 8000
+    high: 8000
+    basis: "US university assumption for larger drones; no Indian source found"
+    source: "University of Missouri Extension G1274"
+    grade: C
+  - key: income_benchmark
+    label: Scheme's expected additional income per SHG
+    unit: INR per year
+    role: benchmark
+    low: 100000
+    base: 100000
+    high: 100000
+    basis: scheme's stated aim; a reference line, not a cost
+    source: "PIB explainer, Namo Drone Didi (November 2024): additional income of at least Rs 1 lakh per year"
+    grade: A
